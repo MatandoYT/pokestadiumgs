@@ -1,0 +1,55 @@
+name: Pokemon Stadium 2 (North America)
+sha1: d8343e69a7dc63b869cf6361d87cde64444281d3
+options:
+  basename: pokemonstadium2
+  target_path: baserom.z64
+  base_path: .
+  compiler: GCC
+  find_file_boundaries: True
+  header_encoding: ASCII
+  platform: n64
+  # undefined_funcs_auto: True
+  # undefined_funcs_auto_path: undefined_funcs_auto.txt
+  # undefined_syms_auto: True
+  # undefined_syms_auto_path: undefined_syms_auto.txt
+  # symbol_addrs_path: symbol_addrs.txt
+  # asm_path: asm
+  # src_path: src
+  # build_path: build
+  # extensions_path: tools/splat_ext
+  # mips_abi_float_regs: o32
+  # section_order: [".text", ".data", ".rodata", ".bss"]
+  # auto_all_sections: [".data", ".rodata", ".bss"]
+  # libultra_symbols: True
+  # hardware_regs: True
+segments:
+  - name: header
+    type: header
+    start: 0x0
+
+  - name: boot
+    type: bin
+    start: 0x40
+
+  - name: entry
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    subsegments:
+      - [0x1000, hasm]
+
+  - name: main
+    type: code
+    start: 0x1060
+    vram: 0x80000460
+    follows_vram: entry
+    bss_size: 0x8C5F0
+    subsegments:
+      - [0x1060, asm]
+      - [0x11B0, data]
+      - { start: 0xA8A80, type: bss, vram: 0x800A7E80 }
+
+  - type: bin
+    start: 0xA8A80
+    follows_vram: main
+  - [0x4000000]
