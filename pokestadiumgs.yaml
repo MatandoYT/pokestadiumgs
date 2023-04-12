@@ -1,18 +1,19 @@
 name: Pokemon Stadium 2 (North America)
 sha1: d8343e69a7dc63b869cf6361d87cde64444281d3
 options:
-  basename: pokemonstadium2
+  basename: pokestadiumgs
   target_path: baserom.z64
   base_path: .
-  compiler: GCC
+  compiler: gcc
   find_file_boundaries: True
   header_encoding: ASCII
   platform: n64
+  ld_script_path: pokestadiumgs.ld
   # undefined_funcs_auto: True
   # undefined_funcs_auto_path: undefined_funcs_auto.txt
   # undefined_syms_auto: True
   # undefined_syms_auto_path: undefined_syms_auto.txt
-  # symbol_addrs_path: symbol_addrs.txt
+  symbol_addrs_path: tools/symbol_addrs.txt
   # asm_path: asm
   # src_path: src
   # build_path: build
@@ -28,28 +29,18 @@ segments:
     start: 0x0
 
   - name: boot
-    type: bin
+    type: code
     start: 0x40
+    vram: 0xA4000040
+    files:
+      - [0x0040, asm, boot]
+      - [0x0B70, bin, bootcode_font]
 
-  - name: entry
+  - name: code
     type: code
     start: 0x1000
     vram: 0x80000400
-    subsegments:
-      - [0x1000, hasm]
-
-  - name: main
-    type: code
-    start: 0x1060
-    vram: 0x80000460
-    follows_vram: entry
-    bss_size: 0x8C5F0
-    subsegments:
-      - [0x1060, asm]
-      - [0x11B0, data]
-      - { start: 0xA8A80, type: bss, vram: 0x800A7E80 }
-
-  - type: bin
-    start: 0xA8A80
-    follows_vram: main
-  - [0x4000000]
+    files:
+      [0x1000, asm] // ram main
+      [0x1060, asm] // rsp graphics
+      [0x]
