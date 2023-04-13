@@ -4,7 +4,7 @@ Build system based on the Pokemon Stadium (US) decomp listed below.
 
 It builds the following ROMs:
 
-* pokestadium.z64: `md5: 1561c75d11cedf356a8ddb1a4a5f9d5d`
+* pokestadiumgs.z64: `md5: 1561c75d11cedf356a8ddb1a4a5f9d5d`
 
 Note: To use this repository, you must already have a rom for the game.
 
