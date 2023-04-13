@@ -1,5 +1,5 @@
 BASEROM = baserom.z64
-TARGET = pokemonstadium2
+TARGET = pokestadiumgs
 NON_MATCHING ?= 0
 RUN_CC_CHECK ?= 1
 WERROR ?= 0
@@ -23,7 +23,7 @@ ROM := $(TARGET).z64
 ELF := $(BUILD_DIR)/$(TARGET).elf
 LD_SCRIPT := $(TARGET).ld
 LD_MAP := $(BUILD_DIR)/$(TARGET).map
-ASM_DIRS := asm asm/data asm/os asm/libleo asm/libultra asm/libultra/os asm/libultra/io asm/libultra/gu asm/libultra/libc asm/libultra/al
+ASM_DIRS := asm asm/data asm/lib/libc asm/lib/libultra
 DATA_DIRS := bin assets
 SRC_DIRS := $(shell find src -type d)
 
@@ -40,7 +40,7 @@ DECOMP_C_OBJS := $(filter %.c.o,$(filter-out $(BUILD_DIR)/src/libultra%,$(O_FILE
 
 DEP_FILES := $(O_FILES:.o=.d) $(DECOMP_C_OBJS:.o=.asmproc.d)
 
-SPLAT_YAML := pokestadium2.yaml
+SPLAT_YAML := pokestadiumgs.yaml
 SPLAT = $(PYTHON) tools/splat/split.py $(SPLAT_YAML)
 
 ##################### Compiler Options #######################
@@ -108,153 +108,15 @@ ASFLAGS = -EB -mtune=vr4300 -march=vr4300 $(IINCS) -32
 # we support Microsoft extensions such as anonymous structs, which the compiler does support but warns for their usage. Surpress the warnings with -woff.
 CFLAGS  = -G 0 -non_shared -Xfullwarn -Xcpluscomm $(IINCS) -Wab,-r4300_mul $(CDEFS) -woff 649,838,712,807 $(MIPS_VERSION)
 
-LDFLAGS = -T undefined_syms.txt -T undefined_syms_auto.txt -T undefined_funcs_auto.txt -T $(BUILD_DIR)/$(LD_SCRIPT) -Map $(BUILD_DIR)/$(TARGET).map --no-check-sections
+LDFLAGS = -T undefined_syms.txt -T undefined_funcs.txt -T $(BUILD_DIR)/$(LD_SCRIPT) -Map $(BUILD_DIR)/$(TARGET).map --no-check-sections
 
 
 ######################## Targets #############################
 
 $(foreach dir,$(SRC_DIRS) $(ASM_DIRS) $(DATA_DIRS) $(COMPRESSED_DIRS) $(MAP_DIRS) $(BGM_DIRS),$(shell mkdir -p build/$(dir)))
 
-# The reimplementations of the string functions need to treat char as signed.
-build/src/hal_libc.c.o: CFLAGS += -signed
-
-# Libultra O1 files
-build/src/libultra/os/sendmesg.c.o: OPTFLAGS := -O1
-build/src/libultra/os/stopthread.c.o: OPTFLAGS := -O1
-build/src/libultra/os/recvmesg.c.o: OPTFLAGS := -O1
-build/src/libultra/os/destroythread.c.o: OPTFLAGS := -O1
-build/src/libultra/os/dequeuethread.c.o: OPTFLAGS := -O1
-build/src/libultra/os/createthread.c.o: OPTFLAGS := -O1
-build/src/libultra/os/virtualtophysical.c.o: OPTFLAGS := -O1
-build/src/libultra/os/initialize.c.o: OPTFLAGS := -O1
-build/src/libultra/os/epilinkhandle.c.o: OPTFLAGS := -O1
-build/src/libultra/os/getmemsize.c.o: OPTFLAGS := -O1
-build/src/libultra/os/seteventmesg.c.o: OPTFLAGS := -O1
-build/src/libultra/os/createmesgqueue.c.o: OPTFLAGS := -O1
-build/src/libultra/os/jammesg.c.o: OPTFLAGS := -O1
-build/src/libultra/os/setthreadpri.c.o: OPTFLAGS := -O1
-build/src/libultra/os/gettime.c.o: OPTFLAGS := -O1
-build/src/libultra/os/timerintr.c.o: OPTFLAGS := -O1
-build/src/libultra/os/setglobalintmask.c.o: OPTFLAGS := -O1
-build/src/libultra/os/resetglobalintmask.c.o: OPTFLAGS := -O1
-build/src/libultra/os/settime.c.o: OPTFLAGS := -O1
-build/src/libultra/os/yieldthread.c.o: OPTFLAGS := -O1
-build/src/libultra/os/settimer.c.o: OPTFLAGS := -O1
-build/src/libultra/os/startthread.c.o: OPTFLAGS := -O1
-build/src/libultra/os/sethwinterrupt.c.o: OPTFLAGS := -O1
-build/src/libultra/io/pigetcmdq.c.o: OPTFLAGS := -O1
-build/src/libultra/io/sptask.c.o: OPTFLAGS := -O1
-build/src/libultra/io/controller.c.o: OPTFLAGS := -O1
-build/src/libultra/io/conteeplongread.c.o: OPTFLAGS := -O1
-build/src/libultra/io/viblack.c.o: OPTFLAGS := -O1
-build/src/libultra/io/visetmode.c.o: OPTFLAGS := -O1
-build/src/libultra/io/virepeatline.c.o: OPTFLAGS := -O1
-build/src/libultra/io/pfsisplug.c.o: OPTFLAGS := -O1
-build/src/libultra/io/epidma.c.o: OPTFLAGS := -O1
-build/src/libultra/io/dpctr.c.o: OPTFLAGS := -O1
-build/src/libultra/io/conteeplongwrite.c.o: OPTFLAGS := -O1
-build/src/libultra/io/si.c.o: OPTFLAGS := -O1
-build/src/libultra/io/sp.c.o: OPTFLAGS := -O1
-build/src/libultra/io/viswapbuf.c.o: OPTFLAGS := -O1
-build/src/libultra/io/sptaskyielded.c.o: OPTFLAGS := -O1
-build/src/libultra/io/vi.c.o: OPTFLAGS := -O1
-build/src/libultra/io/visetevent.c.o: OPTFLAGS := -O1
-build/src/libultra/io/aisetnextbuf.c.o: OPTFLAGS := -O1
-build/src/libultra/io/ai.c.o: OPTFLAGS := -O1
-build/src/libultra/io/vigetcurrframebuf.c.o: OPTFLAGS := -O1
-build/src/libultra/io/spsetpc.c.o: OPTFLAGS := -O1
-build/src/libultra/libc/ll.c.o: OPTFLAGS := -O1
-build/src/libultra/libc/ll.c.o: MIPS_VERSION := -mips3 -32
-build/src/libultra/libc/llcvt.c.o: OPTFLAGS := -O1
-build/src/libultra/libc/llcvt.c.o: MIPS_VERSION := -mips3 -32
-
-# cheap hack. TODO: Make the override better
-build/src/libultra/io/gbpakpower.c.o: OPTFLAGS += -Wo,-loopunroll,0
-build/src/libultra/io/gbpakinit.c.o: OPTFLAGS += -Wo,-loopunroll,0
-build/src/libultra/io/gbpakselectbank.c.o: OPTFLAGS += -Wo,-loopunroll,0
-
-# Libultra misc
-build/src/libultra/gu/scale.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/scale.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/translate.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/translate.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/mtxcatf.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/mtxcatf.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/mtxcatl.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/mtxcatl.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/rotateRPY.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/rotateRPY.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/rotate.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/rotate.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/ortho.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/ortho.c.o: OPTFLAGS := -O3
-build/src/libultra/gu/sinf.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/cosf.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/random.c.o: CC := $(CC_OLD)
-build/src/libultra/libc/xprintf.c.o: CC := $(CC_OLD)
-build/src/libultra/libc/xprintf.c.o: OPTFLAGS := -O3
-build/src/libultra/libc/xldtob.c.o: CC := $(CC_OLD)
-build/src/libultra/libc/xldtob.c.o: OPTFLAGS := -O3
-build/src/libultra/libc/xlitob.c.o: CC := $(CC_OLD)
-build/src/libultra/libc/xlitob.c.o: OPTFLAGS := -O3
-build/src/libultra/libc/string.c.o: CC := $(CC_OLD)
-build/src/libultra/libc/string.c.o: OPTFLAGS := -O3
-build/src/libultra/io/controller.c.o: CC := $(CC_OLD)
-build/src/libultra/io/contreaddata.c.o: CC := $(CC_OLD)
-build/src/libultra/io/devmgr.c.o: CC := $(CC_OLD)
-build/src/libultra/os/initialize.c.o: CC := $(CC_OLD)
-build/src/libultra/io/pfsgetstatus.c.o: CC := $(CC_OLD)
-build/src/libultra/io/epiread.c.o: CC := $(CC_OLD)
-build/src/libultra/al/reverb.c.o: CC := $(CC_OLD)
-build/src/libultra/al/bnkf.c.o: CC := $(CC_OLD)
-build/src/libultra/al/bnkf.c.o: OPTFLAGS := -O3
-build/src/libultra/al/load.c.o: CC := $(CC_OLD)
-build/src/libultra/al/load.c.o: OPTFLAGS := -O3
-build/src/libultra/al/synthesizer.c.o: CC := $(CC_OLD)
-build/src/libultra/al/drvrNew.c.o: CC := $(CC_OLD)
-build/src/libultra/al/mainbus.c.o: CC := $(CC_OLD)
-build/src/libultra/al/mainbus.c.o: OPTFLAGS := -O3
-build/src/libultra/al/auxbus.c.o: CC := $(CC_OLD)
-build/src/libultra/al/auxbus.c.o: OPTFLAGS := -O3
-build/src/libultra/al/env.c.o: CC := $(CC_OLD)
-build/src/libultra/al/resample.c.o: CC := $(CC_OLD)
-build/src/libultra/al/resample.c.o: OPTFLAGS := -O3
-build/src/libultra/al/save.c.o: CC := $(CC_OLD)
-build/src/libultra/al/heapalloc.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/mtxutil.c.o: CC := $(CC_OLD)
-build/src/libultra/gu/mtxutil.c.o: OPTFLAGS := -O3
-build/src/libultra/io/pfsisplug.c.o: CC := $(CC_OLD)
-build/src/libultra/io/conteepprobe.c.o: CC := $(CC_OLD)
-build/src/libultra/io/conteepwrite.c.o: CC := $(CC_OLD)
-build/src/libultra/io/conteepread.c.o: CC := $(CC_OLD)
-build/src/libultra/io/contpfs.c.o: CC := $(CC_OLD)
-build/src/libultra/io/viswapcontext.c.o: CC := $(CC_OLD)
-build/src/libultra/io/contramwrite.c.o: CC := $(CC_OLD)
-build/src/libultra/io/contramread.c.o: CC := $(CC_OLD)
-build/src/libultra/io/crc.c.o: CC := $(CC_OLD)
-build/src/libultra/libc/ldiv.c.o: CC := $(CC_OLD)
-build/src/libultra/io/vimgr.c.o: CC := $(CC_OLD)
-build/src/libultra/io/visetxscale.c.o: CC := $(CC_OLD)
-build/src/libultra/io/visetxscale.c.o: OPTFLAGS := -O1
-build/src/libultra/io/visetyscale.c.o: CC := $(CC_OLD)
-build/src/libultra/io/visetyscale.c.o: OPTFLAGS := -O1
-build/src/libultra/al/synallocfx.c.o: CC := $(CC_OLD)
-build/src/libultra/al/synallocfx.c.o: OPTFLAGS := -O3
-
-build/src/libultra/io/gbpakcheckconnector.c.o: CC := $(CC_OLD)
-build/src/libultra/io/gbpakreadid.c.o: CC := $(CC_OLD)
-build/src/libultra/io/gbpakreadwrite.c.o: CC := $(CC_OLD)
-build/src/libultra/io/gbpakselectbank.c.o: CC := $(CC_OLD)
-
 # run ASM-processor on non-libultra source files
 $(DECOMP_C_OBJS): CC := $(ASMPROC) $(ASMPROC_FLAGS) $(CC) -- $(AS) $(ASFLAGS) --
-
-# turn off syntax checking errors for libultra
-build/src/libultra/al/%.c.o: CHECK_WARNINGS := -w
-build/src/libultra/gu/%.c.o: CHECK_WARNINGS := -w
-build/src/libultra/io/%.c.o: CHECK_WARNINGS := -w
-build/src/libultra/libc/%.c.o: CHECK_WARNINGS := -w
-build/src/libultra/os/%.c.o: CHECK_WARNINGS := -w
 
 ######################## Build #############################
 

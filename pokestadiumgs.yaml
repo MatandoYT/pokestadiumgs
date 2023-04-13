@@ -9,10 +9,12 @@ options:
   header_encoding: ASCII
   platform: n64
   ld_script_path: pokestadiumgs.ld
-  # undefined_funcs_auto: True
-  # undefined_funcs_auto_path: undefined_funcs_auto.txt
-  # undefined_syms_auto: True
-  # undefined_syms_auto_path: undefined_syms_auto.txt
+  create_undefined_funcs_auto: True
+  undefined_funcs_auto_path: undefined_funcs.txt
+  create_undefined_syms_auto: True
+  undefined_syms_auto_path: undefined_syms.txt
+  # symbol_addrs_path: symbol_addrs.txt
+  # undefined_syms_path: undefined_syms.txt
   symbol_addrs_path: tools/symbol_addrs.txt
   # asm_path: asm
   # src_path: src
@@ -27,20 +29,36 @@ segments:
   - name: header
     type: header
     start: 0x0
+    vram: 0
+    subsegments:
+    - [0x0000, header, header]
 
   - name: boot
     type: code
     start: 0x40
     vram: 0xA4000040
-    files:
-      - [0x0040, asm, boot]
-      - [0x0B70, bin, bootcode_font]
+    subsegments:
+    - [0x0040, asm, boot]
+    - [0x0B70, bin, bootcode_font]
 
-  - name: code
+  - name: entry
     type: code
     start: 0x1000
     vram: 0x80000400
-    files:
-      [0x1000, asm] // ram main
-      [0x1060, asm] // rsp graphics
-      [0x]
+    subsegments:
+      - [0x1000, hasm]
+
+  - name: main
+    type: code
+    start: 0x1060
+    vram: 0x80000460
+    follows_vram: entry
+    bss_size: 0x8C5F0
+    subsegments:
+      - [0x11B0, data]
+      - { start: 0xA8A80, type: bss, vram: 0x800A7E80 }
+
+  - type: bin
+    start: 0xA8A80
+    follows_vram: main
+  - [0x4000000]
