@@ -1,0 +1,16 @@
+# Requirements
+PyYAML
+pylibyaml
+pypng
+colorama
+rabbitizer>=1.2.0
+pygfxd
+tqdm
+intervaltree
+n64img
+crunch64
+splat64[mips]==0.25.0
+mapfile-parser>=2.4.0,<3.0.0
+libyaz0
+ipl3checksum>=1.2.0,<2.0.0
+spimdisasm>=1.16.3,<2.0.0
