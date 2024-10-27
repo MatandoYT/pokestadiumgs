@@ -133,7 +133,116 @@
     - [0x79510, asm]
     - [0x79640, asm]
     - [0x796B0, asm]
-    - [0x79750, bin]
+    - [0x79750, hasm]
+    - [0x798B0, asm]
+    - [0x85DA0, data]
+    - [0xA8600, bin] # F3DEX bin
 
+  # unk fragment
+  - name: fragment1
+    type: code
+    bss_size: 0x0
+    start: 0xA8A80
+    vram: 0x83500000
+    subsegments:
+    - [0xA8A80, hasm, fragments/1/fragment1_header]
+    - [0xA8AA0, asm,  fragments/1/fragment1_code]
+    - [0xAC540, data, fragments/1/fragment1_data]
+
+  # unk fragment
+  - name: fragment2
+    type: code
+    bss_size: 0x0
+    start: 0xAD260
+    vram: 0x81900000
+    subsegments:
+    - [0xAD260, hasm, fragments/2/fragment2_header]
+    - [0xAD280, asm,  fragments/2/fragment2_code]
+    - [0xAD970, data, fragments/2/fragment2_data]
+
+  # unk fragment
+  - name: fragment3
+    type: code
+    bss_size: 0x0
+    start: 0xADCA0
+    vram: 0x81A00000
+    subsegments:
+    - [0xADCA0, hasm, fragments/3/fragment3_header]
+    - [0xADCC0, asm,  fragments/3/fragment3_code]
+    - [0xAE5D0, data, fragments/3/fragment3_data]
+
+  # unk fragment
+  - name: fragment4
+    type: code
+    bss_size: 0x0
+    start: 0xAE5E0
+    vram: 0x81800000
+    subsegments:
+    - [0xAE5E0, hasm, fragments/4/fragment4_header]
+    - [0xAE600, asm,  fragments/4/fragment4_code]
+    - [0xB3F00, data, fragments/4/fragment4_data]
+
+  # unk fragment
+  - name: fragment5
+    type: code
+    bss_size: 0x0
+    start: 0xB4D90
+    vram: 0x83200000 # unk vram as it seems(?) this isnt loaded. speculated 83200000 based on the calls?
+    subsegments:
+    - [0xB4D90, hasm, fragments/5/fragment5_header]
+    - [0xB4DB0, asm,  fragments/5/fragment5_code]
+    - [0xB58B0, data, fragments/5/fragment5_data]
+
+  # unk fragment
+  - name: fragment6
+    type: code
+    bss_size: 0x0
+    start: 0xB5DA0
+    vram: 0x83100000
+    subsegments:
+    - [0xB5DA0, hasm, fragments/6/fragment6_header]
+    - [0xB5DC0, asm,  fragments/6/fragment6_code]
+    - [0xB8030, data, fragments/6/fragment6_data]
+
+  - name: fragment7
+    type: code
+    bss_size: 0x0
+    start: 0xBA230
+    vram: 0x83000000 # unk vram. probably 83000000?
+    subsegments:
+    - [0xBA230, hasm, fragments/7/fragment7_header]
+    - [0xBA250, asm,  fragments/7/fragment7_code]
+    - [0xC5BD0, data, fragments/7/fragment7_data]
+
+  - name: fragment8
+    type: code
+    bss_size: 0x0
+    start: 0xCC6B0
+    vram: 0x82F00000 # unk vram. probably 82F00000?
+    subsegments:
+    - [0xCC6B0, hasm, fragments/8/fragment8_header]
+    - [0xCC6D0, asm,  fragments/8/fragment8_code]
+    - [0xCE660, data, fragments/8/fragment8_data]
+
+  - name: fragment9
+    type: code
+    bss_size: 0x0
+    start: 0xD0480
+    vram: 0x8FB00000 # unk vram. probably 8FB00000?
+    subsegments:
+    - [0xD0480, hasm, fragments/9/fragment9_header]
+    - [0xD04A0, asm,  fragments/9/fragment9_code]
+    - [0xD3910, data, fragments/9/fragment9_data]
+  
+  - name: fragment10
+    type: code
+    bss_size: 0x0
+    start: 0xD4C30
+    vram: 0x82800000 # unk vram. probably 82800000?
+    subsegments:
+    - [0xD4C30, hasm, fragments/10/fragment10_header]
+    - [0xD4C50, asm,  fragments/10/fragment10_code]
+
+  - [0xD7BA0,  bin]
+  - [0x437600, bin] # rest of ROM
   - [0x4000000] # end of ROM
-   
