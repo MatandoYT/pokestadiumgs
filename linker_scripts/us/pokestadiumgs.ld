@@ -682,13 +682,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment1_TEXT_START = .;
-        build/asm/us/fragments/1/fragment1_header.o(.text);
+        build/asm/us/data/fragments/1/fragment1_header.o(.text);
         build/asm/us/fragments/1/fragment1_code.o(.text);
         fragment1_TEXT_END = .;
         fragment1_TEXT_SIZE = ABSOLUTE(fragment1_TEXT_END - fragment1_TEXT_START);
         fragment1_DATA_START = .;
         fragments_1_fragment1_header = .;
-        build/asm/us/fragments/1/fragment1_header.o(.data);
+        build/asm/us/data/fragments/1/fragment1_header.o(.data);
         fragments_1_fragment1_code = .;
         build/asm/us/fragments/1/fragment1_code.o(.data);
         fragments_1_fragment1_data_data = .;
@@ -696,7 +696,7 @@ SECTIONS
         fragment1_DATA_END = .;
         fragment1_DATA_SIZE = ABSOLUTE(fragment1_DATA_END - fragment1_DATA_START);
         fragment1_RODATA_START = .;
-        build/asm/us/fragments/1/fragment1_header.o(.rodata);
+        build/asm/us/data/fragments/1/fragment1_header.o(.rodata);
         build/asm/us/fragments/1/fragment1_code.o(.rodata);
         fragment1_RODATA_END = .;
         fragment1_RODATA_SIZE = ABSOLUTE(fragment1_RODATA_END - fragment1_RODATA_START);
@@ -706,7 +706,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment1_BSS_START = .;
-        build/asm/us/fragments/1/fragment1_header.o(.bss);
+        build/asm/us/data/fragments/1/fragment1_header.o(.bss);
         build/asm/us/fragments/1/fragment1_code.o(.bss);
         fragment1_BSS_END = .;
         fragment1_BSS_SIZE = ABSOLUTE(fragment1_BSS_END - fragment1_BSS_START);
@@ -723,13 +723,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment2_TEXT_START = .;
-        build/asm/us/fragments/2/fragment2_header.o(.text);
+        build/asm/us/data/fragments/2/fragment2_header.o(.text);
         build/asm/us/fragments/2/fragment2_code.o(.text);
         fragment2_TEXT_END = .;
         fragment2_TEXT_SIZE = ABSOLUTE(fragment2_TEXT_END - fragment2_TEXT_START);
         fragment2_DATA_START = .;
         fragments_2_fragment2_header = .;
-        build/asm/us/fragments/2/fragment2_header.o(.data);
+        build/asm/us/data/fragments/2/fragment2_header.o(.data);
         fragments_2_fragment2_code = .;
         build/asm/us/fragments/2/fragment2_code.o(.data);
         fragments_2_fragment2_data_data = .;
@@ -737,7 +737,7 @@ SECTIONS
         fragment2_DATA_END = .;
         fragment2_DATA_SIZE = ABSOLUTE(fragment2_DATA_END - fragment2_DATA_START);
         fragment2_RODATA_START = .;
-        build/asm/us/fragments/2/fragment2_header.o(.rodata);
+        build/asm/us/data/fragments/2/fragment2_header.o(.rodata);
         build/asm/us/fragments/2/fragment2_code.o(.rodata);
         fragment2_RODATA_END = .;
         fragment2_RODATA_SIZE = ABSOLUTE(fragment2_RODATA_END - fragment2_RODATA_START);
@@ -747,7 +747,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment2_BSS_START = .;
-        build/asm/us/fragments/2/fragment2_header.o(.bss);
+        build/asm/us/data/fragments/2/fragment2_header.o(.bss);
         build/asm/us/fragments/2/fragment2_code.o(.bss);
         fragment2_BSS_END = .;
         fragment2_BSS_SIZE = ABSOLUTE(fragment2_BSS_END - fragment2_BSS_START);
@@ -764,13 +764,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment3_TEXT_START = .;
-        build/asm/us/fragments/3/fragment3_header.o(.text);
+        build/asm/us/data/fragments/3/fragment3_header.o(.text);
         build/asm/us/fragments/3/fragment3_code.o(.text);
         fragment3_TEXT_END = .;
         fragment3_TEXT_SIZE = ABSOLUTE(fragment3_TEXT_END - fragment3_TEXT_START);
         fragment3_DATA_START = .;
         fragments_3_fragment3_header = .;
-        build/asm/us/fragments/3/fragment3_header.o(.data);
+        build/asm/us/data/fragments/3/fragment3_header.o(.data);
         fragments_3_fragment3_code = .;
         build/asm/us/fragments/3/fragment3_code.o(.data);
         fragments_3_fragment3_data_data = .;
@@ -778,7 +778,7 @@ SECTIONS
         fragment3_DATA_END = .;
         fragment3_DATA_SIZE = ABSOLUTE(fragment3_DATA_END - fragment3_DATA_START);
         fragment3_RODATA_START = .;
-        build/asm/us/fragments/3/fragment3_header.o(.rodata);
+        build/asm/us/data/fragments/3/fragment3_header.o(.rodata);
         build/asm/us/fragments/3/fragment3_code.o(.rodata);
         fragment3_RODATA_END = .;
         fragment3_RODATA_SIZE = ABSOLUTE(fragment3_RODATA_END - fragment3_RODATA_START);
@@ -788,7 +788,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment3_BSS_START = .;
-        build/asm/us/fragments/3/fragment3_header.o(.bss);
+        build/asm/us/data/fragments/3/fragment3_header.o(.bss);
         build/asm/us/fragments/3/fragment3_code.o(.bss);
         fragment3_BSS_END = .;
         fragment3_BSS_SIZE = ABSOLUTE(fragment3_BSS_END - fragment3_BSS_START);
@@ -805,13 +805,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment4_TEXT_START = .;
-        build/asm/us/fragments/4/fragment4_header.o(.text);
+        build/asm/us/data/fragments/4/fragment4_header.o(.text);
         build/asm/us/fragments/4/fragment4_code.o(.text);
         fragment4_TEXT_END = .;
         fragment4_TEXT_SIZE = ABSOLUTE(fragment4_TEXT_END - fragment4_TEXT_START);
         fragment4_DATA_START = .;
         fragments_4_fragment4_header = .;
-        build/asm/us/fragments/4/fragment4_header.o(.data);
+        build/asm/us/data/fragments/4/fragment4_header.o(.data);
         fragments_4_fragment4_code = .;
         build/asm/us/fragments/4/fragment4_code.o(.data);
         fragments_4_fragment4_data_data = .;
@@ -819,7 +819,7 @@ SECTIONS
         fragment4_DATA_END = .;
         fragment4_DATA_SIZE = ABSOLUTE(fragment4_DATA_END - fragment4_DATA_START);
         fragment4_RODATA_START = .;
-        build/asm/us/fragments/4/fragment4_header.o(.rodata);
+        build/asm/us/data/fragments/4/fragment4_header.o(.rodata);
         build/asm/us/fragments/4/fragment4_code.o(.rodata);
         fragment4_RODATA_END = .;
         fragment4_RODATA_SIZE = ABSOLUTE(fragment4_RODATA_END - fragment4_RODATA_START);
@@ -829,7 +829,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment4_BSS_START = .;
-        build/asm/us/fragments/4/fragment4_header.o(.bss);
+        build/asm/us/data/fragments/4/fragment4_header.o(.bss);
         build/asm/us/fragments/4/fragment4_code.o(.bss);
         fragment4_BSS_END = .;
         fragment4_BSS_SIZE = ABSOLUTE(fragment4_BSS_END - fragment4_BSS_START);
@@ -846,13 +846,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment5_TEXT_START = .;
-        build/asm/us/fragments/5/fragment5_header.o(.text);
+        build/asm/us/data/fragments/5/fragment5_header.o(.text);
         build/asm/us/fragments/5/fragment5_code.o(.text);
         fragment5_TEXT_END = .;
         fragment5_TEXT_SIZE = ABSOLUTE(fragment5_TEXT_END - fragment5_TEXT_START);
         fragment5_DATA_START = .;
         fragments_5_fragment5_header = .;
-        build/asm/us/fragments/5/fragment5_header.o(.data);
+        build/asm/us/data/fragments/5/fragment5_header.o(.data);
         fragments_5_fragment5_code = .;
         build/asm/us/fragments/5/fragment5_code.o(.data);
         fragments_5_fragment5_data_data = .;
@@ -860,7 +860,7 @@ SECTIONS
         fragment5_DATA_END = .;
         fragment5_DATA_SIZE = ABSOLUTE(fragment5_DATA_END - fragment5_DATA_START);
         fragment5_RODATA_START = .;
-        build/asm/us/fragments/5/fragment5_header.o(.rodata);
+        build/asm/us/data/fragments/5/fragment5_header.o(.rodata);
         build/asm/us/fragments/5/fragment5_code.o(.rodata);
         fragment5_RODATA_END = .;
         fragment5_RODATA_SIZE = ABSOLUTE(fragment5_RODATA_END - fragment5_RODATA_START);
@@ -870,7 +870,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment5_BSS_START = .;
-        build/asm/us/fragments/5/fragment5_header.o(.bss);
+        build/asm/us/data/fragments/5/fragment5_header.o(.bss);
         build/asm/us/fragments/5/fragment5_code.o(.bss);
         fragment5_BSS_END = .;
         fragment5_BSS_SIZE = ABSOLUTE(fragment5_BSS_END - fragment5_BSS_START);
@@ -887,13 +887,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment6_TEXT_START = .;
-        build/asm/us/fragments/6/fragment6_header.o(.text);
+        build/asm/us/data/fragments/6/fragment6_header.o(.text);
         build/asm/us/fragments/6/fragment6_code.o(.text);
         fragment6_TEXT_END = .;
         fragment6_TEXT_SIZE = ABSOLUTE(fragment6_TEXT_END - fragment6_TEXT_START);
         fragment6_DATA_START = .;
         fragments_6_fragment6_header = .;
-        build/asm/us/fragments/6/fragment6_header.o(.data);
+        build/asm/us/data/fragments/6/fragment6_header.o(.data);
         fragments_6_fragment6_code = .;
         build/asm/us/fragments/6/fragment6_code.o(.data);
         fragments_6_fragment6_data_data = .;
@@ -901,7 +901,7 @@ SECTIONS
         fragment6_DATA_END = .;
         fragment6_DATA_SIZE = ABSOLUTE(fragment6_DATA_END - fragment6_DATA_START);
         fragment6_RODATA_START = .;
-        build/asm/us/fragments/6/fragment6_header.o(.rodata);
+        build/asm/us/data/fragments/6/fragment6_header.o(.rodata);
         build/asm/us/fragments/6/fragment6_code.o(.rodata);
         fragment6_RODATA_END = .;
         fragment6_RODATA_SIZE = ABSOLUTE(fragment6_RODATA_END - fragment6_RODATA_START);
@@ -911,7 +911,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment6_BSS_START = .;
-        build/asm/us/fragments/6/fragment6_header.o(.bss);
+        build/asm/us/data/fragments/6/fragment6_header.o(.bss);
         build/asm/us/fragments/6/fragment6_code.o(.bss);
         fragment6_BSS_END = .;
         fragment6_BSS_SIZE = ABSOLUTE(fragment6_BSS_END - fragment6_BSS_START);
@@ -928,13 +928,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment7_TEXT_START = .;
-        build/asm/us/fragments/7/fragment7_header.o(.text);
+        build/asm/us/data/fragments/7/fragment7_header.o(.text);
         build/asm/us/fragments/7/fragment7_code.o(.text);
         fragment7_TEXT_END = .;
         fragment7_TEXT_SIZE = ABSOLUTE(fragment7_TEXT_END - fragment7_TEXT_START);
         fragment7_DATA_START = .;
         fragments_7_fragment7_header = .;
-        build/asm/us/fragments/7/fragment7_header.o(.data);
+        build/asm/us/data/fragments/7/fragment7_header.o(.data);
         fragments_7_fragment7_code = .;
         build/asm/us/fragments/7/fragment7_code.o(.data);
         fragments_7_fragment7_data_data = .;
@@ -942,7 +942,7 @@ SECTIONS
         fragment7_DATA_END = .;
         fragment7_DATA_SIZE = ABSOLUTE(fragment7_DATA_END - fragment7_DATA_START);
         fragment7_RODATA_START = .;
-        build/asm/us/fragments/7/fragment7_header.o(.rodata);
+        build/asm/us/data/fragments/7/fragment7_header.o(.rodata);
         build/asm/us/fragments/7/fragment7_code.o(.rodata);
         fragment7_RODATA_END = .;
         fragment7_RODATA_SIZE = ABSOLUTE(fragment7_RODATA_END - fragment7_RODATA_START);
@@ -952,7 +952,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment7_BSS_START = .;
-        build/asm/us/fragments/7/fragment7_header.o(.bss);
+        build/asm/us/data/fragments/7/fragment7_header.o(.bss);
         build/asm/us/fragments/7/fragment7_code.o(.bss);
         fragment7_BSS_END = .;
         fragment7_BSS_SIZE = ABSOLUTE(fragment7_BSS_END - fragment7_BSS_START);
@@ -969,13 +969,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment8_TEXT_START = .;
-        build/asm/us/fragments/8/fragment8_header.o(.text);
+        build/asm/us/data/fragments/8/fragment8_header.o(.text);
         build/asm/us/fragments/8/fragment8_code.o(.text);
         fragment8_TEXT_END = .;
         fragment8_TEXT_SIZE = ABSOLUTE(fragment8_TEXT_END - fragment8_TEXT_START);
         fragment8_DATA_START = .;
         fragments_8_fragment8_header = .;
-        build/asm/us/fragments/8/fragment8_header.o(.data);
+        build/asm/us/data/fragments/8/fragment8_header.o(.data);
         fragments_8_fragment8_code = .;
         build/asm/us/fragments/8/fragment8_code.o(.data);
         fragments_8_fragment8_data_data = .;
@@ -983,7 +983,7 @@ SECTIONS
         fragment8_DATA_END = .;
         fragment8_DATA_SIZE = ABSOLUTE(fragment8_DATA_END - fragment8_DATA_START);
         fragment8_RODATA_START = .;
-        build/asm/us/fragments/8/fragment8_header.o(.rodata);
+        build/asm/us/data/fragments/8/fragment8_header.o(.rodata);
         build/asm/us/fragments/8/fragment8_code.o(.rodata);
         fragment8_RODATA_END = .;
         fragment8_RODATA_SIZE = ABSOLUTE(fragment8_RODATA_END - fragment8_RODATA_START);
@@ -993,7 +993,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment8_BSS_START = .;
-        build/asm/us/fragments/8/fragment8_header.o(.bss);
+        build/asm/us/data/fragments/8/fragment8_header.o(.bss);
         build/asm/us/fragments/8/fragment8_code.o(.bss);
         fragment8_BSS_END = .;
         fragment8_BSS_SIZE = ABSOLUTE(fragment8_BSS_END - fragment8_BSS_START);
@@ -1010,13 +1010,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment9_TEXT_START = .;
-        build/asm/us/fragments/9/fragment9_header.o(.text);
+        build/asm/us/data/fragments/9/fragment9_header.o(.text);
         build/asm/us/fragments/9/fragment9_code.o(.text);
         fragment9_TEXT_END = .;
         fragment9_TEXT_SIZE = ABSOLUTE(fragment9_TEXT_END - fragment9_TEXT_START);
         fragment9_DATA_START = .;
         fragments_9_fragment9_header = .;
-        build/asm/us/fragments/9/fragment9_header.o(.data);
+        build/asm/us/data/fragments/9/fragment9_header.o(.data);
         fragments_9_fragment9_code = .;
         build/asm/us/fragments/9/fragment9_code.o(.data);
         fragments_9_fragment9_data_data = .;
@@ -1024,7 +1024,7 @@ SECTIONS
         fragment9_DATA_END = .;
         fragment9_DATA_SIZE = ABSOLUTE(fragment9_DATA_END - fragment9_DATA_START);
         fragment9_RODATA_START = .;
-        build/asm/us/fragments/9/fragment9_header.o(.rodata);
+        build/asm/us/data/fragments/9/fragment9_header.o(.rodata);
         build/asm/us/fragments/9/fragment9_code.o(.rodata);
         fragment9_RODATA_END = .;
         fragment9_RODATA_SIZE = ABSOLUTE(fragment9_RODATA_END - fragment9_RODATA_START);
@@ -1034,7 +1034,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment9_BSS_START = .;
-        build/asm/us/fragments/9/fragment9_header.o(.bss);
+        build/asm/us/data/fragments/9/fragment9_header.o(.bss);
         build/asm/us/fragments/9/fragment9_code.o(.bss);
         fragment9_BSS_END = .;
         fragment9_BSS_SIZE = ABSOLUTE(fragment9_BSS_END - fragment9_BSS_START);
@@ -1051,13 +1051,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment10_TEXT_START = .;
-        build/asm/us/fragments/10/fragment10_header.o(.text);
+        build/asm/us/data/fragments/10/fragment10_header.o(.text);
         build/asm/us/fragments/10/fragment10_code.o(.text);
         fragment10_TEXT_END = .;
         fragment10_TEXT_SIZE = ABSOLUTE(fragment10_TEXT_END - fragment10_TEXT_START);
         fragment10_DATA_START = .;
         fragments_10_fragment10_header = .;
-        build/asm/us/fragments/10/fragment10_header.o(.data);
+        build/asm/us/data/fragments/10/fragment10_header.o(.data);
         fragments_10_fragment10_code = .;
         build/asm/us/fragments/10/fragment10_code.o(.data);
         fragments_10_fragment10_data_data = .;
@@ -1065,7 +1065,7 @@ SECTIONS
         fragment10_DATA_END = .;
         fragment10_DATA_SIZE = ABSOLUTE(fragment10_DATA_END - fragment10_DATA_START);
         fragment10_RODATA_START = .;
-        build/asm/us/fragments/10/fragment10_header.o(.rodata);
+        build/asm/us/data/fragments/10/fragment10_header.o(.rodata);
         build/asm/us/fragments/10/fragment10_code.o(.rodata);
         fragment10_RODATA_END = .;
         fragment10_RODATA_SIZE = ABSOLUTE(fragment10_RODATA_END - fragment10_RODATA_START);
@@ -1075,7 +1075,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment10_BSS_START = .;
-        build/asm/us/fragments/10/fragment10_header.o(.bss);
+        build/asm/us/data/fragments/10/fragment10_header.o(.bss);
         build/asm/us/fragments/10/fragment10_code.o(.bss);
         fragment10_BSS_END = .;
         fragment10_BSS_SIZE = ABSOLUTE(fragment10_BSS_END - fragment10_BSS_START);
@@ -1092,13 +1092,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment11_TEXT_START = .;
-        build/asm/us/fragments/11/fragment11_header.o(.text);
+        build/asm/us/data/fragments/11/fragment11_header.o(.text);
         build/asm/us/fragments/11/fragment11_code.o(.text);
         fragment11_TEXT_END = .;
         fragment11_TEXT_SIZE = ABSOLUTE(fragment11_TEXT_END - fragment11_TEXT_START);
         fragment11_DATA_START = .;
         fragments_11_fragment11_header = .;
-        build/asm/us/fragments/11/fragment11_header.o(.data);
+        build/asm/us/data/fragments/11/fragment11_header.o(.data);
         fragments_11_fragment11_code = .;
         build/asm/us/fragments/11/fragment11_code.o(.data);
         fragments_11_fragment11_data_data = .;
@@ -1106,7 +1106,7 @@ SECTIONS
         fragment11_DATA_END = .;
         fragment11_DATA_SIZE = ABSOLUTE(fragment11_DATA_END - fragment11_DATA_START);
         fragment11_RODATA_START = .;
-        build/asm/us/fragments/11/fragment11_header.o(.rodata);
+        build/asm/us/data/fragments/11/fragment11_header.o(.rodata);
         build/asm/us/fragments/11/fragment11_code.o(.rodata);
         fragment11_RODATA_END = .;
         fragment11_RODATA_SIZE = ABSOLUTE(fragment11_RODATA_END - fragment11_RODATA_START);
@@ -1116,7 +1116,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment11_BSS_START = .;
-        build/asm/us/fragments/11/fragment11_header.o(.bss);
+        build/asm/us/data/fragments/11/fragment11_header.o(.bss);
         build/asm/us/fragments/11/fragment11_code.o(.bss);
         fragment11_BSS_END = .;
         fragment11_BSS_SIZE = ABSOLUTE(fragment11_BSS_END - fragment11_BSS_START);
@@ -1133,13 +1133,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment12_TEXT_START = .;
-        build/asm/us/fragments/12/fragment12_header.o(.text);
+        build/asm/us/data/fragments/12/fragment12_header.o(.text);
         build/asm/us/fragments/12/fragment12_code.o(.text);
         fragment12_TEXT_END = .;
         fragment12_TEXT_SIZE = ABSOLUTE(fragment12_TEXT_END - fragment12_TEXT_START);
         fragment12_DATA_START = .;
         fragments_12_fragment12_header = .;
-        build/asm/us/fragments/12/fragment12_header.o(.data);
+        build/asm/us/data/fragments/12/fragment12_header.o(.data);
         fragments_12_fragment12_code = .;
         build/asm/us/fragments/12/fragment12_code.o(.data);
         fragments_12_fragment12_data_data = .;
@@ -1147,7 +1147,7 @@ SECTIONS
         fragment12_DATA_END = .;
         fragment12_DATA_SIZE = ABSOLUTE(fragment12_DATA_END - fragment12_DATA_START);
         fragment12_RODATA_START = .;
-        build/asm/us/fragments/12/fragment12_header.o(.rodata);
+        build/asm/us/data/fragments/12/fragment12_header.o(.rodata);
         build/asm/us/fragments/12/fragment12_code.o(.rodata);
         fragment12_RODATA_END = .;
         fragment12_RODATA_SIZE = ABSOLUTE(fragment12_RODATA_END - fragment12_RODATA_START);
@@ -1157,7 +1157,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment12_BSS_START = .;
-        build/asm/us/fragments/12/fragment12_header.o(.bss);
+        build/asm/us/data/fragments/12/fragment12_header.o(.bss);
         build/asm/us/fragments/12/fragment12_code.o(.bss);
         fragment12_BSS_END = .;
         fragment12_BSS_SIZE = ABSOLUTE(fragment12_BSS_END - fragment12_BSS_START);
@@ -1174,13 +1174,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment13_TEXT_START = .;
-        build/asm/us/fragments/13/fragment13_header.o(.text);
+        build/asm/us/data/fragments/13/fragment13_header.o(.text);
         build/asm/us/fragments/13/fragment13_code.o(.text);
         fragment13_TEXT_END = .;
         fragment13_TEXT_SIZE = ABSOLUTE(fragment13_TEXT_END - fragment13_TEXT_START);
         fragment13_DATA_START = .;
         fragments_13_fragment13_header = .;
-        build/asm/us/fragments/13/fragment13_header.o(.data);
+        build/asm/us/data/fragments/13/fragment13_header.o(.data);
         fragments_13_fragment13_code = .;
         build/asm/us/fragments/13/fragment13_code.o(.data);
         fragments_13_fragment13_data_data = .;
@@ -1188,7 +1188,7 @@ SECTIONS
         fragment13_DATA_END = .;
         fragment13_DATA_SIZE = ABSOLUTE(fragment13_DATA_END - fragment13_DATA_START);
         fragment13_RODATA_START = .;
-        build/asm/us/fragments/13/fragment13_header.o(.rodata);
+        build/asm/us/data/fragments/13/fragment13_header.o(.rodata);
         build/asm/us/fragments/13/fragment13_code.o(.rodata);
         fragment13_RODATA_END = .;
         fragment13_RODATA_SIZE = ABSOLUTE(fragment13_RODATA_END - fragment13_RODATA_START);
@@ -1198,7 +1198,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment13_BSS_START = .;
-        build/asm/us/fragments/13/fragment13_header.o(.bss);
+        build/asm/us/data/fragments/13/fragment13_header.o(.bss);
         build/asm/us/fragments/13/fragment13_code.o(.bss);
         fragment13_BSS_END = .;
         fragment13_BSS_SIZE = ABSOLUTE(fragment13_BSS_END - fragment13_BSS_START);
@@ -1215,13 +1215,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment14_TEXT_START = .;
-        build/asm/us/fragments/14/fragment14_header.o(.text);
+        build/asm/us/data/fragments/14/fragment14_header.o(.text);
         build/asm/us/fragments/14/fragment14_code.o(.text);
         fragment14_TEXT_END = .;
         fragment14_TEXT_SIZE = ABSOLUTE(fragment14_TEXT_END - fragment14_TEXT_START);
         fragment14_DATA_START = .;
         fragments_14_fragment14_header = .;
-        build/asm/us/fragments/14/fragment14_header.o(.data);
+        build/asm/us/data/fragments/14/fragment14_header.o(.data);
         fragments_14_fragment14_code = .;
         build/asm/us/fragments/14/fragment14_code.o(.data);
         fragments_14_fragment14_data_data = .;
@@ -1229,7 +1229,7 @@ SECTIONS
         fragment14_DATA_END = .;
         fragment14_DATA_SIZE = ABSOLUTE(fragment14_DATA_END - fragment14_DATA_START);
         fragment14_RODATA_START = .;
-        build/asm/us/fragments/14/fragment14_header.o(.rodata);
+        build/asm/us/data/fragments/14/fragment14_header.o(.rodata);
         build/asm/us/fragments/14/fragment14_code.o(.rodata);
         fragment14_RODATA_END = .;
         fragment14_RODATA_SIZE = ABSOLUTE(fragment14_RODATA_END - fragment14_RODATA_START);
@@ -1239,7 +1239,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment14_BSS_START = .;
-        build/asm/us/fragments/14/fragment14_header.o(.bss);
+        build/asm/us/data/fragments/14/fragment14_header.o(.bss);
         build/asm/us/fragments/14/fragment14_code.o(.bss);
         fragment14_BSS_END = .;
         fragment14_BSS_SIZE = ABSOLUTE(fragment14_BSS_END - fragment14_BSS_START);
@@ -1256,13 +1256,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment15_TEXT_START = .;
-        build/asm/us/fragments/15/fragment15_header.o(.text);
+        build/asm/us/data/fragments/15/fragment15_header.o(.text);
         build/asm/us/fragments/15/fragment15_code.o(.text);
         fragment15_TEXT_END = .;
         fragment15_TEXT_SIZE = ABSOLUTE(fragment15_TEXT_END - fragment15_TEXT_START);
         fragment15_DATA_START = .;
         fragments_15_fragment15_header = .;
-        build/asm/us/fragments/15/fragment15_header.o(.data);
+        build/asm/us/data/fragments/15/fragment15_header.o(.data);
         fragments_15_fragment15_code = .;
         build/asm/us/fragments/15/fragment15_code.o(.data);
         fragments_15_fragment15_data_data = .;
@@ -1270,7 +1270,7 @@ SECTIONS
         fragment15_DATA_END = .;
         fragment15_DATA_SIZE = ABSOLUTE(fragment15_DATA_END - fragment15_DATA_START);
         fragment15_RODATA_START = .;
-        build/asm/us/fragments/15/fragment15_header.o(.rodata);
+        build/asm/us/data/fragments/15/fragment15_header.o(.rodata);
         build/asm/us/fragments/15/fragment15_code.o(.rodata);
         fragment15_RODATA_END = .;
         fragment15_RODATA_SIZE = ABSOLUTE(fragment15_RODATA_END - fragment15_RODATA_START);
@@ -1280,7 +1280,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment15_BSS_START = .;
-        build/asm/us/fragments/15/fragment15_header.o(.bss);
+        build/asm/us/data/fragments/15/fragment15_header.o(.bss);
         build/asm/us/fragments/15/fragment15_code.o(.bss);
         fragment15_BSS_END = .;
         fragment15_BSS_SIZE = ABSOLUTE(fragment15_BSS_END - fragment15_BSS_START);
@@ -1297,13 +1297,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment16_TEXT_START = .;
-        build/asm/us/fragments/16/fragment16_header.o(.text);
+        build/asm/us/data/fragments/16/fragment16_header.o(.text);
         build/asm/us/fragments/16/fragment16_code.o(.text);
         fragment16_TEXT_END = .;
         fragment16_TEXT_SIZE = ABSOLUTE(fragment16_TEXT_END - fragment16_TEXT_START);
         fragment16_DATA_START = .;
         fragments_16_fragment16_header = .;
-        build/asm/us/fragments/16/fragment16_header.o(.data);
+        build/asm/us/data/fragments/16/fragment16_header.o(.data);
         fragments_16_fragment16_code = .;
         build/asm/us/fragments/16/fragment16_code.o(.data);
         fragments_16_fragment16_data_data = .;
@@ -1311,7 +1311,7 @@ SECTIONS
         fragment16_DATA_END = .;
         fragment16_DATA_SIZE = ABSOLUTE(fragment16_DATA_END - fragment16_DATA_START);
         fragment16_RODATA_START = .;
-        build/asm/us/fragments/16/fragment16_header.o(.rodata);
+        build/asm/us/data/fragments/16/fragment16_header.o(.rodata);
         build/asm/us/fragments/16/fragment16_code.o(.rodata);
         fragment16_RODATA_END = .;
         fragment16_RODATA_SIZE = ABSOLUTE(fragment16_RODATA_END - fragment16_RODATA_START);
@@ -1321,7 +1321,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment16_BSS_START = .;
-        build/asm/us/fragments/16/fragment16_header.o(.bss);
+        build/asm/us/data/fragments/16/fragment16_header.o(.bss);
         build/asm/us/fragments/16/fragment16_code.o(.bss);
         fragment16_BSS_END = .;
         fragment16_BSS_SIZE = ABSOLUTE(fragment16_BSS_END - fragment16_BSS_START);
@@ -1338,13 +1338,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment17_TEXT_START = .;
-        build/asm/us/fragments/17/fragment17_header.o(.text);
+        build/asm/us/data/fragments/17/fragment17_header.o(.text);
         build/asm/us/fragments/17/fragment17_code.o(.text);
         fragment17_TEXT_END = .;
         fragment17_TEXT_SIZE = ABSOLUTE(fragment17_TEXT_END - fragment17_TEXT_START);
         fragment17_DATA_START = .;
         fragments_17_fragment17_header = .;
-        build/asm/us/fragments/17/fragment17_header.o(.data);
+        build/asm/us/data/fragments/17/fragment17_header.o(.data);
         fragments_17_fragment17_code = .;
         build/asm/us/fragments/17/fragment17_code.o(.data);
         fragments_17_fragment17_data_data = .;
@@ -1352,7 +1352,7 @@ SECTIONS
         fragment17_DATA_END = .;
         fragment17_DATA_SIZE = ABSOLUTE(fragment17_DATA_END - fragment17_DATA_START);
         fragment17_RODATA_START = .;
-        build/asm/us/fragments/17/fragment17_header.o(.rodata);
+        build/asm/us/data/fragments/17/fragment17_header.o(.rodata);
         build/asm/us/fragments/17/fragment17_code.o(.rodata);
         fragment17_RODATA_END = .;
         fragment17_RODATA_SIZE = ABSOLUTE(fragment17_RODATA_END - fragment17_RODATA_START);
@@ -1362,7 +1362,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment17_BSS_START = .;
-        build/asm/us/fragments/17/fragment17_header.o(.bss);
+        build/asm/us/data/fragments/17/fragment17_header.o(.bss);
         build/asm/us/fragments/17/fragment17_code.o(.bss);
         fragment17_BSS_END = .;
         fragment17_BSS_SIZE = ABSOLUTE(fragment17_BSS_END - fragment17_BSS_START);
@@ -1379,13 +1379,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment18_TEXT_START = .;
-        build/asm/us/fragments/18/fragment18_header.o(.text);
+        build/asm/us/data/fragments/18/fragment18_header.o(.text);
         build/asm/us/fragments/18/fragment18_code.o(.text);
         fragment18_TEXT_END = .;
         fragment18_TEXT_SIZE = ABSOLUTE(fragment18_TEXT_END - fragment18_TEXT_START);
         fragment18_DATA_START = .;
         fragments_18_fragment18_header = .;
-        build/asm/us/fragments/18/fragment18_header.o(.data);
+        build/asm/us/data/fragments/18/fragment18_header.o(.data);
         fragments_18_fragment18_code = .;
         build/asm/us/fragments/18/fragment18_code.o(.data);
         fragments_18_fragment18_data_data = .;
@@ -1393,7 +1393,7 @@ SECTIONS
         fragment18_DATA_END = .;
         fragment18_DATA_SIZE = ABSOLUTE(fragment18_DATA_END - fragment18_DATA_START);
         fragment18_RODATA_START = .;
-        build/asm/us/fragments/18/fragment18_header.o(.rodata);
+        build/asm/us/data/fragments/18/fragment18_header.o(.rodata);
         build/asm/us/fragments/18/fragment18_code.o(.rodata);
         fragment18_RODATA_END = .;
         fragment18_RODATA_SIZE = ABSOLUTE(fragment18_RODATA_END - fragment18_RODATA_START);
@@ -1403,7 +1403,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment18_BSS_START = .;
-        build/asm/us/fragments/18/fragment18_header.o(.bss);
+        build/asm/us/data/fragments/18/fragment18_header.o(.bss);
         build/asm/us/fragments/18/fragment18_code.o(.bss);
         fragment18_BSS_END = .;
         fragment18_BSS_SIZE = ABSOLUTE(fragment18_BSS_END - fragment18_BSS_START);
@@ -1420,13 +1420,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment19_TEXT_START = .;
-        build/asm/us/fragments/19/fragment19_header.o(.text);
+        build/asm/us/data/fragments/19/fragment19_header.o(.text);
         build/asm/us/fragments/19/fragment19_code.o(.text);
         fragment19_TEXT_END = .;
         fragment19_TEXT_SIZE = ABSOLUTE(fragment19_TEXT_END - fragment19_TEXT_START);
         fragment19_DATA_START = .;
         fragments_19_fragment19_header = .;
-        build/asm/us/fragments/19/fragment19_header.o(.data);
+        build/asm/us/data/fragments/19/fragment19_header.o(.data);
         fragments_19_fragment19_code = .;
         build/asm/us/fragments/19/fragment19_code.o(.data);
         fragments_19_fragment19_data_data = .;
@@ -1434,7 +1434,7 @@ SECTIONS
         fragment19_DATA_END = .;
         fragment19_DATA_SIZE = ABSOLUTE(fragment19_DATA_END - fragment19_DATA_START);
         fragment19_RODATA_START = .;
-        build/asm/us/fragments/19/fragment19_header.o(.rodata);
+        build/asm/us/data/fragments/19/fragment19_header.o(.rodata);
         build/asm/us/fragments/19/fragment19_code.o(.rodata);
         fragment19_RODATA_END = .;
         fragment19_RODATA_SIZE = ABSOLUTE(fragment19_RODATA_END - fragment19_RODATA_START);
@@ -1444,7 +1444,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment19_BSS_START = .;
-        build/asm/us/fragments/19/fragment19_header.o(.bss);
+        build/asm/us/data/fragments/19/fragment19_header.o(.bss);
         build/asm/us/fragments/19/fragment19_code.o(.bss);
         fragment19_BSS_END = .;
         fragment19_BSS_SIZE = ABSOLUTE(fragment19_BSS_END - fragment19_BSS_START);
@@ -1461,13 +1461,13 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment20_TEXT_START = .;
-        build/asm/us/fragments/20/fragment20_header.o(.text);
+        build/asm/us/data/fragments/20/fragment20_header.o(.text);
         build/asm/us/fragments/20/fragment20_code.o(.text);
         fragment20_TEXT_END = .;
         fragment20_TEXT_SIZE = ABSOLUTE(fragment20_TEXT_END - fragment20_TEXT_START);
         fragment20_DATA_START = .;
         fragments_20_fragment20_header = .;
-        build/asm/us/fragments/20/fragment20_header.o(.data);
+        build/asm/us/data/fragments/20/fragment20_header.o(.data);
         fragments_20_fragment20_code = .;
         build/asm/us/fragments/20/fragment20_code.o(.data);
         fragments_20_fragment20_data_data = .;
@@ -1475,7 +1475,7 @@ SECTIONS
         fragment20_DATA_END = .;
         fragment20_DATA_SIZE = ABSOLUTE(fragment20_DATA_END - fragment20_DATA_START);
         fragment20_RODATA_START = .;
-        build/asm/us/fragments/20/fragment20_header.o(.rodata);
+        build/asm/us/data/fragments/20/fragment20_header.o(.rodata);
         build/asm/us/fragments/20/fragment20_code.o(.rodata);
         fragment20_RODATA_END = .;
         fragment20_RODATA_SIZE = ABSOLUTE(fragment20_RODATA_END - fragment20_RODATA_START);
@@ -1485,7 +1485,7 @@ SECTIONS
     {
         FILL(0x00000000);
         fragment20_BSS_START = .;
-        build/asm/us/fragments/20/fragment20_header.o(.bss);
+        build/asm/us/data/fragments/20/fragment20_header.o(.bss);
         build/asm/us/fragments/20/fragment20_code.o(.bss);
         fragment20_BSS_END = .;
         fragment20_BSS_SIZE = ABSOLUTE(fragment20_BSS_END - fragment20_BSS_START);
@@ -1496,20 +1496,433 @@ SECTIONS
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    _13FF80_ROM_START = __romPos;
-    _13FF80_VRAM = ADDR(._13FF80);
-    ._13FF80 : AT(_13FF80_ROM_START) SUBALIGN(16)
+    fragment21_ROM_START = __romPos;
+    fragment21_VRAM = ADDR(.fragment21);
+    .fragment21 0x82500000 : AT(fragment21_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        _13FF80_DATA_START = .;
-        _13FF80 = .;
-        build/assets/us/13FF80.o(.data);
-        _13FF80_DATA_END = .;
-        _13FF80_DATA_SIZE = ABSOLUTE(_13FF80_DATA_END - _13FF80_DATA_START);
+        fragment21_TEXT_START = .;
+        build/asm/us/data/fragments/21/fragment21_header.o(.text);
+        build/asm/us/fragments/21/fragment21_code.o(.text);
+        fragment21_TEXT_END = .;
+        fragment21_TEXT_SIZE = ABSOLUTE(fragment21_TEXT_END - fragment21_TEXT_START);
+        fragment21_DATA_START = .;
+        fragments_21_fragment21_header = .;
+        build/asm/us/data/fragments/21/fragment21_header.o(.data);
+        fragments_21_fragment21_code = .;
+        build/asm/us/fragments/21/fragment21_code.o(.data);
+        fragments_21_fragment21_data_data = .;
+        build/asm/us/data/fragments/21/fragment21_data.data.o(.data);
+        fragment21_DATA_END = .;
+        fragment21_DATA_SIZE = ABSOLUTE(fragment21_DATA_END - fragment21_DATA_START);
+        fragment21_RODATA_START = .;
+        build/asm/us/data/fragments/21/fragment21_header.o(.rodata);
+        build/asm/us/fragments/21/fragment21_code.o(.rodata);
+        fragment21_RODATA_END = .;
+        fragment21_RODATA_SIZE = ABSOLUTE(fragment21_RODATA_END - fragment21_RODATA_START);
     }
-    __romPos += SIZEOF(._13FF80);
-    _13FF80_ROM_END = __romPos;
-    _13FF80_VRAM_END = .;
+    fragment21_bss_VRAM = ADDR(.fragment21_bss);
+    .fragment21_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment21_BSS_START = .;
+        build/asm/us/data/fragments/21/fragment21_header.o(.bss);
+        build/asm/us/fragments/21/fragment21_code.o(.bss);
+        fragment21_BSS_END = .;
+        fragment21_BSS_SIZE = ABSOLUTE(fragment21_BSS_END - fragment21_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment21);
+    fragment21_ROM_END = __romPos;
+    fragment21_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment22_ROM_START = __romPos;
+    fragment22_VRAM = ADDR(.fragment22);
+    .fragment22 0x82700000 : AT(fragment22_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment22_TEXT_START = .;
+        build/asm/us/data/fragments/22/fragment22_header.o(.text);
+        build/asm/us/fragments/22/fragment22_code.o(.text);
+        fragment22_TEXT_END = .;
+        fragment22_TEXT_SIZE = ABSOLUTE(fragment22_TEXT_END - fragment22_TEXT_START);
+        fragment22_DATA_START = .;
+        fragments_22_fragment22_header = .;
+        build/asm/us/data/fragments/22/fragment22_header.o(.data);
+        fragments_22_fragment22_code = .;
+        build/asm/us/fragments/22/fragment22_code.o(.data);
+        fragments_22_fragment22_data_data = .;
+        build/asm/us/data/fragments/22/fragment22_data.data.o(.data);
+        fragment22_DATA_END = .;
+        fragment22_DATA_SIZE = ABSOLUTE(fragment22_DATA_END - fragment22_DATA_START);
+        fragment22_RODATA_START = .;
+        build/asm/us/data/fragments/22/fragment22_header.o(.rodata);
+        build/asm/us/fragments/22/fragment22_code.o(.rodata);
+        fragment22_RODATA_END = .;
+        fragment22_RODATA_SIZE = ABSOLUTE(fragment22_RODATA_END - fragment22_RODATA_START);
+    }
+    fragment22_bss_VRAM = ADDR(.fragment22_bss);
+    .fragment22_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment22_BSS_START = .;
+        build/asm/us/data/fragments/22/fragment22_header.o(.bss);
+        build/asm/us/fragments/22/fragment22_code.o(.bss);
+        fragment22_BSS_END = .;
+        fragment22_BSS_SIZE = ABSOLUTE(fragment22_BSS_END - fragment22_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment22);
+    fragment22_ROM_END = __romPos;
+    fragment22_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment23_ROM_START = __romPos;
+    fragment23_VRAM = ADDR(.fragment23);
+    .fragment23 0x82A00000 : AT(fragment23_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment23_TEXT_START = .;
+        build/asm/us/data/fragments/23/fragment23_header.o(.text);
+        build/asm/us/fragments/23/fragment23_code.o(.text);
+        fragment23_TEXT_END = .;
+        fragment23_TEXT_SIZE = ABSOLUTE(fragment23_TEXT_END - fragment23_TEXT_START);
+        fragment23_DATA_START = .;
+        fragments_23_fragment23_header = .;
+        build/asm/us/data/fragments/23/fragment23_header.o(.data);
+        fragments_23_fragment23_code = .;
+        build/asm/us/fragments/23/fragment23_code.o(.data);
+        fragments_23_fragment23_data_data = .;
+        build/asm/us/data/fragments/23/fragment23_data.data.o(.data);
+        fragment23_DATA_END = .;
+        fragment23_DATA_SIZE = ABSOLUTE(fragment23_DATA_END - fragment23_DATA_START);
+        fragment23_RODATA_START = .;
+        build/asm/us/data/fragments/23/fragment23_header.o(.rodata);
+        build/asm/us/fragments/23/fragment23_code.o(.rodata);
+        fragment23_RODATA_END = .;
+        fragment23_RODATA_SIZE = ABSOLUTE(fragment23_RODATA_END - fragment23_RODATA_START);
+    }
+    fragment23_bss_VRAM = ADDR(.fragment23_bss);
+    .fragment23_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment23_BSS_START = .;
+        build/asm/us/data/fragments/23/fragment23_header.o(.bss);
+        build/asm/us/fragments/23/fragment23_code.o(.bss);
+        fragment23_BSS_END = .;
+        fragment23_BSS_SIZE = ABSOLUTE(fragment23_BSS_END - fragment23_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment23);
+    fragment23_ROM_END = __romPos;
+    fragment23_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment24_ROM_START = __romPos;
+    fragment24_VRAM = ADDR(.fragment24);
+    .fragment24 0x82B00000 : AT(fragment24_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment24_TEXT_START = .;
+        build/asm/us/data/fragments/24/fragment24_header.o(.text);
+        build/asm/us/fragments/24/fragment24_code.o(.text);
+        fragment24_TEXT_END = .;
+        fragment24_TEXT_SIZE = ABSOLUTE(fragment24_TEXT_END - fragment24_TEXT_START);
+        fragment24_DATA_START = .;
+        fragments_24_fragment24_header = .;
+        build/asm/us/data/fragments/24/fragment24_header.o(.data);
+        fragments_24_fragment24_code = .;
+        build/asm/us/fragments/24/fragment24_code.o(.data);
+        fragments_24_fragment24_data_data = .;
+        build/asm/us/data/fragments/24/fragment24_data.data.o(.data);
+        fragment24_DATA_END = .;
+        fragment24_DATA_SIZE = ABSOLUTE(fragment24_DATA_END - fragment24_DATA_START);
+        fragment24_RODATA_START = .;
+        build/asm/us/data/fragments/24/fragment24_header.o(.rodata);
+        build/asm/us/fragments/24/fragment24_code.o(.rodata);
+        fragment24_RODATA_END = .;
+        fragment24_RODATA_SIZE = ABSOLUTE(fragment24_RODATA_END - fragment24_RODATA_START);
+    }
+    fragment24_bss_VRAM = ADDR(.fragment24_bss);
+    .fragment24_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment24_BSS_START = .;
+        build/asm/us/data/fragments/24/fragment24_header.o(.bss);
+        build/asm/us/fragments/24/fragment24_code.o(.bss);
+        fragment24_BSS_END = .;
+        fragment24_BSS_SIZE = ABSOLUTE(fragment24_BSS_END - fragment24_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment24);
+    fragment24_ROM_END = __romPos;
+    fragment24_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment25_ROM_START = __romPos;
+    fragment25_VRAM = ADDR(.fragment25);
+    .fragment25 0x82100000 : AT(fragment25_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment25_TEXT_START = .;
+        build/asm/us/data/fragments/25/fragment25_header.o(.text);
+        build/asm/us/fragments/25/fragment25_code.o(.text);
+        fragment25_TEXT_END = .;
+        fragment25_TEXT_SIZE = ABSOLUTE(fragment25_TEXT_END - fragment25_TEXT_START);
+        fragment25_DATA_START = .;
+        fragments_25_fragment25_header = .;
+        build/asm/us/data/fragments/25/fragment25_header.o(.data);
+        fragments_25_fragment25_code = .;
+        build/asm/us/fragments/25/fragment25_code.o(.data);
+        fragments_25_fragment25_data_data = .;
+        build/asm/us/data/fragments/25/fragment25_data.data.o(.data);
+        fragment25_DATA_END = .;
+        fragment25_DATA_SIZE = ABSOLUTE(fragment25_DATA_END - fragment25_DATA_START);
+        fragment25_RODATA_START = .;
+        build/asm/us/data/fragments/25/fragment25_header.o(.rodata);
+        build/asm/us/fragments/25/fragment25_code.o(.rodata);
+        fragment25_RODATA_END = .;
+        fragment25_RODATA_SIZE = ABSOLUTE(fragment25_RODATA_END - fragment25_RODATA_START);
+    }
+    fragment25_bss_VRAM = ADDR(.fragment25_bss);
+    .fragment25_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment25_BSS_START = .;
+        build/asm/us/data/fragments/25/fragment25_header.o(.bss);
+        build/asm/us/fragments/25/fragment25_code.o(.bss);
+        fragment25_BSS_END = .;
+        fragment25_BSS_SIZE = ABSOLUTE(fragment25_BSS_END - fragment25_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment25);
+    fragment25_ROM_END = __romPos;
+    fragment25_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment26_ROM_START = __romPos;
+    fragment26_VRAM = ADDR(.fragment26);
+    .fragment26 0x81000000 : AT(fragment26_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment26_TEXT_START = .;
+        build/asm/us/data/fragments/26/fragment26_header.o(.text);
+        build/asm/us/data/fragments/26/fragment26_unk_table.o(.text);
+        build/asm/us/fragments/26/fragment26_code.o(.text);
+        fragment26_TEXT_END = .;
+        fragment26_TEXT_SIZE = ABSOLUTE(fragment26_TEXT_END - fragment26_TEXT_START);
+        fragment26_DATA_START = .;
+        fragments_26_fragment26_header = .;
+        build/asm/us/data/fragments/26/fragment26_header.o(.data);
+        fragments_26_fragment26_unk_table = .;
+        build/asm/us/data/fragments/26/fragment26_unk_table.o(.data);
+        fragments_26_fragment26_code = .;
+        build/asm/us/fragments/26/fragment26_code.o(.data);
+        fragments_26_fragment26_data_data = .;
+        build/asm/us/data/fragments/26/fragment26_data.data.o(.data);
+        fragment26_DATA_END = .;
+        fragment26_DATA_SIZE = ABSOLUTE(fragment26_DATA_END - fragment26_DATA_START);
+        fragment26_RODATA_START = .;
+        build/asm/us/data/fragments/26/fragment26_header.o(.rodata);
+        build/asm/us/data/fragments/26/fragment26_unk_table.o(.rodata);
+        build/asm/us/fragments/26/fragment26_code.o(.rodata);
+        fragment26_RODATA_END = .;
+        fragment26_RODATA_SIZE = ABSOLUTE(fragment26_RODATA_END - fragment26_RODATA_START);
+    }
+    fragment26_bss_VRAM = ADDR(.fragment26_bss);
+    .fragment26_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment26_BSS_START = .;
+        build/asm/us/data/fragments/26/fragment26_header.o(.bss);
+        build/asm/us/data/fragments/26/fragment26_unk_table.o(.bss);
+        build/asm/us/fragments/26/fragment26_code.o(.bss);
+        fragment26_BSS_END = .;
+        fragment26_BSS_SIZE = ABSOLUTE(fragment26_BSS_END - fragment26_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment26);
+    fragment26_ROM_END = __romPos;
+    fragment26_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment27_ROM_START = __romPos;
+    fragment27_VRAM = ADDR(.fragment27);
+    .fragment27 0x81100000 : AT(fragment27_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment27_TEXT_START = .;
+        build/asm/us/data/fragments/27/fragment27_header.o(.text);
+        build/asm/us/fragments/27/fragment27_code.o(.text);
+        fragment27_TEXT_END = .;
+        fragment27_TEXT_SIZE = ABSOLUTE(fragment27_TEXT_END - fragment27_TEXT_START);
+        fragment27_DATA_START = .;
+        fragments_27_fragment27_header = .;
+        build/asm/us/data/fragments/27/fragment27_header.o(.data);
+        fragments_27_fragment27_code = .;
+        build/asm/us/fragments/27/fragment27_code.o(.data);
+        fragment27_DATA_END = .;
+        fragment27_DATA_SIZE = ABSOLUTE(fragment27_DATA_END - fragment27_DATA_START);
+        fragment27_RODATA_START = .;
+        build/asm/us/data/fragments/27/fragment27_header.o(.rodata);
+        build/asm/us/fragments/27/fragment27_code.o(.rodata);
+        fragment27_RODATA_END = .;
+        fragment27_RODATA_SIZE = ABSOLUTE(fragment27_RODATA_END - fragment27_RODATA_START);
+    }
+    fragment27_bss_VRAM = ADDR(.fragment27_bss);
+    .fragment27_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment27_BSS_START = .;
+        build/asm/us/data/fragments/27/fragment27_header.o(.bss);
+        build/asm/us/fragments/27/fragment27_code.o(.bss);
+        fragment27_BSS_END = .;
+        fragment27_BSS_SIZE = ABSOLUTE(fragment27_BSS_END - fragment27_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment27);
+    fragment27_ROM_END = __romPos;
+    fragment27_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment28_ROM_START = __romPos;
+    fragment28_VRAM = ADDR(.fragment28);
+    .fragment28 0x80000000 : AT(fragment28_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment28_TEXT_START = .;
+        build/asm/us/data/fragments/28/fragment28_header.o(.text);
+        build/asm/us/fragments/28/fragment28_code.o(.text);
+        fragment28_TEXT_END = .;
+        fragment28_TEXT_SIZE = ABSOLUTE(fragment28_TEXT_END - fragment28_TEXT_START);
+        fragment28_DATA_START = .;
+        fragments_28_fragment28_header = .;
+        build/asm/us/data/fragments/28/fragment28_header.o(.data);
+        fragments_28_fragment28_code = .;
+        build/asm/us/fragments/28/fragment28_code.o(.data);
+        fragments_28_fragment28_data_data = .;
+        build/asm/us/data/fragments/28/fragment28_data.data.o(.data);
+        fragment28_DATA_END = .;
+        fragment28_DATA_SIZE = ABSOLUTE(fragment28_DATA_END - fragment28_DATA_START);
+        fragment28_RODATA_START = .;
+        build/asm/us/data/fragments/28/fragment28_header.o(.rodata);
+        build/asm/us/fragments/28/fragment28_code.o(.rodata);
+        fragment28_RODATA_END = .;
+        fragment28_RODATA_SIZE = ABSOLUTE(fragment28_RODATA_END - fragment28_RODATA_START);
+    }
+    fragment28_bss_VRAM = ADDR(.fragment28_bss);
+    .fragment28_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment28_BSS_START = .;
+        build/asm/us/data/fragments/28/fragment28_header.o(.bss);
+        build/asm/us/fragments/28/fragment28_code.o(.bss);
+        fragment28_BSS_END = .;
+        fragment28_BSS_SIZE = ABSOLUTE(fragment28_BSS_END - fragment28_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment28);
+    fragment28_ROM_END = __romPos;
+    fragment28_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment29_ROM_START = __romPos;
+    fragment29_VRAM = ADDR(.fragment29);
+    .fragment29 0x88000000 : AT(fragment29_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment29_TEXT_START = .;
+        build/asm/us/data/fragments/29/fragment29_header.o(.text);
+        build/asm/us/fragments/29/fragment29_code.o(.text);
+        fragment29_TEXT_END = .;
+        fragment29_TEXT_SIZE = ABSOLUTE(fragment29_TEXT_END - fragment29_TEXT_START);
+        fragment29_DATA_START = .;
+        fragments_29_fragment29_header = .;
+        build/asm/us/data/fragments/29/fragment29_header.o(.data);
+        fragments_29_fragment29_code = .;
+        build/asm/us/fragments/29/fragment29_code.o(.data);
+        fragments_29_fragment29_data_data = .;
+        build/asm/us/data/fragments/29/fragment29_data.data.o(.data);
+        fragment29_DATA_END = .;
+        fragment29_DATA_SIZE = ABSOLUTE(fragment29_DATA_END - fragment29_DATA_START);
+        fragment29_RODATA_START = .;
+        build/asm/us/data/fragments/29/fragment29_header.o(.rodata);
+        build/asm/us/fragments/29/fragment29_code.o(.rodata);
+        fragment29_RODATA_END = .;
+        fragment29_RODATA_SIZE = ABSOLUTE(fragment29_RODATA_END - fragment29_RODATA_START);
+    }
+    fragment29_bss_VRAM = ADDR(.fragment29_bss);
+    .fragment29_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment29_BSS_START = .;
+        build/asm/us/data/fragments/29/fragment29_header.o(.bss);
+        build/asm/us/fragments/29/fragment29_code.o(.bss);
+        fragment29_BSS_END = .;
+        fragment29_BSS_SIZE = ABSOLUTE(fragment29_BSS_END - fragment29_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment29);
+    fragment29_ROM_END = __romPos;
+    fragment29_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    fragment30_ROM_START = __romPos;
+    fragment30_VRAM = ADDR(.fragment30);
+    .fragment30 0x88A00000 : AT(fragment30_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment30_TEXT_START = .;
+        build/asm/us/data/fragments/30/fragment30_header.o(.text);
+        build/asm/us/fragments/30/fragment30_code.o(.text);
+        fragment30_TEXT_END = .;
+        fragment30_TEXT_SIZE = ABSOLUTE(fragment30_TEXT_END - fragment30_TEXT_START);
+        fragment30_DATA_START = .;
+        fragments_30_fragment30_header = .;
+        build/asm/us/data/fragments/30/fragment30_header.o(.data);
+        fragments_30_fragment30_code = .;
+        build/asm/us/fragments/30/fragment30_code.o(.data);
+        fragments_30_fragment30_data_data = .;
+        build/asm/us/data/fragments/30/fragment30_data.data.o(.data);
+        fragment30_DATA_END = .;
+        fragment30_DATA_SIZE = ABSOLUTE(fragment30_DATA_END - fragment30_DATA_START);
+        fragment30_RODATA_START = .;
+        build/asm/us/data/fragments/30/fragment30_header.o(.rodata);
+        build/asm/us/fragments/30/fragment30_code.o(.rodata);
+        fragment30_RODATA_END = .;
+        fragment30_RODATA_SIZE = ABSOLUTE(fragment30_RODATA_END - fragment30_RODATA_START);
+    }
+    fragment30_bss_VRAM = ADDR(.fragment30_bss);
+    .fragment30_bss (NOLOAD) : SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        fragment30_BSS_START = .;
+        build/asm/us/data/fragments/30/fragment30_header.o(.bss);
+        build/asm/us/fragments/30/fragment30_code.o(.bss);
+        fragment30_BSS_END = .;
+        fragment30_BSS_SIZE = ABSOLUTE(fragment30_BSS_END - fragment30_BSS_START);
+    }
+    __romPos += SIZEOF(.fragment30);
+    fragment30_ROM_END = __romPos;
+    fragment30_VRAM_END = .;
+    __romPos = ALIGN(__romPos, 16);
+    . = ALIGN(., 16);
+
+    _173280_ROM_START = __romPos;
+    _173280_VRAM = ADDR(._173280);
+    ._173280 : AT(_173280_ROM_START) SUBALIGN(16)
+    {
+        FILL(0x00000000);
+        _173280_DATA_START = .;
+        _173280 = .;
+        build/assets/us/173280.o(.data);
+        _173280_DATA_END = .;
+        _173280_DATA_SIZE = ABSOLUTE(_173280_DATA_END - _173280_DATA_START);
+    }
+    __romPos += SIZEOF(._173280);
+    _173280_ROM_END = __romPos;
+    _173280_VRAM_END = .;
 
     _437600_ROM_START = __romPos;
     _437600_VRAM = ADDR(._437600);
