@@ -737,6 +737,7 @@
     subsegments:
     - [0x2CD3B0, textbin, fragments/59/fragment59_header]
     - [0x2CD3D0, asm,     fragments/59/fragment59_code]
+    - [0x2DB460, data,    fragments/59/fragment59_data]
   
   - name: fragment60
     type: code
@@ -746,7 +747,108 @@
     subsegments:
     - [0x2E1080, textbin, fragments/60/fragment60_header]
     - [0x2E10A0, asm,     fragments/60/fragment60_code]
+    - [0x2EE550, data,    fragments/60/fragment60_data]
 
-  - [0x2F2F50, bin]
+  - name: fragment61
+    type: code
+    bss_size: 0x0
+    start: 0x2F2F50
+    vram: 0x86B00000
+    subsegments:
+    - [0x2F2F50, textbin, fragments/61/fragment61_header]
+    - [0x2F2F70, asm,     fragments/61/fragment61_code]
+    - [0x3000B0, data,    fragments/61/fragment61_data]
+
+  - name: fragment62
+    type: code
+    bss_size: 0x0
+    start: 0x303510
+    vram: 0x86C00000 # unk vram, guessed
+    subsegments:
+    - [0x303510, textbin, fragments/62/fragment62_header]
+    - [0x303530, asm,     fragments/62/fragment62_code]
+    - [0x303830, data,    fragments/62/fragment62_data]
+
+  - name: fragment63
+    type: code
+    bss_size: 0x0
+    start: 0x303970
+    vram: 0x87E00000
+    subsegments:
+    - [0x303970, textbin, fragments/63/fragment63_header]
+    - [0x303990, asm,     fragments/63/fragment63_code]
+    - [0x31CFE0, data,    fragments/63/fragment63_data]
+
+  - name: fragment64
+    type: code
+    bss_size: 0x0
+    start: 0x322C70
+    vram: 0x87F00000
+    subsegments:
+    - [0x322C70, textbin, fragments/64/fragment64_header]
+    - [0x322C90, asm,     fragments/64/fragment64_code]
+    - [0x3321A0, data,    fragments/64/fragment64_data]
+
+  - name: fragment65
+    type: code
+    bss_size: 0x0
+    start: 0x335DC0
+    vram: 0x87D00000
+    subsegments:
+    - [0x335DC0, textbin, fragments/65/fragment65_header]
+    - [0x335DE0, asm,     fragments/65/fragment65_code]
+    - [0x336590, data,    fragments/65/fragment65_data]
+
+  - name: fragment66
+    type: code
+    bss_size: 0x0
+    start: 0x3365F0
+    vram: 0x82E00000
+    subsegments:
+    - [0x3365F0, textbin, fragments/66/fragment66_header]
+    - [0x336610, asm,     fragments/66/fragment66_code]
+    - [0x33B4A0, data,    fragments/66/fragment66_data]
+  
+  - name: fragment67
+    type: code
+    bss_size: 0x0
+    start: 0x33CB00
+    vram: 0x82900000
+    subsegments:
+    - [0x33CB00, textbin, fragments/67/fragment67_header]
+    - [0x33CB20, asm,     fragments/67/fragment67_code]
+    - [0x34E600, data,    fragments/67/fragment67_data]
+  
+  - name: fragment68
+    type: code
+    bss_size: 0x0
+    start: 0x357D20
+    vram: 0x8F000000 # unk vram
+    subsegments:
+    - [0x357D20, textbin, fragments/68/fragment68_header]
+    - [0x357D40, asm,     fragments/68/fragment68_code]
+    - [0x358610, data,    fragments/68/fragment68_data]
+
+  - name: fragment69
+    type: code
+    bss_size: 0x0
+    start: 0x358830
+    vram: 0x8F100000 # unk vram
+    subsegments:
+    - [0x358830, textbin, fragments/69/fragment69_header]
+    - [0x358850, asm,     fragments/69/fragment69_code]
+    - [0x35C130, data,    fragments/69/fragment69_data]
+  
+  - name: fragment70
+    type: code
+    bss_size: 0x0
+    start: 0x35DD90
+    vram: 0x8F200000 # unk vram
+    subsegments:
+    - [0x35DD90, textbin, fragments/70/fragment70_header]
+    - [0x35DDB0, asm,     fragments/70/fragment70_code]
+    - [0x35E600, data,    fragments/70/fragment70_data]
+
+  - [0x35E900, bin]
   - [0x437600, bin] # rest of ROM
   - [0x4000000] # end of ROM
