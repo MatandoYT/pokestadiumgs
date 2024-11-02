@@ -1029,5 +1029,5 @@
     - [0x436C40, asm,     fragments/88/fragment88_code]
     - [0x437450, data,    fragments/88/fragment88_data]
 
-  - [0x437600, bin] # rest of ROM
+  - [0x437610, bin] # rest of ROM
   - [0x4000000] # end of ROM
