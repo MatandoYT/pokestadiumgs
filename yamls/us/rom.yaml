@@ -823,7 +823,7 @@
     type: code
     bss_size: 0x0
     start: 0x357D20
-    vram: 0x8F000000 # unk vram
+    vram: 0x8F000000 # unk vram, guessed
     subsegments:
     - [0x357D20, textbin, fragments/68/fragment68_header]
     - [0x357D40, asm,     fragments/68/fragment68_code]
@@ -833,7 +833,7 @@
     type: code
     bss_size: 0x0
     start: 0x358830
-    vram: 0x8F100000 # unk vram
+    vram: 0x8F100000 # unk vram, guessed
     subsegments:
     - [0x358830, textbin, fragments/69/fragment69_header]
     - [0x358850, asm,     fragments/69/fragment69_code]
@@ -843,12 +843,112 @@
     type: code
     bss_size: 0x0
     start: 0x35DD90
-    vram: 0x8F200000 # unk vram
+    vram: 0x8F200000 # unk vram, guessed
     subsegments:
     - [0x35DD90, textbin, fragments/70/fragment70_header]
     - [0x35DDB0, asm,     fragments/70/fragment70_code]
     - [0x35E600, data,    fragments/70/fragment70_data]
 
-  - [0x35E900, bin]
+  - name: fragment71
+    type: code
+    bss_size: 0x0
+    start: 0x35E900
+    vram: 0x8F300000 # unk vram, guessed
+    subsegments:
+    - [0x35E900, textbin, fragments/71/fragment71_header]
+    - [0x35E920, asm,     fragments/71/fragment71_code]
+    - [0x35F710, data,    fragments/71/fragment71_data]
+
+  - name: fragment72
+    type: code
+    bss_size: 0x0
+    start: 0x35FC90
+    vram: 0x8F400000 # unk vram, guessed
+    subsegments:
+    - [0x35FC90, textbin, fragments/72/fragment72_header]
+    - [0x35FCB0, asm,     fragments/72/fragment72_code]
+    - [0x361CC0, data,    fragments/72/fragment72_data]
+
+  - name: fragment73
+    type: code
+    bss_size: 0x0
+    start: 0x362890
+    vram: 0x8F500000 # unk vram, guessed
+    subsegments:
+    - [0x362890, textbin, fragments/73/fragment73_header]
+    - [0x3628B0, asm,     fragments/73/fragment73_code]
+    - [0x363210, data,    fragments/73/fragment73_data]
+  
+  - name: fragment74
+    type: code
+    bss_size: 0x0
+    start: 0x363590
+    vram: 0x8F600000 # unk vram, guessed
+    subsegments:
+    - [0x363590, textbin, fragments/74/fragment74_header]
+    - [0x3635B0, asm,     fragments/74/fragment74_code]
+    - [0x364150, data,    fragments/74/fragment74_data]
+  
+  - name: fragment75
+    type: code
+    bss_size: 0x0
+    start: 0x364500
+    vram: 0x8FA00000 # unk vram, guessed
+    subsegments:
+    - [0x364500, textbin, fragments/75/fragment75_header]
+    - [0x364520, asm,     fragments/75/fragment75_code]
+    - [0x365E50, data,    fragments/75/fragment75_data]
+  
+  - name: fragment76
+    type: code
+    bss_size: 0x0
+    start: 0x3667F0
+    vram: 0x8F700000 # unk vram, guessed
+    subsegments:
+    - [0x3667F0, textbin, fragments/76/fragment76_header]
+    - [0x366810, asm,     fragments/76/fragment76_code]
+    - [0x367B40, data,    fragments/76/fragment76_data]
+  
+  - name: fragment77
+    type: code
+    bss_size: 0x0
+    start: 0x3690C0
+    vram: 0x8F800000 # unk vram, guessed
+    subsegments:
+    - [0x3690C0, textbin, fragments/77/fragment77_header]
+    - [0x3690E0, asm,     fragments/77/fragment77_code]
+    - [0x36C530, data,    fragments/77/fragment77_data]
+  
+  - name: fragment78
+    type: code
+    bss_size: 0x0
+    start: 0x36DD90
+    vram: 0x8F900000 # unk vram, guessed
+    subsegments:
+    - [0x36DD90, textbin, fragments/78/fragment78_header]
+    - [0x36DDB0, asm,     fragments/78/fragment78_code]
+    - [0x36F2C0, data,    fragments/78/fragment78_data]
+  
+  - name: fragment79
+    type: code
+    bss_size: 0x0
+    start: 0x36F890
+    vram: 0x84100000
+    subsegments:
+    - [0x36f890, textbin, fragments/79/fragment79_header]
+    - [0x36f8b0, asm,     fragments/79/fragment79_code]
+    - [0x3D9A00, data,    fragments/79/fragment79_data]
+  
+  - name: fragment80
+    type: code
+    bss_size: 0x0
+    start: 0x419480
+    vram: 0x84200000
+    subsegments:
+    - [0x419480, textbin, fragments/80/fragment80_header]
+    - [0x4194A0, asm,     fragments/80/fragment80_code]
+    - [0x41C940, data,    fragments/80/fragment80_data]
+
+  - [0x41d750, bin]
   - [0x437600, bin] # rest of ROM
   - [0x4000000] # end of ROM
