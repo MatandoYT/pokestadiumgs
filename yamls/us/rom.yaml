@@ -949,6 +949,85 @@
     - [0x4194A0, asm,     fragments/80/fragment80_code]
     - [0x41C940, data,    fragments/80/fragment80_data]
 
-  - [0x41d750, bin]
+  - name: fragment81
+    type: code
+    bss_size: 0x0
+    start: 0x41D750
+    vram: 0x84300000
+    subsegments:
+    - [0x41D750, textbin, fragments/81/fragment81_header]
+    - [0x41D770, asm,     fragments/81/fragment81_code]
+    - [0x41F9D0, data,    fragments/81/fragment81_data]
+ 
+  - name: fragment82
+    type: code
+    bss_size: 0x0
+    start: 0x420E80
+    vram: 0x82D00000
+    subsegments:
+    - [0x420E80, textbin, fragments/82/fragment82_header]
+    - [0x420EA0, asm,     fragments/82/fragment82_code]
+    - [0x427E00, data,    fragments/82/fragment82_data]
+
+  - name: fragment83
+    type: code
+    bss_size: 0x0
+    start: 0x429850
+    vram: 0x82C00000
+    subsegments:
+    - [0x429850, textbin, fragments/83/fragment83_header]
+    - [0x429870, asm,     fragments/83/fragment83_code]
+    - [0x42E150, data,    fragments/83/fragment83_data]
+
+  - name: fragment84
+    type: code
+    bss_size: 0x0
+    start: 0x42F160
+    vram: 0x8FC00000 # unk vram, guessed
+    subsegments:
+    - [0x42F160, textbin, fragments/84/fragment84_header]
+    - [0x42F180, asm,     fragments/84/fragment84_code]
+    - [0x431590, data,    fragments/84/fragment84_data]
+
+  - name: fragment85
+    type: code
+    bss_size: 0x0
+    start: 0x4320C0
+    vram: 0x8FD00000 # unk vram, guessed
+    subsegments:
+    - [0x4320C0, textbin, fragments/85/fragment85_header]
+    - [0x4320E0, asm,     fragments/85/fragment85_code]
+    - [0x434040, data,    fragments/85/fragment85_data]
+
+  - name: fragment86
+    type: code
+    bss_size: 0x0
+    start: 0x434720
+    vram: 0x84400000
+    subsegments:
+    - [0x434720, textbin, fragments/86/fragment86_header]
+    - [0x434740, asm,     fragments/86/fragment86_code]
+    - [0x435140, data,    fragments/86/fragment86_data]
+  
+  - name: fragment87
+    type: code
+    bss_size: 0x0
+    start: 0x435A70
+    vram: 0x81B00000
+    subsegments:
+    - [0x435A70, textbin, fragments/87/fragment87_header]
+    - [0x435A90, asm,     fragments/87/fragment87_code]
+    - [0x436A20, data,    fragments/87/fragment87_data]
+
+  - name: fragment88
+    type: code
+    bss_size: 0x0
+    start: 0x436C20
+    vram: 0x81C00000
+    subsegments:
+    - [0x436C20, textbin, fragments/88/fragment88_header]
+    - [0x436C40, asm,     fragments/88/fragment88_code]
+    - [0x437450, data,    fragments/88/fragment88_data]
+
   - [0x437600, bin] # rest of ROM
   - [0x4000000] # end of ROM
