@@ -6,7 +6,7 @@ options:
   ld_script_path: linker_scripts/us/pokestadiumgs.ld
   base_path: .
   compiler: IDO
-  find_file_boundaries: True
+  find_file_boundaries: False
   header_encoding: ASCII
   platform: n64
 
