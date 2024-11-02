@@ -4289,20 +4289,20 @@ SECTIONS
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    _437600_ROM_START = __romPos;
-    _437600_VRAM = ADDR(._437600);
-    ._437600 : AT(_437600_ROM_START) SUBALIGN(16)
+    _437610_ROM_START = __romPos;
+    _437610_VRAM = ADDR(._437610);
+    ._437610 : AT(_437610_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        _437600_DATA_START = .;
-        _437600 = .;
-        build/assets/us/437600.o(.data);
-        _437600_DATA_END = .;
-        _437600_DATA_SIZE = ABSOLUTE(_437600_DATA_END - _437600_DATA_START);
+        _437610_DATA_START = .;
+        _437610 = .;
+        build/assets/us/437610.o(.data);
+        _437610_DATA_END = .;
+        _437610_DATA_SIZE = ABSOLUTE(_437610_DATA_END - _437610_DATA_START);
     }
-    __romPos += SIZEOF(._437600);
-    _437600_ROM_END = __romPos;
-    _437600_VRAM_END = .;
+    __romPos += SIZEOF(._437610);
+    _437610_ROM_END = __romPos;
+    _437610_VRAM_END = .;
 
     /DISCARD/ :
     {
