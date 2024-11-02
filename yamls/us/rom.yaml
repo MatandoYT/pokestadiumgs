@@ -114,7 +114,7 @@
     - [0x762D0, asm, libultra/io/gbpakcheckconnector]
     - [0x76760, asm, libultra/io/gbpakpower]
     - [0x76870, asm, libultra/io/controller]
-    - [0x76B50, asm]
+    - [0x76B50, asm] # unk libultra file
     - [0x76C10, asm, libultra/flash/flashsectorerase]
     - [0x76D60, asm, libultra/os/initialize]
     - [0x77120, asm, libultra/os/initialize_emu]
@@ -123,29 +123,33 @@
     - [0x77C20, asm, libultra/io/piread]
     - [0x77C60, asm, libultra/io/piacs]
     - [0x77D80, asm, libultra/os/createthread]
-    - [0x77F10, asm]
-
-    - [0x77FA0, asm]
-    - [0x78180, asm]
-    - [0x78210, asm]
-    - [0x78290, asm]
-    - [0x782B0, asm]
-    - [0x78330, asm]
-    - [0x78790, asm]
-    - [0x78A20, asm]
-    - [0x78AB0, asm]
-    - [0x78B60, asm]
-
-    - [0x78BB0, asm]
-    - [0x78EC0, asm]
-    - [0x78F30, asm]
-    - [0x78F80, asm]
-    - [0x78FD0, asm]
-    - [0x79510, asm]
-    - [0x79640, asm]
-    - [0x796B0, asm]
-    - [0x79750, hasm]
-    - [0x798B0, asm]
+    - [0x77F10, asm] # unk libultra file
+    - [0x77FA0, asm, libultra/io/contreaddata]
+    - [0x78180, asm, libultra/io/conteeplongread]
+    - [0x78210, asm, libultra/os/virtualtophysical]
+    - [0x78290, asm, libultra/os/setsr]
+    - [0x782A0, asm, libultra/os/getsr]
+    - [0x782B0, asm, libultra/os/writebackdcache]
+    - [0x78330, asm, libultra/io/gbpakinit]
+    - [0x78560, asm, libultra/io/pfsgetstatus]
+    - [0x78790, asm, libultra/gu/perspective]
+    - [0x78A20, asm, libultra/io/sprawdma]
+    - [0x78AB0, asm, libultra/io/sirawdma]
+    - [0x78B60, asm, libultra/io/epilinkhandle]
+    - [0x78BB0, asm] # unk libultra file
+    - [0x78EC0, asm] # unk libultra file
+    - [0x78F30, asm, libultra/io/sprawread]
+    - [0x78F80, asm, libultra/io/pirawread]
+    - [0x78FD0, asm, libultra/io/sptaskyield]
+    - [0x78FF0, asm, libultra/gu/lookatref]
+    - [0x794C0, asm, libultra/mgu/mtxidentf]
+    - [0x79510, asm] # unk libultra file
+    - [0x795E0, asm, libultra/io/visetmode]
+    - [0x79640, asm] # unk libultra file
+    - [0x796B0, asm] # unk libultra file
+    - [0x79750, hasm] # unk libultra file
+    - [0x798B0, asm] # unk libultra file
+    - [0x799C0, asm, libultra/flash/flashreadid]
 
     - [0x79A90, asm]
     - [0x79D80, asm]
