@@ -138,7 +138,7 @@
     - [0x78B60, asm, libultra/io/epilinkhandle]
     - [0x78BB0, asm, libultra/debug/kdebugserver]
     - [0x78EC0, asm, libultra/io/viblack]
-    - [0x78F30, asm, libultra/io/sprawread]
+    - [0x78F30, asm, libultra/io/sirawread]
     - [0x78F80, asm, libultra/io/pirawread]
     - [0x78FD0, asm, libultra/io/sptaskyield]
     - [0x78FF0, asm, libultra/gu/lookatref]
@@ -164,7 +164,7 @@
     - [0x7AE80, asm, libultra/io/contpfs]
     - [0x7BA00, asm, libultra/os/seteventmesg]
     - [0x7BAC0, asm, libultra/gu/sqrtf]
-    - [0x7BAD0, asm] # unk libultra file
+    - [0x7BAD0, asm, libultra/os/afterprenmi]
     - [0x7BAF0, asm, libultra/mgu/mtxxfmf]
     - [0x7BBA0, asm, libultra/gu/random]
     - [0x7BBD0, asm, libultra/libc/xprintf]
@@ -172,12 +172,12 @@
     - [0x7CA30, asm, libultra/libc/sprintf]
     - [0x7CAB0, asm, libultra/os/unmaptlball]
     - [0x7CB00, asm, libultra/io/epidma]
-    - [0x7CBA0, asm] # unk libultra file
+    - [0x7CBA0, asm, libultra/libc/syncprintf]
     - [0x7CC60, asm, libultra/libc/string]
     - [0x7CD00, asm, libultra/os/createmesgqueue]
     - [0x7CD30, asm, libultra/os/invaldcache]
     - [0x7CDE0, asm, libultra/os/invalicache]
-    - [0x7CE60, asm] # unk libultra file
+    - [0x7CE60, asm, libultra/rmon/rmonsio]
     - [0x7D060, asm, libultra/os/initialize_kmc]
     - [0x7D520, asm, libultra/io/conteeplongwrite]
     - [0x7D630, asm, libultra/io/sp]
@@ -196,12 +196,12 @@
     - [0x7DF10, asm, libultra/gu/rotaterpy]
     - [0x7E0A0, asm, libultra/libc/bcmp]
     - [0x7E1C0, asm, libultra/os/gettime]
-    - [0x7E250, asm] # unk libultra file
+    - [0x7E250, asm, libultra/os/timerintr]
     - [0x7E750, asm, libultra/gu/rotate]
     - [0x7E920, asm, libultra/os/setglobalintmask]
     - [0x7E970, asm, libultra/io/aisetfreq]
     - [0x7EAC0, asm, libultra/io/dpctr]
-    - [0x7EB00, asm] # unk libultra file
+    - [0x7EB00, asm, libultra/os/getactivequeue]
     - [0x7EB20, asm, libultra/mgu/normalize]
     - [0x7EB80, asm, libultra/os/setcompare]
     - [0x7EB90, asm, libultra/io/aigetstat]
@@ -210,32 +210,33 @@
     - [0x7EEC0, asm, libultra/os/resetglobalintmask]
     - [0x7EF20, asm, libultra/gu/ortho]
     - [0x7F0E0, asm, libultra/os/interrupt]
-    - [0x7F170, asm] # unk libultra file
+    - [0x7F170, asm, libultra/io/vi]
     - [0x7F290, asm, libultra/io/viswapcontext]
     - [0x7F590, asm, libultra/io/pigetcmdq]
     - [0x7F5C0, asm, libultra/gu/cosf]
-    - [0x7F730, asm, libultra/io/epiwrite]
+    - [0x7F730, asm, libultra/io/epiread]
     - [0x7F780, asm, libultra/io/visetspecial]
     - [0x7F8E0, asm, libultra/flash/flashwritearray]
     - [0x7FA40, asm, libultra/os/settime]
     - [0x7FA70, asm, libultra/flash/flashclearstatus]
     - [0x7FAC0, asm, libultra/io/visetevent]
-    - [0x7FB20, asm] # unk libultra file
+    - [0x7FB20, asm, libultra/os/rdbsend]
     - [0x7FDE0, asm, libultra/flash/flashwritebuffer]
-    - [0x7FE70, asm] # unk libultra file
+    - [0x7FE70, asm, libultra/io/cartrominit]
     - [0x7FFD0, asm, libultra/io/gbpakreadid]
-    - [0x80280, asm] # unk libultra file
-    - [0x80320, asm] # unk libultra file
-    - [0x80C40, asm] # unk libultra file
-    - [0x81040, asm] # unk libultra file
-    - [0x81AC0, asm] # unk libultra file
-    - [0x81C50, asm] # unk libultra file
-    - [0x827D0, asm] # unk libultra file
-    - [0x82820, asm] # unk libultra file
+    - [0x80280, asm, libultra/rmon/rmoncmds]
+    - [0x80320, asm, libultra/rmon/rmonmem]
+    - [0x80C40, asm, libultra/rmon/rmonmain]
+    - [0x81040, asm, libultra/rmon/rmontask]
+    - [0x81AC0, asm, libultra/rmon/rmonmisc]
+    - [0x81C50, asm, libultra/rmon/rmonrcp]
+    - [0x81CF0, asm, libultra/rmon/rmonbrk]
+    - [0x827D0, asm, libultra/io/sprawread]
+    - [0x82820, asm, libultra/rmon/rmonregs]
     - [0x83420, asm, libultra/io/pfsselectbank]
     - [0x834A0, asm, libultra/os/setfpccsr]
     - [0x834B0, asm, libultra/io/aigetlen]
-    - [0x834C0, asm] # unk libultra file
+    - [0x834C0, asm, libultra/io/epiwrite]
     - [0x83510, asm, libultra/io/piwrite]
     - [0x83550, asm, libultra/os/maptlbrdb]
     - [0x835B0, asm, libultra/os/yieldthread]
@@ -249,13 +250,13 @@
     - [0x83FC0, asm, libultra/libc/xldtob]
     - [0x84AD0, asm, libultra/libc/ldiv]
     - [0x84C60, asm, libultra/libc/xlitob]
-    - [0x84F00, asm, libultra/io/sprawwrite]
+    - [0x84F00, asm, libultra/io/sirawwrite]
     - [0x84F50, asm, libultra/io/pirawwrite]
-    - [0x84FA0, asm] # unk libultra file
+    - [0x84FA0, asm, libultra/io/sprawwrite]
     - [0x84FF0, asm, libultra/io/spsetstat]
     - [0x85000, asm, libultra/io/spgetstat]
     - [0x85020, asm, libultra/io/vimgr]
-    - [0x85330, asm] # unk libultra file
+    - [0x85330, asm, libultra/io/vigetcurrcontext]
     - [0x85340, asm, libultra/os/writebackdcacheall]
     - [0x85380, asm, libultra/mgu/mtxf2l]
     - [0x853F0, asm, libultra/os/startthread]

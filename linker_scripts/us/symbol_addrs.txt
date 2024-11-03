@@ -18,3 +18,5 @@ is_Handle = 0x8012B630; // size:0x4
 gISVDbgPrnAdrs = 0x8012B628; // size:0x4
 __printfunc = 0x800A0164; // size:0x4
 gISVChk = 0x8012B624; // size:0x2
+__osActiveQueue = 0x800A011C; // size:0x4
+dispatchTable = 0x800A16A0; // size:0xD8
