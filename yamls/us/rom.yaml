@@ -219,27 +219,27 @@
     - [0x7F8E0, asm, libultra/flash/flashwritearray]
     - [0x7FA40, asm, libultra/os/settime]
     - [0x7FA70, asm, libultra/flash/flashclearstatus]
-
-    - [0x7FAC0, asm]
-    - [0x7FB20, asm]
-    - [0x7FDE0, asm]
-    - [0x7FE70, asm]
-    - [0x7FFD0, asm]
-    - [0x80280, asm]
-    - [0x80320, asm]
-    - [0x80C40, asm]
-    - [0x81040, asm]
-    - [0x81AC0, asm]
-    - [0x81C50, asm]
-    - [0x827D0, asm]
-    - [0x82820, asm]
-    - [0x83420, asm]
-    - [0x834A0, asm]
-    - [0x834C0, asm]
-    - [0x83510, asm]
-    - [0x83550, asm]
-    - [0x835B0, asm]
-    - [0x83600, asm]
+    - [0x7FAC0, asm, libultra/io/visetevent]
+    - [0x7FB20, asm] # unk libultra file
+    - [0x7FDE0, asm, libultra/flash/flashwritebuffer]
+    - [0x7FE70, asm] # unk libultra file
+    - [0x7FFD0, asm, libultra/io/gbpakreadid]
+    - [0x80280, asm] # unk libultra file
+    - [0x80320, asm] # unk libultra file
+    - [0x80C40, asm] # unk libultra file
+    - [0x81040, asm] # unk libultra file
+    - [0x81AC0, asm] # unk libultra file
+    - [0x81C50, asm] # unk libultra file
+    - [0x827D0, asm] # unk libultra file
+    - [0x82820, asm] # unk libultra file
+    - [0x83420, asm, libultra/io/pfsselectbank]
+    - [0x834A0, asm, libultra/os/setfpccsr]
+    - [0x834B0, asm, libultra/io/aigetlen]
+    - [0x834C0, asm] # unk libultra file
+    - [0x83510, asm, libultra/io/piwrite]
+    - [0x83550, asm, libultra/os/maptlbrdb]
+    - [0x835B0, asm, libultra/os/yieldthread]
+    - [0x83600, asm, libultra/mgu/translate]
 
     - [0x836D0, asm]
     - [0x83920, asm]
