@@ -138,7 +138,7 @@ SECTIONS
         build/asm/us/72C30.o(.text);
         build/asm/us/73C80.o(.text);
         build/asm/us/74020.o(.text);
-        build/asm/us/libultra/os/sendmesg.o(.text);
+        build/lib/libultra.a:sendmesg.o(.text);
         build/asm/us/libultra/os/stopthread.o(.text);
         build/asm/us/libultra/os/recvmesg.o(.text);
         build/asm/us/libultra/os/setintmask.o(.text);
@@ -471,8 +471,6 @@ SECTIONS
         build/asm/us/73C80.o(.data);
         _74020 = .;
         build/asm/us/74020.o(.data);
-        libultra_os_sendmesg = .;
-        build/asm/us/libultra/os/sendmesg.o(.data);
         libultra_os_stopthread = .;
         build/asm/us/libultra/os/stopthread.o(.data);
         libultra_os_recvmesg = .;
@@ -901,7 +899,6 @@ SECTIONS
         build/asm/us/72C30.o(.rodata);
         build/asm/us/73C80.o(.rodata);
         build/asm/us/74020.o(.rodata);
-        build/asm/us/libultra/os/sendmesg.o(.rodata);
         build/asm/us/libultra/os/stopthread.o(.rodata);
         build/asm/us/libultra/os/recvmesg.o(.rodata);
         build/asm/us/libultra/os/setintmask.o(.rodata);
@@ -1160,7 +1157,6 @@ SECTIONS
         build/asm/us/72C30.o(.bss);
         build/asm/us/73C80.o(.bss);
         build/asm/us/74020.o(.bss);
-        build/asm/us/libultra/os/sendmesg.o(.bss);
         build/asm/us/libultra/os/stopthread.o(.bss);
         build/asm/us/libultra/os/recvmesg.o(.bss);
         build/asm/us/libultra/os/setintmask.o(.bss);

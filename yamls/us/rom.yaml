@@ -98,7 +98,7 @@
     - [0x74020, asm]
 
     # libultra
-    - [0x746D0, asm, libultra/os/sendmesg]
+    - [0x746D0, lib, libultra, sendmesg]
     - [0x74820, asm, libultra/os/stopthread]
     - [0x748E0, asm, libultra/os/recvmesg]
     - [0x74A20, asm, libultra/os/setintmask]

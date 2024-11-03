@@ -1,5 +1,5 @@
 func_8012B610 = 0x8012B610; // type:func
-osSendMesg = 0x80073AD0; // type:func
+osSendMesg = 0x80073AD0; // defined:true type:func
 osStopThread = 0x80073C20; // type:func
 osRecvMesg = 0x80073CE0; // type:func
 osSetIntMask = 0x80073E20; // type:func
