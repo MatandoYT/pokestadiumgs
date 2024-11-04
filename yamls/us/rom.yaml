@@ -142,17 +142,16 @@
     - [0x78EC0, lib, libultra, viblack]
     - [0x78F30, lib, libultra, sirawread]
     - [0x78F80, lib, libultra, pirawread]
-    
-    - [0x78FD0, asm, libultra/io/sptaskyield]
-    - [0x78FF0, asm, libultra/gu/lookatref]
-    - [0x794C0, asm, libultra/mgu/mtxidentf]
-    - [0x79510, asm, libultra/host/readhost]
-    - [0x795E0, asm, libultra/io/visetmode]
-    - [0x79640, asm, libultra/io/virepeatline]
+    - [0x78FD0, lib, libultra, sptaskyield]
+    - [0x78FF0, lib, libultra, lookatref]
+    - [0x794C0, lib, libultra, mtxidentf]
+    - [0x79510, lib, libultra, readhost]
+    - [0x795E0, lib, libultra, visetmode]
+    - [0x79640, lib, libultra, virepeatline]
     - [0x796B0, lib, libultra, threadprofile]
-    - [0x79750, hasm, libultra/monutil]
-    - [0x798D0, asm, libultra/flash/flashinit]
-    - [0x799C0, asm, libultra/flash/flashreadid]
+    - [0x79750, lib, libultra, monutil]
+    - [0x798D0, lib, libultra, flashinit]
+    - [0x799C0, lib, libultra, flashreadid]
     
     - [0x79A90, asm, libultra/io/pfsisplug]
     - [0x79D80, asm, libultra/os/probetlb]
@@ -296,7 +295,8 @@
     - [0xA0D80, lib, libultra, piacs, .data]
     - [0xA0D90, data]
     - [0xA1F10, lib, libultra, kdebugserver, .data]
-    - [0xA1F20, data]
+    - [0xA1F20, lib, libultra, readhost, .data]
+    - [0xA1F30, data]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, rodata, libultra/os/exceptasm]
@@ -320,9 +320,10 @@
     - {type: lib, vram: 0x8012B660, name: libultra, object: initrdb, section: .bss}
     - {type: lib, vram: 0x8012B680, name: libultra, object: gbpakinit, section: .bss}
     - {type: lib, vram: 0x8012B6C0, name: libultra, object: kdebugserver, section: .bss}
-    - {vram: 0x8012B880, type:  bss, name: unk_bss_5}
+    - {type: lib, vram: 0x8012B880, name: libultra, object: readhost, section: .bss}
     - {type: lib, vram: 0x8012B8B0, name: libultra, object: threadprofile, section: .bss}
-    - {vram: 0x8012C4C0, type:  bss, name: unk_bss_6}
+    - {type: lib, vram: 0x8012C4C0, name: libultra, object: flashinit, section: .bss}
+    - {vram: 0x8012C580, type:  bss, name: unk_bss_6}
   - [0xA8A80]
 
   # unk fragment
