@@ -110,17 +110,18 @@
     - [0x753C0, asm, libultra/os/exceptasm] # cant move this yet?
     - [0x76190, lib, libultra, thread]
     - [0x761D0, pad]
-    - [0x761E0, asm, libultra/mgu/scalef]
-    - [0x76230, asm, libultra/libc/bzero]
-    - [0x762D0, asm, libultra/io/gbpakcheckconnector]
-    - [0x76760, asm, libultra/io/gbpakpower]
-    - [0x76870, asm, libultra/io/controller]
-    - [0x76B50, asm, libultra/io/siacs]
-    - [0x76C10, asm, libultra/flash/flashsectorerase]
-    - [0x76D60, asm, libultra/os/initialize]
-    - [0x77120, asm, libultra/os/initialize_emu]
-    - [0x771B0, asm, libultra/os/initialize_msp]
-    - [0x77670, asm, libultra/os/initialize_isv]
+    - [0x761E0, lib, libultra, scalef]
+    - [0x76230, lib, libultra, bzero]
+    - [0x762D0, lib, libultra, gbpakcheckconnector]
+    - [0x76760, lib, libultra, gbpakpower]
+    - [0x76870, lib, libultra, controller]
+    - [0x76B50, lib, libultra, siacs]
+    - [0x76C10, lib, libultra, flashsectorerase]
+    - [0x76D60, lib, libultra, initialize]
+    - [0x77120, lib, libultra, initialize_emu]
+    - [0x771B0, lib, libultra, initialize_msp]
+    - [0x77670, lib, libultra, initialize_isv]
+    
     - [0x77C20, asm, libultra/io/piread]
     - [0x77C60, asm, libultra/io/piacs]
     - [0x77D80, asm, libultra/os/createthread]
@@ -131,6 +132,7 @@
     - [0x78290, asm, libultra/os/setsr]
     - [0x782A0, asm, libultra/os/getsr]
     - [0x782B0, asm, libultra/os/writebackdcache]
+    
     - [0x78330, asm, libultra/io/gbpakinit]
     - [0x78560, asm, libultra/io/pfsgetstatus]
     - [0x78790, asm, libultra/gu/perspective]
@@ -141,6 +143,7 @@
     - [0x78EC0, asm, libultra/io/viblack]
     - [0x78F30, asm, libultra/io/sirawread]
     - [0x78F80, asm, libultra/io/pirawread]
+    
     - [0x78FD0, asm, libultra/io/sptaskyield]
     - [0x78FF0, asm, libultra/gu/lookatref]
     - [0x794C0, asm, libultra/mgu/mtxidentf]
@@ -151,6 +154,7 @@
     - [0x79750, hasm, libultra/monutil]
     - [0x798D0, asm, libultra/flash/flashinit]
     - [0x799C0, asm, libultra/flash/flashreadid]
+    
     - [0x79A90, asm, libultra/io/pfsisplug]
     - [0x79D80, asm, libultra/os/probetlb]
     - [0x79E40, asm, libultra/io/pimgr]
@@ -161,6 +165,7 @@
     - [0x7A650, asm, libultra/io/conteepwrite]
     - [0x7AA70, asm, libultra/io/conteepread]
     - [0x7ACD0, asm, libultra/flash/flashreadstatus]
+    
     - [0x7AD60, asm, libultra/os/getmemsize]
     - [0x7AE80, asm, libultra/io/contpfs]
     - [0x7BA00, asm, libultra/os/seteventmesg]
@@ -171,6 +176,7 @@
     - [0x7BBD0, asm, libultra/libc/xprintf]
     - [0x7C8B0, asm, libultra/io/gbpakgetstatus]
     - [0x7CA30, asm, libultra/libc/sprintf]
+    
     - [0x7CAB0, asm, libultra/os/unmaptlball]
     - [0x7CB00, asm, libultra/io/epidma]
     - [0x7CBA0, asm, libultra/libc/syncprintf]
@@ -181,6 +187,7 @@
     - [0x7CE60, asm, libultra/rmon/rmonsio]
     - [0x7D060, asm, libultra/os/initialize_kmc]
     - [0x7D520, asm, libultra/io/conteeplongwrite]
+    
     - [0x7D630, asm, libultra/io/sp]
     - [0x7D660, asm, libultra/io/si]
     - [0x7D6A0, asm, libultra/mgu/translatef]
@@ -192,16 +199,18 @@
     - [0x7DB00, asm, libultra/mgu/mtxcatf]
     - [0x7DBF0, asm, libultra/mgu/mtxcatl]
     - [0x7DC60, asm, libultra/mgu/mtxl2f]
+    
     - [0x7DCD0, asm, libultra/io/epirawdma]
     - [0x7DEB0, asm, libultra/io/sptaskyielded]
     - [0x7DF10, asm, libultra/gu/rotaterpy]
-    - [0x7E0A0, asm, libultra/libc/bcmp]
+    - [0x7E0A0, lib, libultra, bcmp]
     - [0x7E1C0, asm, libultra/os/gettime]
     - [0x7E250, asm, libultra/os/timerintr]
     - [0x7E750, asm, libultra/gu/rotate]
     - [0x7E920, asm, libultra/os/setglobalintmask]
     - [0x7E970, asm, libultra/io/aisetfreq]
     - [0x7EAC0, asm, libultra/io/dpctr]
+    
     - [0x7EB00, asm, libultra/os/getactivequeue]
     - [0x7EB20, asm, libultra/mgu/normalize]
     - [0x7EB80, asm, libultra/os/setcompare]
@@ -212,6 +221,7 @@
     - [0x7EF20, asm, libultra/gu/ortho]
     - [0x7F0E0, asm, libultra/os/interrupt]
     - [0x7F170, asm, libultra/io/vi]
+    
     - [0x7F290, asm, libultra/io/viswapcontext]
     - [0x7F590, asm, libultra/io/pigetcmdq]
     - [0x7F5C0, asm, libultra/gu/cosf]
@@ -222,6 +232,7 @@
     - [0x7FA70, asm, libultra/flash/flashclearstatus]
     - [0x7FAC0, asm, libultra/io/visetevent]
     - [0x7FB20, asm, libultra/os/rdbsend]
+    
     - [0x7FDE0, asm, libultra/flash/flashwritebuffer]
     - [0x7FE70, asm, libultra/io/cartrominit]
     - [0x7FFD0, asm, libultra/io/gbpakreadid]
@@ -232,6 +243,7 @@
     - [0x81AC0, asm, libultra/rmon/rmonmisc]
     - [0x81C50, asm, libultra/rmon/rmonrcp]
     - [0x81CF0, asm, libultra/rmon/rmonbrk]
+    
     - [0x827D0, asm, libultra/io/sprawread]
     - [0x82820, asm, libultra/rmon/rmonregs]
     - [0x83420, asm, libultra/io/pfsselectbank]
@@ -241,6 +253,7 @@
     - [0x83510, asm, libultra/io/piwrite]
     - [0x83550, asm, libultra/os/maptlbrdb]
     - [0x835B0, asm, libultra/os/yieldthread]
+    
     - [0x83600, asm, libultra/mgu/translate]
     - [0x836D0, asm, libultra/io/contramwrite]
     - [0x83920, asm, libultra/io/contramread]
@@ -251,6 +264,7 @@
     - [0x83FC0, asm, libultra/libc/xldtob]
     - [0x84AD0, asm, libultra/libc/ldiv]
     - [0x84C60, asm, libultra/libc/xlitob]
+    
     - [0x84F00, asm, libultra/io/sirawwrite]
     - [0x84F50, asm, libultra/io/pirawwrite]
     - [0x84FA0, asm, libultra/io/sprawwrite]
@@ -260,6 +274,7 @@
     - [0x85330, asm, libultra/io/vigetcurrcontext]
     - [0x85340, asm, libultra/os/writebackdcacheall]
     - [0x85380, asm, libultra/mgu/mtxf2l]
+    
     - [0x853F0, asm, libultra/os/startthread]
     - [0x85540, asm, libultra/io/visetxscale]
     - [0x85650, asm, libultra/io/visetyscale]
@@ -271,10 +286,15 @@
     - [0x85BC0, asm, libultra/flash/flashreadarray]
     - [0x85D60, asm, libultra/flash/flashgetaddr]
     - [0x85D90, asm, libultra/os/setwatchlo]
+    
     - [0x85DA0, data]
     - [0xA0CD0, data, libultra/os/exceptasm]
     - [0xA0D10, lib, libultra, thread, .data]
-    - [0xA0D30, data]
+    - [0xA0D30, lib, libultra, controller, .data]
+    - [0xA0D40, lib, libultra, siacs, .data]
+    - [0xA0D50, lib, libultra, initialize, .data]
+    - [0xA0D70, lib, libultra, initialize_msp, .data]
+    - [0xA0D80, data]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, rodata, libultra/os/exceptasm]
@@ -287,7 +307,11 @@
 
     # ultralib
     - {type: lib, vram: 0x8012B510, name: libultra, object: sptask, section: .bss}
-    - {vram: 0x8012B550, type:  bss, name: unk_bss_2}
+    - {type: lib, vram: 0x8012B550, name: libultra, object: controller, section: .bss}
+    - {type: lib, vram: 0x8012B5E0, name: libultra, object: siacs, section: .bss}
+    - {type: lib, vram: 0x8012B600, name: libultra, object: initialize, section: .bss}
+    - {type: lib, vram: 0x8012B610, name: libultra, object: initialize_isv, section: .bss}
+    - {vram: 0x8012B640, type:  bss, name: unk_bss_2}
   - [0xA8A80]
 
   # unk fragment
