@@ -121,17 +121,17 @@
     - [0x77120, lib, libultra, initialize_emu]
     - [0x771B0, lib, libultra, initialize_msp]
     - [0x77670, lib, libultra, initialize_isv]
-    
-    - [0x77C20, asm, libultra/io/piread]
-    - [0x77C60, asm, libultra/io/piacs]
-    - [0x77D80, asm, libultra/os/createthread]
-    - [0x77F10, asm, libultra/os/initrdb]
-    - [0x77FA0, asm, libultra/io/contreaddata]
-    - [0x78180, asm, libultra/io/conteeplongread]
-    - [0x78210, asm, libultra/os/virtualtophysical]
-    - [0x78290, asm, libultra/os/setsr]
-    - [0x782A0, asm, libultra/os/getsr]
-    - [0x782B0, asm, libultra/os/writebackdcache]
+    - [0x77C20, lib, libultra, piread]
+    - [0x77C60, lib, libultra, piacs]
+    - [0x77D20, pad]
+    - [0x77D80, lib, libultra, createthread]
+    - [0x77F10, lib, libultra, initrdb]
+    - [0x77FA0, lib, libultra, contreaddata]
+    - [0x78180, lib, libultra, conteeplongread]
+    - [0x78210, lib, libultra, virtualtophysical]
+    - [0x78290, lib, libultra, setsr]
+    - [0x782A0, lib, libultra, getsr]
+    - [0x782B0, lib, libultra, writebackdcache]
     
     - [0x78330, asm, libultra/io/gbpakinit]
     - [0x78560, asm, libultra/io/pfsgetstatus]
@@ -150,7 +150,7 @@
     - [0x79510, asm, libultra/host/readhost]
     - [0x795E0, asm, libultra/io/visetmode]
     - [0x79640, asm, libultra/io/virepeatline]
-    - [0x796B0, asm, libultra/debug/threadprofile]
+    - [0x796B0, lib, libultra, threadprofile]
     - [0x79750, hasm, libultra/monutil]
     - [0x798D0, asm, libultra/flash/flashinit]
     - [0x799C0, asm, libultra/flash/flashreadid]
@@ -294,7 +294,8 @@
     - [0xA0D40, lib, libultra, siacs, .data]
     - [0xA0D50, lib, libultra, initialize, .data]
     - [0xA0D70, lib, libultra, initialize_msp, .data]
-    - [0xA0D80, data]
+    - [0xA0D80, lib, libultra, piacs, .data]
+    - [0xA0D90, data]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, rodata, libultra/os/exceptasm]
@@ -311,7 +312,11 @@
     - {type: lib, vram: 0x8012B5E0, name: libultra, object: siacs, section: .bss}
     - {type: lib, vram: 0x8012B600, name: libultra, object: initialize, section: .bss}
     - {type: lib, vram: 0x8012B610, name: libultra, object: initialize_isv, section: .bss}
-    - {vram: 0x8012B640, type:  bss, name: unk_bss_2}
+    - {type: lib, vram: 0x8012B640, name: libultra, object: piacs, section: .bss}
+    - {type: lib, vram: 0x8012B660, name: libultra, object: initrdb, section: .bss}
+    - {vram: 0x8012B680, type:  bss, name: unk_bss_3}
+    - {type: lib, vram: 0x8012B8B0, name: libultra, object: threadprofile, section: .bss}
+    - {vram: 0x8012C4C0, type:  bss, name: unk_bss_4}
   - [0xA8A80]
 
   # unk fragment
