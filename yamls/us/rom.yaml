@@ -13,7 +13,7 @@
     - [0x0B70, bin, bootcode_font]
   - name: text
     type: code
-    bss_size: 0x0 # unknown
+    bss_size: 0x8C5F0
     start: 0x1000
     vram: 0x80000400
     subsegments:
@@ -99,16 +99,17 @@
 
     # libultra
     - [0x746D0, lib, libultra, sendmesg]
-    - [0x74820, asm, libultra/os/stopthread]
-    - [0x748E0, asm, libultra/os/recvmesg]
-    - [0x74A20, asm, libultra/os/setintmask]
-    - [0x74AC0, asm, libultra/mgu/scale]
-    - [0x74B70, asm, libultra/gu/sinf]
-    - [0x74D30, asm, libultra/io/sptask]
-    - [0x74FF0, asm, libultra/os/destroythread]
-    - [0x75100, asm, libultra/libc/ll]
-    - [0x753C0, asm, libultra/os/exceptasm]
-    - [0x76190, asm, libultra/os/thread]
+    - [0x74820, lib, libultra, stopthread]
+    - [0x748E0, lib, libultra, recvmesg]
+    - [0x74A20, lib, libultra, setintmask]
+    - [0x74AC0, lib, libultra, scale]
+    - [0x74B70, lib, libultra, sinf]
+    - [0x74D30, lib, libultra, sptask]
+    - [0x74FF0, lib, libultra, destroythread]
+    - [0x75100, lib, libultra, ll]
+    - [0x753C0, asm, libultra/os/exceptasm] # cant move this yet?
+    - [0x76190, lib, libultra, thread]
+    - [0x761D0, pad]
     - [0x761E0, asm, libultra/mgu/scalef]
     - [0x76230, asm, libultra/libc/bzero]
     - [0x762D0, asm, libultra/io/gbpakcheckconnector]
@@ -206,7 +207,7 @@
     - [0x7EB80, asm, libultra/os/setcompare]
     - [0x7EB90, asm, libultra/io/aigetstat]
     - [0x7EBA0, asm, libultra/io/dpsetstat]
-    - [0x7EBB0, asm, libultra/libc/bcopy]
+    - [0x7EBB0, lib, libultra, bcopy]
     - [0x7EEC0, asm, libultra/os/resetglobalintmask]
     - [0x7EF20, asm, libultra/gu/ortho]
     - [0x7F0E0, asm, libultra/os/interrupt]
@@ -271,7 +272,23 @@
     - [0x85D60, asm, libultra/flash/flashgetaddr]
     - [0x85D90, asm, libultra/os/setwatchlo]
     - [0x85DA0, data]
-    - [0xA8600, bin] # F3DEX bin
+    - [0xA0CD0, data, libultra/os/exceptasm]
+    - [0xA0D10, lib, libultra, thread, .data]
+    - [0xA0D30, data]
+    - [0xA6860, lib, libultra, setintmask, .rodata]
+    - [0xA68E0, lib, libultra, sinf, .rodata]
+    - [0xA6930, rodata, libultra/os/exceptasm]
+    - [0xA69A0, rodata]
+    - [0xA8600, rodata] # F3DEX bin
+    - [0xA8A80]
+    
+    # .bss
+    - {vram: 0x800A7E80, type:  bss, name: unk_bss}
+
+    # ultralib
+    - {type: lib, vram: 0x8012B510, name: libultra, object: sptask, section: .bss}
+    - {vram: 0x8012B550, type:  bss, name: unk_bss_2}
+  - [0xA8A80]
 
   # unk fragment
   - name: fragment1
