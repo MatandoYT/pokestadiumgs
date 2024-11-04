@@ -132,17 +132,16 @@
     - [0x78290, lib, libultra, setsr]
     - [0x782A0, lib, libultra, getsr]
     - [0x782B0, lib, libultra, writebackdcache]
-    
-    - [0x78330, asm, libultra/io/gbpakinit]
-    - [0x78560, asm, libultra/io/pfsgetstatus]
-    - [0x78790, asm, libultra/gu/perspective]
-    - [0x78A20, asm, libultra/io/sprawdma]
-    - [0x78AB0, asm, libultra/io/sirawdma]
-    - [0x78B60, asm, libultra/io/epilinkhandle]
-    - [0x78BB0, asm, libultra/debug/kdebugserver]
-    - [0x78EC0, asm, libultra/io/viblack]
-    - [0x78F30, asm, libultra/io/sirawread]
-    - [0x78F80, asm, libultra/io/pirawread]
+    - [0x78330, lib, libultra, gbpakinit]
+    - [0x78560, lib, libultra, pfsgetstatus]
+    - [0x78790, lib, libultra, perspective]
+    - [0x78A20, lib, libultra, sprawdma]
+    - [0x78AB0, lib, libultra, sirawdma]
+    - [0x78B60, lib, libultra, epilinkhandle]
+    - [0x78BB0, lib, libultra, kdebugserver]
+    - [0x78EC0, lib, libultra, viblack]
+    - [0x78F30, lib, libultra, sirawread]
+    - [0x78F80, lib, libultra, pirawread]
     
     - [0x78FD0, asm, libultra/io/sptaskyield]
     - [0x78FF0, asm, libultra/gu/lookatref]
@@ -224,7 +223,7 @@
     
     - [0x7F290, asm, libultra/io/viswapcontext]
     - [0x7F590, asm, libultra/io/pigetcmdq]
-    - [0x7F5C0, asm, libultra/gu/cosf]
+    - [0x7F5C0, lib, libultra, cosf]
     - [0x7F730, asm, libultra/io/epiread]
     - [0x7F780, asm, libultra/io/visetspecial]
     - [0x7F8E0, asm, libultra/flash/flashwritearray]
@@ -296,10 +295,15 @@
     - [0xA0D70, lib, libultra, initialize_msp, .data]
     - [0xA0D80, lib, libultra, piacs, .data]
     - [0xA0D90, data]
+    - [0xA1F10, lib, libultra, kdebugserver, .data]
+    - [0xA1F20, data]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, rodata, libultra/os/exceptasm]
-    - [0xA69A0, rodata]
+    - [0xA69A0, lib, libultra, perspective, .rodata]
+    - [0xA69B0, rodata]
+    - [0xA6AD0, lib, libultra, cosf, .rodata]
+    - [0xA6B20, rodata]
     - [0xA8600, rodata] # F3DEX bin
     - [0xA8A80]
     
@@ -314,9 +318,11 @@
     - {type: lib, vram: 0x8012B610, name: libultra, object: initialize_isv, section: .bss}
     - {type: lib, vram: 0x8012B640, name: libultra, object: piacs, section: .bss}
     - {type: lib, vram: 0x8012B660, name: libultra, object: initrdb, section: .bss}
-    - {vram: 0x8012B680, type:  bss, name: unk_bss_3}
+    - {type: lib, vram: 0x8012B680, name: libultra, object: gbpakinit, section: .bss}
+    - {type: lib, vram: 0x8012B6C0, name: libultra, object: kdebugserver, section: .bss}
+    - {vram: 0x8012B880, type:  bss, name: unk_bss_5}
     - {type: lib, vram: 0x8012B8B0, name: libultra, object: threadprofile, section: .bss}
-    - {vram: 0x8012C4C0, type:  bss, name: unk_bss_4}
+    - {vram: 0x8012C4C0, type:  bss, name: unk_bss_6}
   - [0xA8A80]
 
   # unk fragment
