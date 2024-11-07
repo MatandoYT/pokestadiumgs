@@ -217,27 +217,28 @@
     - [0x7EF20, lib, libultra, ortho]
     - [0x7F0E0, lib, libultra, interrupt]
     - [0x7F170, lib, libultra, vi]
-    
-    - [0x7F290, asm, libultra/io/viswapcontext]
-    - [0x7F590, asm, libultra/io/pigetcmdq]
+    - [0x7F290, lib, libultra, viswapcontext]
+    - [0x7F590, lib, libultra, pigetcmdq]
     - [0x7F5C0, lib, libultra, cosf]
-    - [0x7F730, asm, libultra/io/epiread]
-    - [0x7F780, asm, libultra/io/visetspecial]
-    - [0x7F8E0, asm, libultra/flash/flashwritearray]
-    - [0x7FA40, asm, libultra/os/settime]
-    - [0x7FA70, asm, libultra/flash/flashclearstatus]
-    - [0x7FAC0, asm, libultra/io/visetevent]
-    - [0x7FB20, asm, libultra/os/rdbsend]
-    - [0x7FDE0, asm, libultra/flash/flashwritebuffer]
-    - [0x7FE70, asm, libultra/io/cartrominit]
-    - [0x7FFD0, asm, libultra/io/gbpakreadid]
-    - [0x80280, asm, libultra/rmon/rmoncmds]
-    - [0x80320, asm, libultra/rmon/rmonmem]
-    - [0x80C40, asm, libultra/rmon/rmonmain]
-    - [0x81040, asm, libultra/rmon/rmontask]
-    - [0x81AC0, asm, libultra/rmon/rmonmisc]
-    - [0x81C50, asm, libultra/rmon/rmonrcp]
-    - [0x81CF0, asm, libultra/rmon/rmonbrk]
+    - [0x7F730, lib, libultra, epiread]
+    - [0x7F780, lib, libultra, visetspecial]
+    - [0x7F8E0, lib, libultra, flashwritearray]
+    - [0x7FA40, lib, libultra, settime]
+    - [0x7FA70, lib, libultra, flashclearstatus]
+    - [0x7FAC0, lib, libultra, visetevent]
+    - [0x7FB20, lib, libultra, rdbsend]
+    - [0x7FDE0, lib, libultra, flashwritebuffer]
+    - [0x7FE70, lib, libultra, cartrominit]
+    - [0x7FFD0, lib, libultra, gbpakreadid]
+    - [0x80280, lib, libultra, rmoncmds]
+    - [0x80320, lib, libultra, rmonmem]
+    - [0x80C30, pad]
+    - [0x80C40, lib, libultra, rmonmain]
+    - [0x81040, lib, libultra, rmontask]
+    - [0x81AB0, pad]
+    - [0x81AC0, lib, libultra, rmonmisc]
+    - [0x81C50, lib, libultra, rmonrcp]
+    - [0x81CF0, lib, libultra, rmonbrk]
     
     - [0x827D0, asm, libultra/io/sprawread]
     - [0x82820, asm, libultra/rmon/rmonregs]
@@ -303,7 +304,15 @@
     - [0xA20B0, lib, libultra, timerintr, .data]
     - [0xA20C0, lib, libultra, rotate, .data]
     - [0xA20D0, lib, libultra, vi, .data]
-    - [0xA2140, data]
+    - [0xA2140, lib, libultra, vimodepallan1, .data]
+    - [0xA2190, lib, libultra, vimodentsclan1, .data]
+    - [0xA21E0, lib, libultra, vimodempallan1, .data]
+    - [0xA2230, lib, libultra, rdbsend, .data]
+    - [0xA2240, lib, libultra, cartrominit, .data]
+    - [0xA2250, lib, libultra, gbpakreadid, .data]
+    - [0xA22A0, lib, libultra, rmoncmds, .data]
+    - [0xA2380, lib, libultra, rmonmain, .data]
+    - [0xA2390, data]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, rodata, libultra/os/exceptasm]
@@ -311,7 +320,12 @@
     - [0xA69B0, lib, libultra, devmgr, .rodata]
     - [0xA69D0, lib, libultra, xprintf, .rodata]
     - [0xA6AD0, lib, libultra, cosf, .rodata]
-    - [0xA6B20, rodata]
+    - [0xA6B20, lib, libultra, rmonmem, .rodata]
+    - [0xA6BF0, lib, libultra, rmonmain, .rodata]
+    - [0xA6C30, lib, libultra, rmontask, .rodata]
+    - [0xA6CD0, lib, libultra, rmonmisc, .rodata]
+    - [0xA6D00, lib, libultra, rmonbrk, .rodata]
+    - [0xA6ED0, rodata]
     - [0xA8600, rodata] # F3DEX bin
     - [0xA8A80]
     
@@ -338,7 +352,12 @@
     - {type: lib, vram: 0x8012DFC0, name: libultra, object: seteventmesg, section: .bss}
     - {type: lib, vram: 0x8012E080, name: libultra, object: rmonsio, section: .bss}
     - {type: lib, vram: 0x8012E8A0, name: libultra, object: timerintr, section: .bss}
-    - {vram: 0x8012E900, type:  bss, name: unk_bss_6}
+    - {type: lib, vram: 0x8012E900, name: libultra, object: cartrominit, section: .bss}
+    - {type: lib, vram: 0x8012E980, name: libultra, object: rmonmem, section: .bss}
+    - {type: lib, vram: 0x8012EA80, name: libultra, object: rmonmain, section: .bss}
+    - {type: lib, vram: 0x8012EF00, name: libultra, object: rmonmisc, section: .bss}
+    - {type: lib, vram: 0x80133120, name: libultra, object: rmonbrk, section: .bss}
+    - {vram: 0x80133230, type:  bss, name: unk_bss_6}
   - [0xA8A80]
 
   # unk fragment
