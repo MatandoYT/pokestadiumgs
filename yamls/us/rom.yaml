@@ -239,26 +239,25 @@
     - [0x81AC0, lib, libultra, rmonmisc]
     - [0x81C50, lib, libultra, rmonrcp]
     - [0x81CF0, lib, libultra, rmonbrk]
-    
-    - [0x827D0, asm, libultra/io/sprawread]
-    - [0x82820, asm, libultra/rmon/rmonregs]
-    - [0x83420, asm, libultra/io/pfsselectbank]
-    - [0x834A0, asm, libultra/os/setfpccsr]
-    - [0x834B0, asm, libultra/io/aigetlen]
-    - [0x834C0, asm, libultra/io/epiwrite]
-    - [0x83510, asm, libultra/io/piwrite]
-    - [0x83550, asm, libultra/os/maptlbrdb]
-    - [0x835B0, asm, libultra/os/yieldthread]
-    - [0x83600, asm, libultra/mgu/translate]
-    - [0x836D0, asm, libultra/io/contramwrite]
-    - [0x83920, asm, libultra/io/contramread]
-    - [0x83B50, asm, libultra/io/crc]
-    - [0x83CC0, asm, libultra/os/getcause]
-    - [0x83CD0, asm, libultra/io/epirawwrite]
-    - [0x83E30, asm, libultra/os/settimer]
-    - [0x83FC0, asm, libultra/libc/xldtob]
-    - [0x84AD0, asm, libultra/libc/ldiv]
-    - [0x84C60, asm, libultra/libc/xlitob]
+    - [0x827D0, lib, libultra, sprawread]
+    - [0x82820, lib, libultra, rmonregs]
+    - [0x83420, lib, libultra, pfsselectbank]
+    - [0x834A0, lib, libultra, setfpccsr]
+    - [0x834B0, lib, libultra, aigetlen]
+    - [0x834C0, lib, libultra, epiwrite]
+    - [0x83510, lib, libultra, piwrite]
+    - [0x83550, lib, libultra, maptlbrdb]
+    - [0x835B0, lib, libultra, yieldthread]
+    - [0x83600, lib, libultra, translate]
+    - [0x836D0, lib, libultra, contramwrite]
+    - [0x83920, lib, libultra, contramread]
+    - [0x83B50, lib, libultra, crc]
+    - [0x83CC0, lib, libultra, getcause]
+    - [0x83CD0, lib, libultra, epirawwrite]
+    - [0x83E30, lib, libultra, settimer]
+    - [0x83FC0, lib, libultra, xldtob]
+    - [0x84AD0, lib, libultra, ldiv]
+    - [0x84C60, lib, libultra, xlitob]
     
     - [0x84F00, asm, libultra/io/sirawwrite]
     - [0x84F50, asm, libultra/io/pirawwrite]
@@ -312,7 +311,9 @@
     - [0xA2250, lib, libultra, gbpakreadid, .data]
     - [0xA22A0, lib, libultra, rmoncmds, .data]
     - [0xA2380, lib, libultra, rmonmain, .data]
-    - [0xA2390, data]
+    - [0xA2390, lib, libultra, contramread, .data]
+    - [0xA23A0, lib, libultra, xlitob, .data]
+    - [0xA23D0, data]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, rodata, libultra/os/exceptasm]
@@ -325,7 +326,11 @@
     - [0xA6C30, lib, libultra, rmontask, .rodata]
     - [0xA6CD0, lib, libultra, rmonmisc, .rodata]
     - [0xA6D00, lib, libultra, rmonbrk, .rodata]
-    - [0xA6ED0, rodata]
+    - [0xA6ED0, lib, libultra, rmonregs, .rodata]
+    - [0xA6F50, lib, libultra, libm_vals, .rodata]
+    - [0xA6F60, lib, libultra, xldtob, .rodata]
+    - [0xA6FC0, rodata]
+    - [0xA6FC0, rodata]
     - [0xA8600, rodata] # F3DEX bin
     - [0xA8A80]
     
@@ -357,7 +362,8 @@
     - {type: lib, vram: 0x8012EA80, name: libultra, object: rmonmain, section: .bss}
     - {type: lib, vram: 0x8012EF00, name: libultra, object: rmonmisc, section: .bss}
     - {type: lib, vram: 0x80133120, name: libultra, object: rmonbrk, section: .bss}
-    - {vram: 0x80133230, type:  bss, name: unk_bss_6}
+    - {type: lib, vram: 0x80133230, name: libultra, object: rmonregs, section: .bss}
+    - {vram: 0x80133250, type:  bss, name: unk_bss_6}
   - [0xA8A80]
 
   # unk fragment
