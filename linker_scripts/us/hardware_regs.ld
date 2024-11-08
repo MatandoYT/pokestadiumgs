@@ -102,3 +102,6 @@ D_A480000C = 0xA480000C; // defined:True // reserved
 SI_PIF_ADDR_WR64B_REG = 0xA4800010; // defined:True
 D_A4800014 = 0xA4800014; // defined:True // reserved
 SI_STATUS_REG = 0xA4800018; // defined:True
+
+// Other addresses im too lazy fix right now.
+osTvType = 0x80000300; // defined:true

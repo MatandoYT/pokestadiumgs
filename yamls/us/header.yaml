@@ -16,6 +16,7 @@ options:
   symbol_addrs_path:
     - linker_scripts/us/symbol_addrs.txt
     - linker_scripts/us/symbol_addrs_code.txt
+    - linker_scripts/us/symbol_addrs_ultralib.txt
     - linker_scripts/us/ignored_addresses.txt
   reloc_addrs_path:
     - relocs/reloc_addrs-us.txt
@@ -25,6 +26,7 @@ options:
   asset_path: assets/us
 
   build_path: build
+  lib_path: build/lib
 
   extensions_path: tools/splat_ext
   mips_abi_float_regs: o32
@@ -44,6 +46,7 @@ options:
   asm_jtbl_label_macro: jlabel
   asm_data_macro: dlabel
   include_macro_inc: False
+  libultra_symbols: True
   hardware_regs: True
   asm_emit_size_directive: False
   segment_end_before_align: True

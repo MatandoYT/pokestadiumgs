@@ -94,8 +94,8 @@ endif
 BASEROM_DIR := baseroms/$(VERSION)
 BASEROM     := $(BASEROM_DIR)/baserom.z64
 
-#ULTRALIB_VERSION     := I_P
-#ULTRALIB_TARGET      := libultra_rom
+ULTRALIB_VERSION     := L
+ULTRALIB_TARGET      := libultra
 
 ### Output ###
 
@@ -123,7 +123,7 @@ endif
 
 MAKE = make
 CPPFLAGS += -fno-dollars-in-identifiers -P
-LDFLAGS  := --no-check-sections --accept-unknown-input-arch --emit-relocs --whole-archive
+LDFLAGS  := --no-check-sections --accept-unknown-input-arch --emit-relocs
 
 ifeq ($(DETECTED_OS), macos)
   CPPFLAGS += -xc++
@@ -158,7 +158,8 @@ SPLAT_YAML      := $(TARGET)-$(VERSION).yaml
 #ENCRYPT_LIBLEO  := $(PYTHON) tools/encrypt_libleo.py
 #EXTRACT_ASSETS  := tools/extract_assets.sh
 
-IINC := -Iinclude -Isrc -Iassets/$(VERSION) -I. -I$(BUILD_DIR)
+IINC := -Iinclude -Isrc -Isrc/libnaudio -Iassets/$(VERSION) -I. -I$(BUILD_DIR)
+IINC += -Ilib/ultralib/include -Ilib/ultralib/include/PR -Ilib/ultralib/include/ido
 IINC += -Iinclude/
 
 ifeq ($(KEEP_MDEBUG),0)
@@ -234,9 +235,15 @@ endif
 
 $(shell mkdir -p asm/$(VERSION) assets/$(VERSION) linker_scripts/$(VERSION)/auto)
 
+ULTRALIB_DIR  := lib/ultralib
+ULTRALIB_LIB  := $(ULTRALIB_DIR)/build/$(ULTRALIB_VERSION)/$(ULTRALIB_TARGET)/$(ULTRALIB_TARGET).a
+LIBULTRA_DIR  := lib/libultra
+LIBULTRA_LIB  := $(BUILD_DIR)/$(LIBULTRA_DIR).a
+
 #SRC_DIRS      := $(shell find src -type d)
 ASM_DIRS      := $(shell find asm/$(VERSION) -type d -not -path "asm/$(VERSION)/nonmatchings/*" -not -path "asm/$(VERSION)/lib/*")
 ASSET_DIRS    := $(shell find assets/$(VERSION) -type d)
+LIB_DIRS      := $(foreach f, $(LIBULTRA_DIR), $f)
 
 C_FILES       := $(foreach dir,$(SRC_DIRS),$(wildcard $(dir)/*.c))
 S_FILES       := $(foreach dir,$(ASM_DIRS) $(SRC_DIRS),$(wildcard $(dir)/*.s))
@@ -288,7 +295,17 @@ clean:
 	@$(PRINT) "$(RED)Cleaning ROM build files...\n$(NO_COL)"
 	$(V)$(RM) -r $(BUILD_DIR)
 
-distclean: clean
+libclean:
+	@$(PRINT) "$(RED)Cleaning libultra build files...\n$(NO_COL)"
+	$(V)$(MAKE) -C lib/ultralib clean VERSION=$(ULTRALIB_VERSION) TARGET=$(ULTRALIB_TARGET)
+	$(V)$(RM) -rf $(BUILD_DIR)/lib
+	$(V)$(RM) -rf lib/ultralib/build
+	$(V)$(RM) -r build/$(TARGET)-$(VERSION).elf
+	$(V)$(RM) -r build/$(TARGET)-$(VERSION).ld
+	$(V)$(RM) -r build/$(TARGET)-$(VERSION).map
+	$(V)$(RM) -r build/$(TARGET)-$(VERSION).z64
+
+distclean: clean libclean
 	@$(PRINT) "$(RED)Performing full source distribution clean...\n$(NO_COL)"
 	$(V)$(RM) -r $(BUILD_DIR) asm/ assets/ .splat/
 	$(V)$(RM) -r linker_scripts/$(VERSION)/auto $(LDSCRIPT)
@@ -312,6 +329,8 @@ extract:
 	$(V)$(SPLAT) $(SPLAT_FLAGS) $(SPLAT_YAML)
 	$(V)$(EXTRACT_ASSETS)
 
+lib: $(ULTRALIB_LIB)
+
 diff-init: rom
 	$(RM) -r expected/
 	mkdir -p expected/
@@ -329,7 +348,7 @@ ifeq ($(N64_EMULATOR),)
 endif
 	$(N64_EMULATOR) $<
 
-.PHONY: all rom clean distclean venv setup extract diff-init init run
+.PHONY: all rom clean libclean distclean venv setup extract lib diff-init init run
 .DEFAULT_GOAL := rom
 # Prevent removing intermediate files
 .SECONDARY:
@@ -341,13 +360,13 @@ $(ROM): $(ELF)
 	$(V)$(OBJCOPY) -O binary --gap-fill=0xFF $< $@
 
 # TODO: avoid using auto/undefined
-$(ELF): $(O_FILES) $(LDSCRIPT) $(BUILD_DIR)/linker_scripts/$(VERSION)/hardware_regs.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/undefined_syms.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/unused_syms.ld $(BUILD_DIR)/linker_scripts/common_undef_syms.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/auto/undefined_syms_auto.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/auto/undefined_funcs_auto.ld
+$(ELF): $(O_FILES) $(LIBULTRA_LIB) $(LDSCRIPT) $(BUILD_DIR)/linker_scripts/$(VERSION)/hardware_regs.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/undefined_syms.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/unused_syms.ld $(BUILD_DIR)/linker_scripts/common_undef_syms.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/auto/undefined_syms_auto.ld $(BUILD_DIR)/linker_scripts/$(VERSION)/auto/undefined_funcs_auto.ld
 	@$(PRINT) "$(GREEN)Linking ELF file:  $(BLUE)$@ $(NO_COL)\n"
 	$(V)$(LD) $(LDFLAGS) -T $(LDSCRIPT) \
 		-T $(BUILD_DIR)/linker_scripts/$(VERSION)/hardware_regs.ld -T $(BUILD_DIR)/linker_scripts/$(VERSION)/undefined_syms.ld \
 		-T $(BUILD_DIR)/linker_scripts/$(VERSION)/unused_syms.ld -T $(BUILD_DIR)/linker_scripts/common_undef_syms.ld \
 		-T $(BUILD_DIR)/linker_scripts/$(VERSION)/auto/undefined_syms_auto.ld -T $(BUILD_DIR)/linker_scripts/$(VERSION)/auto/undefined_funcs_auto.ld \
-		-Map $(MAP) -o $@
+		-Map $(MAP) $(LIBULTRA_LIB) -o $@
 
 $(LDSCRIPT): linker_scripts/$(VERSION)/$(TARGET).ld
 	$(call print,Copying linker script to build dir:,$<,$@)
@@ -356,6 +375,15 @@ $(LDSCRIPT): linker_scripts/$(VERSION)/$(TARGET).ld
 $(BUILD_DIR)/%.ld: %.ld
 	$(call print,Preprocessing linker script:,$<,$@)
 	$(V)$(CPP) $(CPPFLAGS) $(BUILD_DEFINES) $(IINC) $< > $@
+
+$(LIBULTRA_LIB): $(ULTRALIB_LIB)
+	$(call print,Archiving libultra lib:,$<,$@)
+	$(V)cp $< $@
+	$(V)$(LIBDUMP_CMD)
+
+$(ULTRALIB_LIB):
+	@$(PRINT) "$(GREEN)Making libultra:  $(BLUE)$@ $(NO_COL)\n"
+	$(V)$(MAKE) -C lib/ultralib VERSION=$(ULTRALIB_VERSION) TARGET=$(ULTRALIB_TARGET) FIXUPS=1 CROSS=$(MIPS_BINUTILS_PREFIX) CC=../../$(CC_OLD) VERBOSE=$(VERBOSE) COLOR=$(COLOR)
 
 $(BUILD_DIR)/%.o: %.bin
 	$(call print,Binning object:,$<,$@)
