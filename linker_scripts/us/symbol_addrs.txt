@@ -163,3 +163,6 @@ viThread = 0x80133250; // defined:true
 __osViCurr = 0x800A1530;
 __osThprofFlag = 0x800A1330; // defined:true
 __osThprofFunc = 0x800A1334; // defined:true
+osViModeTable = 0x800A0190; // defined:true
+osViModeNtscLpn1 = 0x800A1370; // defined:true
+osViModeMpalLpn1 = 0x800A13C0; // defined:true

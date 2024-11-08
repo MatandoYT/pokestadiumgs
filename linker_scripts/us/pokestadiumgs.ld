@@ -490,14 +490,13 @@ SECTIONS
         build/lib/libultra.a:initialize.o(.data);
         build/lib/libultra.a:initialize_msp.o(.data);
         build/lib/libultra.a:piacs.o(.data);
-        A0D90_data = .;
-        build/asm/us/data/A0D90.data.o(.data);
+        build/lib/libultra.a:vitbl.o(.data);
         build/lib/libultra.a:kdebugserver.o(.data);
         build/lib/libultra.a:readhost.o(.data);
         build/lib/libultra.a:threadprofile.o(.data);
         build/lib/libultra.a:pimgr.o(.data);
-        A1F70_data = .;
-        build/asm/us/data/A1F70.data.o(.data);
+        build/lib/libultra.a:vimodentsclpn1.o(.data);
+        build/lib/libultra.a:vimodempallpn1.o(.data);
         build/lib/libultra.a:contpfs.o(.data);
         build/lib/libultra.a:seteventmesg.o(.data);
         build/lib/libultra.a:random.o(.data);

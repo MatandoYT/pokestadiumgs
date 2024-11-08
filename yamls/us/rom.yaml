@@ -282,6 +282,8 @@
     - [0x85D90, lib, libultra, setwatchlo]
 
     - [0x85DA0, data]
+    
+    # libultra .data
     - [0xA0CD0, lib, libultra, exceptasm, .data]
     - [0xA0D10, lib, libultra, thread, .data]
     - [0xA0D30, lib, libultra, controller, .data]
@@ -289,12 +291,13 @@
     - [0xA0D50, lib, libultra, initialize, .data]
     - [0xA0D70, lib, libultra, initialize_msp, .data]
     - [0xA0D80, lib, libultra, piacs, .data]
-    - [0xA0D90, data]
+    - [0xA0D90, lib, libultra, vitbl, .data]
     - [0xA1F10, lib, libultra, kdebugserver, .data]
     - [0xA1F20, lib, libultra, readhost, .data]
     - [0xA1F30, lib, libultra, threadprofile, .data]
     - [0xA1F40, lib, libultra, pimgr, .data]
-    - [0xA1F70, data]
+    - [0xA1F70, lib, libultra, vimodentsclpn1, .data]
+    - [0xA1FC0, lib, libultra, vimodempallpn1, .data]
     - [0xA2010, lib, libultra, contpfs, .data]
     - [0xA2020, lib, libultra, seteventmesg, .data]
     - [0xA2030, lib, libultra, random, .data]
@@ -315,7 +318,7 @@
     - [0xA2390, lib, libultra, contramread, .data]
     - [0xA23A0, lib, libultra, xlitob, .data]
     - [0xA23D0, lib, libultra, vimgr, .data]
-    - [0xA23F0, data]
+    - [0xA23F0, data] # not part of libultra's data. what?
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, lib, libultra, exceptasm, .rodata]
@@ -332,7 +335,7 @@
     - [0xA6F50, lib, libultra, libm_vals, .rodata]
     - [0xA6F60, lib, libultra, xldtob, .rodata]
     - [0xA6FC0, lib, libultra, llcvt, .rodata]
-    - [0xA6FD0, rodata]
+    - [0xA6FD0, rodata] # also not part of libultra's rodata
     - [0xA8600, rodata] # F3DEX bin
     - [0xA8A80]
     
