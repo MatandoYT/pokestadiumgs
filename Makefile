@@ -240,7 +240,7 @@ ULTRALIB_LIB  := $(ULTRALIB_DIR)/build/$(ULTRALIB_VERSION)/$(ULTRALIB_TARGET)/$(
 LIBULTRA_DIR  := lib/libultra
 LIBULTRA_LIB  := $(BUILD_DIR)/$(LIBULTRA_DIR).a
 
-#SRC_DIRS      := $(shell find src -type d)
+SRC_DIRS      := $(shell find src -type d)
 ASM_DIRS      := $(shell find asm/$(VERSION) -type d -not -path "asm/$(VERSION)/nonmatchings/*" -not -path "asm/$(VERSION)/lib/*")
 ASSET_DIRS    := $(shell find assets/$(VERSION) -type d)
 LIB_DIRS      := $(foreach f, $(LIBULTRA_DIR), $f)

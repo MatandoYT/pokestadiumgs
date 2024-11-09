@@ -19,83 +19,86 @@
     subsegments:
     - [0x1000, hasm, entry] # bootloader
     - [0x1060, asm, pre_main] # what is this? this isnt code?
-    - [0x2060, asm, main]
-    - [0x21C0, asm]
-    - [0x2CA0, asm]
-    - [0x3280, asm]
-    - [0x3A00, asm]
-    - [0x3E40, asm]
-    - [0x4420, asm]
-    - [0x57C0, asm]
-    - [0x62E0, asm]
-    - [0x6670, asm]
-    - [0x7140, asm]
-    - [0x78D0, asm]
-    - [0x7A50, asm]
-    - [0x8470, asm]
-    - [0x95C0, asm]
-    - [0x9E00, asm]
-    - [0xAC80, asm]
-    - [0xBF50, asm]
-    - [0xC180, asm]
-    - [0xC290, asm]
-    - [0xC2A0, asm]
-    - [0xC2C0, asm]
-    - [0xC380, asm]
-    - [0xC890, asm]
-    - [0xCE80, asm]
-    - [0x10BB0, asm]
-    - [0x14640, asm]
-    - [0x1A140, asm]
-    - [0x1A360, asm]
-    - [0x1C2D0, asm]
-    - [0x1CDC0, asm]
-    - [0x20860, asm]
-    - [0x208A0, asm]
-    - [0x20C50, asm]
-    - [0x43700, asm]
-    - [0x44300, asm]
-    - [0x44E70, asm]
-    - [0x47580, asm]
-    - [0x4AAD0, asm]
-    - [0x4AC10, asm]
-    - [0x4C2E0, asm]
-    - [0x4CC20, asm]
-    - [0x4EE50, asm]
-    - [0x4F800, asm]
-    - [0x517E0, asm]
-    - [0x56F90, asm]
-    - [0x585D0, asm]
-    - [0x615D0, asm]
-    - [0x638E0, asm]
-    - [0x63CF0, asm]
-    - [0x641E0, asm]
-    - [0x654A0, asm]
-    - [0x65820, asm]
-    - [0x65E20, asm]
-    - [0x667B0, asm]
-    - [0x66990, asm]
-    - [0x66B50, asm]
-    - [0x66DF0, asm]
-    - [0x672F0, asm]
-    - [0x674C0, asm]
-    - [0x674D0, asm]
-    - [0x67F00, asm]
-    - [0x68F90, asm]
-    - [0x69650, asm]
-    - [0x69F70, asm]
-    - [0x6AA10, asm]
-    - [0x6AA80, asm]
-    - [0x6DDA0, asm]
-    - [0x6DEC0, asm]
-    - [0x6E850, asm]
-    - [0x71E10, asm]
-    - [0x72540, asm]
-    - [0x72720, asm]
-    - [0x728D0, asm]
-    - [0x72C30, asm]
-    - [0x73C80, asm]
-    - [0x74020, asm]
+    - [0x2060, c, main]
+    - [0x21C0, c, dp_intro]
+    - [0x2CA0, c]
+    - [0x3280, c]
+    - [0x3A00, c]
+    - [0x3E40, c]
+    - [0x4420, c]
+    - [0x57C0, c]
+    - [0x62E0, c]
+    - [0x6670, c]
+    - [0x7140, c]
+    - [0x78D0, c]
+    - [0x7A50, c]
+    - [0x8470, c]
+    - [0x95C0, c]
+    - [0x9E00, c]
+    - [0xAC80, c]
+    - [0xBF50, c]
+    - [0xC180, c]
+    - [0xC290, c]
+    - [0xC2A0, c]
+    - [0xC2C0, c]
+    - [0xC380, c]
+    - [0xC890, c]
+    - [0xCE80, c]
+    - [0x10BB0, c]
+    - [0x14640, c]
+    - [0x1A140, c]
+    - [0x1A360, c]
+    - [0x1C2D0, c]
+    - [0x1CDC0, c]
+    - [0x20860, c]
+    - [0x208A0, c]
+    - [0x20C50, c]
+    - [0x220C0, hasm, ../../src/unk_220C0]
+    - [0x226C0, c]
+    - [0x229E0, c]
+    - [0x43700, c]
+    - [0x44300, c]
+    - [0x44E70, c]
+    - [0x47580, c]
+    - [0x4AAD0, c]
+    - [0x4AC10, c]
+    - [0x4C2E0, c]
+    - [0x4CC20, c]
+    - [0x4EE50, c]
+    - [0x4F800, c]
+    - [0x517E0, c]
+    - [0x56F90, c]
+    - [0x585D0, c]
+    - [0x615D0, c]
+    - [0x638E0, c]
+    - [0x63CF0, c]
+    - [0x641E0, c]
+    - [0x654A0, c]
+    - [0x65820, c]
+    - [0x65E20, c]
+    - [0x667B0, c]
+    - [0x66990, c]
+    - [0x66B50, c]
+    - [0x66DF0, c]
+    - [0x672F0, c]
+    - [0x674C0, c]
+    - [0x674D0, c]
+    - [0x67F00, c]
+    - [0x68F90, c]
+    - [0x69650, c]
+    - [0x69F70, c]
+    - [0x6AA10, c]
+    - [0x6AA80, c]
+    - [0x6DDA0, c]
+    - [0x6DEC0, c]
+    - [0x6E850, c]
+    - [0x71E10, c]
+    - [0x72540, c]
+    - [0x72720, c]
+    - [0x728D0, c]
+    - [0x72C30, c]
+    - [0x73C80, c]
+    - [0x74020, c]
 
     # libultra
     - [0x746D0, lib, libultra, sendmesg]
@@ -318,7 +321,9 @@
     - [0xA2390, lib, libultra, contramread, .data]
     - [0xA23A0, lib, libultra, xlitob, .data]
     - [0xA23D0, lib, libultra, vimgr, .data]
-    - [0xA23F0, data] # not part of libultra's data. what?
+    
+    # .rodata
+    - [0xA23F0, rodata]
     - [0xA6860, lib, libultra, setintmask, .rodata]
     - [0xA68E0, lib, libultra, sinf, .rodata]
     - [0xA6930, lib, libultra, exceptasm, .rodata]
@@ -379,7 +384,7 @@
     vram: 0x83500000
     subsegments:
     - [0xA8A80, textbin, fragments/1/fragment1_header]
-    - [0xA8AA0, asm,     fragments/1/fragment1_code]
+    - [0xA8AA0, c,       fragments/1/fragment1_code]
     - [0xAC540, data,    fragments/1/fragment1_data]
 
   # unk fragment
@@ -390,7 +395,7 @@
     vram: 0x81900000
     subsegments:
     - [0xAD260, textbin, fragments/2/fragment2_header]
-    - [0xAD280, asm,     fragments/2/fragment2_code]
+    - [0xAD280, c,       fragments/2/fragment2_code]
     - [0xAD970, data,    fragments/2/fragment2_data]
 
   # unk fragment
@@ -401,7 +406,7 @@
     vram: 0x81A00000
     subsegments:
     - [0xADCA0, textbin, fragments/3/fragment3_header]
-    - [0xADCC0, asm,     fragments/3/fragment3_code]
+    - [0xADCC0, c,       fragments/3/fragment3_code]
     - [0xAE5D0, data,    fragments/3/fragment3_data]
 
   # unk fragment
@@ -412,9 +417,9 @@
     vram: 0x81800000
     subsegments:
     - [0xAE5E0, textbin, fragments/4/fragment4_header]
-    - [0xAE600, asm,     fragments/4/fragment4_AE600]
-    - [0xAFAA0, asm,     fragments/4/fragment4_AFAA0]
-    - [0xB2D00, asm,     fragments/4/fragment4_B2D00]
+    - [0xAE600, c,       fragments/4/fragment4_AE600]
+    - [0xAFAA0, c,       fragments/4/fragment4_AFAA0]
+    - [0xB2D00, c,       fragments/4/fragment4_B2D00]
     - [0xB3F00, data,    fragments/4/fragment4_data]
 
   # unk fragment
@@ -425,7 +430,7 @@
     vram: 0x83200000 # unk vram as it seems(?) this isnt loaded. speculated 83200000 based on the calls?
     subsegments:
     - [0xB4D90, textbin, fragments/5/fragment5_header]
-    - [0xB4DB0, asm,     fragments/5/fragment5_code]
+    - [0xB4DB0, c,       fragments/5/fragment5_code]
     - [0xB58B0, data,    fragments/5/fragment5_data]
 
   # unk fragment
@@ -436,7 +441,7 @@
     vram: 0x83100000
     subsegments:
     - [0xB5DA0, textbin, fragments/6/fragment6_header]
-    - [0xB5DC0, asm,     fragments/6/fragment6_code]
+    - [0xB5DC0, c,       fragments/6/fragment6_code]
     - [0xB8030, data,    fragments/6/fragment6_data]
 
   # unk fragment
@@ -447,8 +452,8 @@
     vram: 0x83000000 # unk vram. probably 83000000?
     subsegments:
     - [0xBA230, textbin, fragments/7/fragment7_header]
-    - [0xBA250, asm,     fragments/7/fragment7_BA250]
-    - [0xC4C10, asm,     fragments/7/fragment7_C4C10]
+    - [0xBA250, c,       fragments/7/fragment7_BA250]
+    - [0xC4C10, c,       fragments/7/fragment7_C4C10]
     - [0xC5BD0, data,    fragments/7/fragment7_data]
 
   # unk fragment
@@ -459,7 +464,7 @@
     vram: 0x82F00000
     subsegments:
     - [0xCC6B0, textbin, fragments/8/fragment8_header]
-    - [0xCC6D0, asm,     fragments/8/fragment8_code]
+    - [0xCC6D0, c,       fragments/8/fragment8_code]
     - [0xCE660, data,    fragments/8/fragment8_data]
 
   # unk fragment
@@ -470,7 +475,7 @@
     vram: 0x8FB00000 # unk vram. probably 8FB00000?
     subsegments:
     - [0xD0480, textbin, fragments/9/fragment9_header]
-    - [0xD04A0, asm,     fragments/9/fragment9_code]
+    - [0xD04A0, c,       fragments/9/fragment9_code]
     - [0xD3910, data,    fragments/9/fragment9_data]
   
   # unk fragment
@@ -481,8 +486,8 @@
     vram: 0x82800000
     subsegments:
     - [0xD4C30, textbin, fragments/10/fragment10_header]
-    - [0xD4C50, asm,     fragments/10/fragment10_D4C50]
-    - [0xD5250, asm,     fragments/10/fragment10_D5250]
+    - [0xD4C50, c,       fragments/10/fragment10_D4C50]
+    - [0xD5250, c,       fragments/10/fragment10_D5250]
     - [0xD7460, data,    fragments/10/fragment10_data]
 
   - name: fragment11
@@ -492,11 +497,11 @@
     vram: 0x81600000
     subsegments:
     - [0xD7BA0, textbin, fragments/11/fragment11_header]
-    - [0xD7BC0, asm,     fragments/11/fragment11_D7BC0]
-    - [0xD9520, asm,     fragments/11/fragment11_D9520]
-    - [0xE1E10, asm,     fragments/11/fragment11_E1E10]
-    - [0xE35C0, asm,     fragments/11/fragment11_E35C0]
-    - [0xE3850, asm,     fragments/11/fragment11_E3850]
+    - [0xD7BC0, c,       fragments/11/fragment11_D7BC0]
+    - [0xD9520, c,       fragments/11/fragment11_D9520]
+    - [0xE1E10, c,       fragments/11/fragment11_E1E10]
+    - [0xE35C0, c,       fragments/11/fragment11_E35C0]
+    - [0xE3850, c,       fragments/11/fragment11_E3850]
     - [0xE38A0, data,    fragments/11/fragment11_data]
   
   - name: fragment12
@@ -506,8 +511,8 @@
     vram: 0x81400000
     subsegments:
     - [0xE5310, textbin, fragments/12/fragment12_header]
-    - [0xE5330, asm,     fragments/12/fragment12_E5330]
-    - [0xE7C00, asm,     fragments/12/fragment12_E7C00]
+    - [0xE5330, c,       fragments/12/fragment12_E5330]
+    - [0xE7C00, c,       fragments/12/fragment12_E7C00]
     - [0xECAB0, data,    fragments/12/fragment12_data]
   
   - name: fragment13
@@ -517,9 +522,9 @@
     vram: 0x82400000
     subsegments:
     - [0xEE080, textbin, fragments/13/fragment13_header]
-    - [0xEE0A0, asm,     fragments/13/fragment13_EE0A0]
-    - [0xEE5B0, asm,     fragments/13/fragment13_EE5B0]
-    - [0xEEC50, asm,     fragments/13/fragment13_EEC50]
+    - [0xEE0A0, c,       fragments/13/fragment13_EE0A0]
+    - [0xEE5B0, c,       fragments/13/fragment13_EE5B0]
+    - [0xEEC50, c,       fragments/13/fragment13_EEC50]
     - [0xF53D0, data,    fragments/13/fragment13_data]
   
   - name: fragment14
@@ -529,15 +534,15 @@
     vram: 0x81300000
     subsegments:
     - [0xF8190,  textbin, fragments/14/fragment14_header]
-    - [0xF81B0,  asm,     fragments/14/fragment14_F81B0]
-    - [0xFA520,  asm,     fragments/14/fragment14_FA520]
-    - [0xFAD40,  asm,     fragments/14/fragment14_FAD40]
-    - [0xFCD40,  asm,     fragments/14/fragment14_FCD40]
-    - [0xFD770,  asm,     fragments/14/fragment14_FD770]
-    - [0xFF070,  asm,     fragments/14/fragment14_FF070]
-    - [0x104FC0, asm,     fragments/14/fragment14_104FC0]
-    - [0x1077C0, asm,     fragments/14/fragment14_1077C0]
-    - [0x109280, asm,     fragments/14/fragment14_109280]
+    - [0xF81B0,  c,       fragments/14/fragment14_F81B0]
+    - [0xFA520,  c,       fragments/14/fragment14_FA520]
+    - [0xFAD40,  c,       fragments/14/fragment14_FAD40]
+    - [0xFCD40,  c,       fragments/14/fragment14_FCD40]
+    - [0xFD770,  c,       fragments/14/fragment14_FD770]
+    - [0xFF070,  c,       fragments/14/fragment14_FF070]
+    - [0x104FC0, c,       fragments/14/fragment14_104FC0]
+    - [0x1077C0, c,       fragments/14/fragment14_1077C0]
+    - [0x109280, c,       fragments/14/fragment14_109280]
     - [0x109EC0, data,    fragments/14/fragment14_data]
 
   - name: fragment15
@@ -547,7 +552,7 @@
     vram: 0x83F00000
     subsegments:
     - [0x10CF70, textbin, fragments/15/fragment15_header]
-    - [0x10CF90, asm,     fragments/15/fragment15_code]
+    - [0x10CF90, c,       fragments/15/fragment15_code]
     - [0x10D360, data,    fragments/15/fragment15_data]
   
   - name: fragment16
@@ -557,7 +562,7 @@
     vram: 0x82000000
     subsegments:
     - [0x10D470, textbin, fragments/16/fragment16_header]
-    - [0x10D490, asm,     fragments/16/fragment16_code]
+    - [0x10D490, c,       fragments/16/fragment16_code]
     - [0x10F080, data,    fragments/16/fragment16_data]
   
   - name: fragment17
@@ -567,11 +572,11 @@
     vram: 0x82200000
     subsegments:
     - [0x10F9C0, textbin, fragments/17/fragment17_header]
-    - [0x10F9E0, asm,     fragments/17/fragment17_10F9E0]
-    - [0x10FFC0, asm,     fragments/17/fragment17_10FFC0]
-    - [0x113A60, asm,     fragments/17/fragment17_113A60]
-    - [0x11A7F0, asm,     fragments/17/fragment17_11A7F0]
-    - [0x11B210, asm,     fragments/17/fragment17_11B210]
+    - [0x10F9E0, c,       fragments/17/fragment17_10F9E0]
+    - [0x10FFC0, c,       fragments/17/fragment17_10FFC0]
+    - [0x113A60, c,       fragments/17/fragment17_113A60]
+    - [0x11A7F0, c,       fragments/17/fragment17_11A7F0]
+    - [0x11B210, c,       fragments/17/fragment17_11B210]
     - [0x11D0B0, data,    fragments/17/fragment17_data]
   
   - name: fragment18
@@ -581,7 +586,7 @@
     vram: 0x81700000
     subsegments:
     - [0x120260, textbin, fragments/18/fragment18_header]
-    - [0x120280, asm,     fragments/18/fragment18_code]
+    - [0x120280, c,       fragments/18/fragment18_code]
     - [0x121010, data,    fragments/18/fragment18_data]
   
   - name: fragment19
@@ -591,8 +596,8 @@
     vram: 0x82300000
     subsegments:
     - [0x1210E0, textbin, fragments/19/fragment19_header]
-    - [0x121100, asm,     fragments/19/fragment19_121100]
-    - [0x124E40, asm,     fragments/19/fragment19_124E40]
+    - [0x121100, c,       fragments/19/fragment19_121100]
+    - [0x124E40, c,       fragments/19/fragment19_124E40]
     - [0x126B50, data,    fragments/19/fragment19_data]
   
   - name: fragment20
@@ -602,11 +607,11 @@
     vram: 0x82600000
     subsegments:
     - [0x1280D0, textbin, fragments/20/fragment20_header]
-    - [0x1280F0, asm,     fragments/20/fragment20_1280F0]
-    - [0x1286C0, asm,     fragments/20/fragment20_1286C0]
-    - [0x128B10, asm,     fragments/20/fragment20_128B10]
-    - [0x12BB60, asm,     fragments/20/fragment20_12BB60]
-    - [0x12C460, asm,     fragments/20/fragment20_12C460]
+    - [0x1280F0, c,       fragments/20/fragment20_1280F0]
+    - [0x1286C0, c,       fragments/20/fragment20_1286C0]
+    - [0x128B10, c,       fragments/20/fragment20_128B10]
+    - [0x12BB60, c,       fragments/20/fragment20_12BB60]
+    - [0x12C460, c,       fragments/20/fragment20_12C460]
     - [0x13D3F0, data,    fragments/20/fragment20_data]
 
   - name: fragment21
@@ -616,9 +621,9 @@
     vram: 0x82500000
     subsegments:
     - [0x13FF80, textbin, fragments/21/fragment21_header]
-    - [0x13FFA0, asm,     fragments/21/fragment21_13FFA0]
-    - [0x144790, asm,     fragments/21/fragment21_144790]
-    - [0x147D10, asm,     fragments/21/fragment21_147D10]
+    - [0x13FFA0, c,       fragments/21/fragment21_13FFA0]
+    - [0x144790, c,       fragments/21/fragment21_144790]
+    - [0x147D10, c,       fragments/21/fragment21_147D10]
     - [0x148600, data,    fragments/21/fragment21_data]
 
   - name: fragment22
@@ -628,8 +633,8 @@
     vram: 0x82700000
     subsegments:
     - [0x14A2C0, textbin, fragments/22/fragment22_header]
-    - [0x14A2E0, asm,     fragments/22/fragment22_14A2E0]
-    - [0x14B090, asm,     fragments/22/fragment22_14B090]
+    - [0x14A2E0, c,       fragments/22/fragment22_14A2E0]
+    - [0x14B090, c,       fragments/22/fragment22_14B090]
     - [0x14D470, data,    fragments/22/fragment22_data]
   
   - name: fragment23
@@ -639,7 +644,7 @@
     vram: 0x82A00000
     subsegments:
     - [0x14DF30, textbin, fragments/23/fragment23_header]
-    - [0x14DF50, asm,     fragments/23/fragment23_code]
+    - [0x14DF50, c,       fragments/23/fragment23_code]
     - [0x14F760, data,    fragments/23/fragment23_data]
   
   - name: fragment24
@@ -649,8 +654,8 @@
     vram: 0x82B00000
     subsegments:
     - [0x14FE00, textbin, fragments/24/fragment24_header]
-    - [0x14FE20, asm,     fragments/24/fragment24_14FE20]
-    - [0x150C10, asm,     fragments/24/fragment24_150C10]
+    - [0x14FE20, c,       fragments/24/fragment24_14FE20]
+    - [0x150C10, c,       fragments/24/fragment24_150C10]
     - [0x158320, data,    fragments/24/fragment24_data]
   
   - name: fragment25
@@ -660,10 +665,10 @@
     vram: 0x82100000
     subsegments:
     - [0x15A040, textbin, fragments/25/fragment25_header]
-    - [0x15A060, asm,     fragments/25/fragment25_15A060]
-    - [0x15BBC0, asm,     fragments/25/fragment25_15BBC0]
-    - [0x15C920, asm,     fragments/25/fragment25_15C920]
-    - [0x15CBC0, asm,     fragments/25/fragment25_15CBC0]
+    - [0x15A060, c,       fragments/25/fragment25_15A060]
+    - [0x15BBC0, c,       fragments/25/fragment25_15BBC0]
+    - [0x15C920, c,       fragments/25/fragment25_15C920]
+    - [0x15CBC0, c,       fragments/25/fragment25_15CBC0]
     - [0x15CE40, data,    fragments/25/fragment25_data]
   
   - name: fragment26
@@ -674,16 +679,16 @@
     subsegments:
     - [0x15E8B0, textbin, fragments/26/fragment26_header]
     - [0x15E8D0, textbin, fragments/26/fragment26_unk_table] # what is this?
-    - [0x15EA30, asm,     fragments/26/fragment26_15EA30]
-    - [0x162090, asm,     fragments/26/fragment26_162090]
-    - [0x1622D0, asm,     fragments/26/fragment26_1622D0]
-    - [0x162370, asm,     fragments/26/fragment26_162370]
-    - [0x1624E0, asm,     fragments/26/fragment26_1624E0]
-    - [0x162710, asm,     fragments/26/fragment26_162710]
-    - [0x164280, asm,     fragments/26/fragment26_164280]
-    - [0x164400, asm,     fragments/26/fragment26_164400]
-    - [0x1646B0, asm,     fragments/26/fragment26_1646B0]
-    - [0x164860, asm,     fragments/26/fragment26_164860]
+    - [0x15EA30, c,       fragments/26/fragment26_15EA30]
+    - [0x162090, c,       fragments/26/fragment26_162090]
+    - [0x1622D0, c,       fragments/26/fragment26_1622D0]
+    - [0x162370, c,       fragments/26/fragment26_162370]
+    - [0x1624E0, c,       fragments/26/fragment26_1624E0]
+    - [0x162710, c,       fragments/26/fragment26_162710]
+    - [0x164280, c,       fragments/26/fragment26_164280]
+    - [0x164400, c,       fragments/26/fragment26_164400]
+    - [0x1646B0, c,       fragments/26/fragment26_1646B0]
+    - [0x164860, c,       fragments/26/fragment26_164860]
     - [0x1648D0, data,    fragments/26/fragment26_data]
 
   - name: fragment27
@@ -693,7 +698,7 @@
     vram: 0x81100000
     subsegments:
     - [0x165C50, textbin, fragments/27/fragment27_header]
-    - [0x165C70, asm,     fragments/27/fragment27_code]
+    - [0x165C70, c,       fragments/27/fragment27_code]
     - [0x165EA0, data,    fragments/27/fragment27_data]
   
   - name: fragment28
@@ -703,7 +708,7 @@
     vram: 0x80000000 # unk vram. not loaded
     subsegments:
     - [0x165EC0, textbin, fragments/28/fragment28_header]
-    - [0x165EE0, asm,     fragments/28/fragment28_code]
+    - [0x165EE0, c,       fragments/28/fragment28_code]
     - [0x165FD0, data,    fragments/28/fragment28_data]
   
   - name: fragment29
@@ -713,13 +718,13 @@
     vram: 0x88000000
     subsegments:
     - [0x166040, textbin, fragments/29/fragment29_header]
-    - [0x166060, asm,     fragments/29/fragment29_166060]
-    - [0x167940, asm,     fragments/29/fragment29_167940]
-    - [0x168330, asm,     fragments/29/fragment29_168330]
-    - [0x16AA30, asm,     fragments/29/fragment29_16AA30]
-    - [0x16AEF0, asm,     fragments/29/fragment29_16AEF0]
-    - [0x16B030, asm,     fragments/29/fragment29_16B030]
-    - [0x16BBA0, asm,     fragments/29/fragment29_16BBA0]
+    - [0x166060, c,       fragments/29/fragment29_166060]
+    - [0x167940, c,       fragments/29/fragment29_167940]
+    - [0x168330, c,       fragments/29/fragment29_168330]
+    - [0x16AA30, c,       fragments/29/fragment29_16AA30]
+    - [0x16AEF0, c,       fragments/29/fragment29_16AEF0]
+    - [0x16B030, c,       fragments/29/fragment29_16B030]
+    - [0x16BBA0, c,       fragments/29/fragment29_16BBA0]
     - [0x16BFE0, data,    fragments/29/fragment29_data]
   
   - name: fragment30
@@ -729,9 +734,9 @@
     vram: 0x88100000
     subsegments:
     - [0x16D4D0, textbin, fragments/30/fragment30_header]
-    - [0x16D4F0, asm,     fragments/30/fragment30_16D4F0]
-    - [0x170430, asm,     fragments/30/fragment30_170430]
-    - [0x170D70, asm,     fragments/30/fragment30_170D70]
+    - [0x16D4F0, c,       fragments/30/fragment30_16D4F0]
+    - [0x170430, c,       fragments/30/fragment30_170430]
+    - [0x170D70, c,       fragments/30/fragment30_170D70]
     - [0x172230, data,    fragments/30/fragment30_data]
 
   - name: fragment31
@@ -741,52 +746,52 @@
     vram: 0x88200000
     subsegments:
     - [0x173280, textbin, fragments/31/fragment31_header]
-    - [0x1732A0, asm,     fragments/31/fragment31_1732A0]
-    - [0x1736F0, asm,     fragments/31/fragment31_1736F0]
-    - [0x174460, asm,     fragments/31/fragment31_174460]
-    - [0x175260, asm,     fragments/31/fragment31_175260]
-    - [0x1768F0, asm,     fragments/31/fragment31_1768F0]
-    - [0x177430, asm,     fragments/31/fragment31_177430]
-    - [0x179030, asm,     fragments/31/fragment31_179030]
-    - [0x17B150, asm,     fragments/31/fragment31_17B150]
-    - [0x17F280, asm,     fragments/31/fragment31_17F280]
-    - [0x183700, asm,     fragments/31/fragment31_183700]
-    - [0x186690, asm,     fragments/31/fragment31_186690]
-    - [0x18F6D0, asm,     fragments/31/fragment31_18F6D0]
-    - [0x1900C0, asm,     fragments/31/fragment31_1900C0]
-    - [0x190BB0, asm,     fragments/31/fragment31_190BB0]
-    - [0x193D50, asm,     fragments/31/fragment31_193D50]
-    - [0x194450, asm,     fragments/31/fragment31_194450]
-    - [0x194C30, asm,     fragments/31/fragment31_194C30]
-    - [0x195910, asm,     fragments/31/fragment31_195910]
-    - [0x1965A0, asm,     fragments/31/fragment31_1965A0]
-    - [0x197640, asm,     fragments/31/fragment31_197640]
-    - [0x19BCA0, asm,     fragments/31/fragment31_19BCA0]
-    - [0x19C000, asm,     fragments/31/fragment31_19C000]
-    - [0x19C390, asm,     fragments/31/fragment31_19C390]
-    - [0x19CD60, asm,     fragments/31/fragment31_19CD60]
-    - [0x19D160, asm,     fragments/31/fragment31_19D160]
-    - [0x19DCA0, asm,     fragments/31/fragment31_19DCA0]
-    - [0x19DFC0, asm,     fragments/31/fragment31_19DFC0]
-    - [0x19E800, asm,     fragments/31/fragment31_19E800]
-    - [0x19F570, asm,     fragments/31/fragment31_19F570]
-    - [0x1A03C0, asm,     fragments/31/fragment31_1A03C0]
-    - [0x1A1AF0, asm,     fragments/31/fragment31_1A1AF0]
-    - [0x1A1BD0, asm,     fragments/31/fragment31_1A1BD0]
-    - [0x1A3540, asm,     fragments/31/fragment31_1A3540]
-    - [0x1A3730, asm,     fragments/31/fragment31_1A3730]
-    - [0x1A3960, asm,     fragments/31/fragment31_1A3960]
-    - [0x1A4160, asm,     fragments/31/fragment31_1A4160]
-    - [0x1A43F0, asm,     fragments/31/fragment31_1A43F0]
-    - [0x1A46B0, asm,     fragments/31/fragment31_1A46B0]
-    - [0x1A4B70, asm,     fragments/31/fragment31_1A4B70]
-    - [0x1A4FF0, asm,     fragments/31/fragment31_1A4FF0]
-    - [0x1A51E0, asm,     fragments/31/fragment31_1A51E0]
-    - [0x1A53B0, asm,     fragments/31/fragment31_1A53B0]
-    - [0x1A5AE0, asm,     fragments/31/fragment31_1A5AE0]
-    - [0x1A5E10, asm,     fragments/31/fragment31_1A5E10]
-    - [0x1A60F0, asm,     fragments/31/fragment31_1A60F0]
-    - [0x1A6360, asm,     fragments/31/fragment31_1A6360]
+    - [0x1732A0, c,       fragments/31/fragment31_1732A0]
+    - [0x1736F0, c,       fragments/31/fragment31_1736F0]
+    - [0x174460, c,       fragments/31/fragment31_174460]
+    - [0x175260, c,       fragments/31/fragment31_175260]
+    - [0x1768F0, c,       fragments/31/fragment31_1768F0]
+    - [0x177430, c,       fragments/31/fragment31_177430]
+    - [0x179030, c,       fragments/31/fragment31_179030]
+    - [0x17B150, c,       fragments/31/fragment31_17B150]
+    - [0x17F280, c,       fragments/31/fragment31_17F280]
+    - [0x183700, c,       fragments/31/fragment31_183700]
+    - [0x186690, c,       fragments/31/fragment31_186690]
+    - [0x18F6D0, c,       fragments/31/fragment31_18F6D0]
+    - [0x1900C0, c,       fragments/31/fragment31_1900C0]
+    - [0x190BB0, c,       fragments/31/fragment31_190BB0]
+    - [0x193D50, c,       fragments/31/fragment31_193D50]
+    - [0x194450, c,       fragments/31/fragment31_194450]
+    - [0x194C30, c,       fragments/31/fragment31_194C30]
+    - [0x195910, c,       fragments/31/fragment31_195910]
+    - [0x1965A0, c,       fragments/31/fragment31_1965A0]
+    - [0x197640, c,       fragments/31/fragment31_197640]
+    - [0x19BCA0, c,       fragments/31/fragment31_19BCA0]
+    - [0x19C000, c,       fragments/31/fragment31_19C000]
+    - [0x19C390, c,       fragments/31/fragment31_19C390]
+    - [0x19CD60, c,       fragments/31/fragment31_19CD60]
+    - [0x19D160, c,       fragments/31/fragment31_19D160]
+    - [0x19DCA0, c,       fragments/31/fragment31_19DCA0]
+    - [0x19DFC0, c,       fragments/31/fragment31_19DFC0]
+    - [0x19E800, c,       fragments/31/fragment31_19E800]
+    - [0x19F570, c,       fragments/31/fragment31_19F570]
+    - [0x1A03C0, c,       fragments/31/fragment31_1A03C0]
+    - [0x1A1AF0, c,       fragments/31/fragment31_1A1AF0]
+    - [0x1A1BD0, c,       fragments/31/fragment31_1A1BD0]
+    - [0x1A3540, c,       fragments/31/fragment31_1A3540]
+    - [0x1A3730, c,       fragments/31/fragment31_1A3730]
+    - [0x1A3960, c,       fragments/31/fragment31_1A3960]
+    - [0x1A4160, c,       fragments/31/fragment31_1A4160]
+    - [0x1A43F0, c,       fragments/31/fragment31_1A43F0]
+    - [0x1A46B0, c,       fragments/31/fragment31_1A46B0]
+    - [0x1A4B70, c,       fragments/31/fragment31_1A4B70]
+    - [0x1A4FF0, c,       fragments/31/fragment31_1A4FF0]
+    - [0x1A51E0, c,       fragments/31/fragment31_1A51E0]
+    - [0x1A53B0, c,       fragments/31/fragment31_1A53B0]
+    - [0x1A5AE0, c,       fragments/31/fragment31_1A5AE0]
+    - [0x1A5E10, c,       fragments/31/fragment31_1A5E10]
+    - [0x1A60F0, c,       fragments/31/fragment31_1A60F0]
+    - [0x1A6360, c,       fragments/31/fragment31_1A6360]
     - [0x1A6980, data,    fragments/31/fragment31_data]
   
   - name: fragment32
@@ -796,13 +801,13 @@
     vram: 0x88300000
     subsegments:
     - [0x1B1310, textbin, fragments/32/fragment32_header]
-    - [0x1B1330, asm,     fragments/32/fragment32_1B1330]
-    - [0x1B6E40, asm,     fragments/32/fragment32_1B6E40]
-    - [0x1B8010, asm,     fragments/32/fragment32_1B8010]
-    - [0x1B8DE0, asm,     fragments/32/fragment32_1B8DE0]
-    - [0x1B92C0, asm,     fragments/32/fragment32_1B92C0]
-    - [0x1B9390, asm,     fragments/32/fragment32_1B9390]
-    - [0x1B9840, asm,     fragments/32/fragment32_1B9840]
+    - [0x1B1330, c,       fragments/32/fragment32_1B1330]
+    - [0x1B6E40, c,       fragments/32/fragment32_1B6E40]
+    - [0x1B8010, c,       fragments/32/fragment32_1B8010]
+    - [0x1B8DE0, c,       fragments/32/fragment32_1B8DE0]
+    - [0x1B92C0, c,       fragments/32/fragment32_1B92C0]
+    - [0x1B9390, c,       fragments/32/fragment32_1B9390]
+    - [0x1B9840, c,       fragments/32/fragment32_1B9840]
     - [0x1B9A50, data,    fragments/32/fragment32_data]
   
   - name: fragment33
@@ -812,7 +817,7 @@
     vram: 0x88400000
     subsegments:
     - [0x1BBBC0, textbin, fragments/33/fragment33_header]
-    - [0x1BBBE0, asm,     fragments/33/fragment33_code]
+    - [0x1BBBE0, c,       fragments/33/fragment33_code]
     - [0x1BD300, data,    fragments/33/fragment33_data]
   
   - name: fragment34
@@ -822,11 +827,11 @@
     vram: 0x88500000
     subsegments:
     - [0x1BD610, textbin, fragments/34/fragment34_header]
-    - [0x1BD630, asm,     fragments/34/fragment34_1BD630]
-    - [0x1BE300, asm,     fragments/34/fragment34_1BE300]
-    - [0x1C1BC0, asm,     fragments/34/fragment34_1C1BC0]
-    - [0x1C3FA0, asm,     fragments/34/fragment34_1C3FA0]
-    - [0x1C5AA0, asm,     fragments/34/fragment34_1C5AA0]
+    - [0x1BD630, c,       fragments/34/fragment34_1BD630]
+    - [0x1BE300, c,       fragments/34/fragment34_1BE300]
+    - [0x1C1BC0, c,       fragments/34/fragment34_1C1BC0]
+    - [0x1C3FA0, c,       fragments/34/fragment34_1C3FA0]
+    - [0x1C5AA0, c,       fragments/34/fragment34_1C5AA0]
     - [0x1CA690, data,    fragments/34/fragment34_data]
 
   - name: fragment35
@@ -836,8 +841,8 @@
     vram: 0x88600000
     subsegments:
     - [0x1CCC00, textbin, fragments/35/fragment35_header]
-    - [0x1CCC20, asm,     fragments/35/fragment35_1CCC20]
-    - [0x1CCE70, asm,     fragments/35/fragment35_1CCE70]
+    - [0x1CCC20, c,       fragments/35/fragment35_1CCC20]
+    - [0x1CCE70, c,       fragments/35/fragment35_1CCE70]
     - [0x1CE100, data,    fragments/35/fragment35_data]
   
   - name: fragment36
@@ -847,7 +852,7 @@
     vram: 0x88700000
     subsegments:
     - [0x1CE9F0, textbin, fragments/36/fragment36_header]
-    - [0x1CEA10, asm,     fragments/36/fragment36_code]
+    - [0x1CEA10, c,       fragments/36/fragment36_code]
     - [0x1D04F0, data,    fragments/36/fragment36_data]
   
   - name: fragment37
@@ -857,7 +862,7 @@
     vram: 0x88800000
     subsegments:
     - [0x1D0960, textbin, fragments/37/fragment37_header]
-    - [0x1D0980, asm,     fragments/37/fragment37_code]
+    - [0x1D0980, c,       fragments/37/fragment37_code]
     - [0x1D4850, data,    fragments/37/fragment37_data]
   
   - name: fragment38
@@ -867,9 +872,9 @@
     vram: 0x88900000
     subsegments:
     - [0x1D55F0, textbin, fragments/38/fragment38_header]
-    - [0x1D5610, asm,     fragments/38/fragment38_1D5610]
-    - [0x1D8160, asm,     fragments/38/fragment38_1D8160]
-    - [0x1D8990, asm,     fragments/38/fragment38_1D8990]
+    - [0x1D5610, c,       fragments/38/fragment38_1D5610]
+    - [0x1D8160, c,       fragments/38/fragment38_1D8160]
+    - [0x1D8990, c,       fragments/38/fragment38_1D8990]
     - [0x1D9400, data,    fragments/38/fragment38_data]
 
   - name: fragment39
@@ -879,8 +884,8 @@
     vram: 0x88A00000
     subsegments:
     - [0x1DA2E0, textbin, fragments/39/fragment39_header]
-    - [0x1DA300, asm,     fragments/39/fragment39_1DA300]
-    - [0x1DA9F0, asm,     fragments/39/fragment39_1DA9F0]
+    - [0x1DA300, c,       fragments/39/fragment39_1DA300]
+    - [0x1DA9F0, c,       fragments/39/fragment39_1DA9F0]
     - [0x1DBE50, data,    fragments/39/fragment39_data]
 
   - name: fragment40
@@ -890,8 +895,8 @@
     vram: 0x88B00000
     subsegments:
     - [0x1DC1D0, textbin, fragments/40/fragment40_header]
-    - [0x1DC1F0, asm,     fragments/40/fragment40_1DC1F0]
-    - [0x1E0550, asm,     fragments/40/fragment40_1E0550]
+    - [0x1DC1F0, c,       fragments/40/fragment40_1DC1F0]
+    - [0x1E0550, c,       fragments/40/fragment40_1E0550]
     - [0x1E19E0, data,    fragments/40/fragment40_data]
 
   - name: fragment41
@@ -901,7 +906,7 @@
     vram: 0x88C00000 # unk vram, guessed
     subsegments:
     - [0x1E2E90, textbin, fragments/41/fragment41_header]
-    - [0x1E2EB0, asm,     fragments/41/fragment41_code]
+    - [0x1E2EB0, c,       fragments/41/fragment41_code]
     - [0x1E46C0, data,    fragments/41/fragment41_data]
   
   - name: fragment42
@@ -911,7 +916,7 @@
     vram: 0x88D00000 # unk vram, guessed
     subsegments:
     - [0x1E4D70, textbin, fragments/42/fragment42_header]
-    - [0x1E4D90, asm,     fragments/42/fragment42_code]
+    - [0x1E4D90, c,       fragments/42/fragment42_code]
     - [0x1E54B0, data,    fragments/42/fragment42_data]
   
   - name: fragment43
@@ -921,8 +926,8 @@
     vram: 0x8AC00000
     subsegments:
     - [0x1E59F0, textbin, fragments/43/fragment43_header]
-    - [0x1E5A10, asm,     fragments/43/fragment43_1E5A10]
-    - [0x1EC950, asm,     fragments/43/fragment43_1EC950]
+    - [0x1E5A10, c,       fragments/43/fragment43_1E5A10]
+    - [0x1EC950, c,       fragments/43/fragment43_1EC950]
     - [0x1ED590, data,    fragments/43/fragment43_data]
   
   - name: fragment44
@@ -932,32 +937,32 @@
     vram: 0x8AF00000
     subsegments:
     - [0x1EE270, textbin, fragments/44/fragment44_header]
-    - [0x1EE290, asm,     fragments/44/fragment44_1EE290]
-    - [0x1F0680, asm,     fragments/44/fragment44_1F0680]
-    - [0x1F1850, asm,     fragments/44/fragment44_1F1850]
-    - [0x1F53D0, asm,     fragments/44/fragment44_1F53D0]
-    - [0x1F5480, asm,     fragments/44/fragment44_1F5480]
-    - [0x1F5BD0, asm,     fragments/44/fragment44_1F5BD0]
-    - [0x1F5F20, asm,     fragments/44/fragment44_1F5F20]
-    - [0x1F6BF0, asm,     fragments/44/fragment44_1F6BF0]
-    - [0x1F7DD0, asm,     fragments/44/fragment44_1F7DD0]
-    - [0x1F85B0, asm,     fragments/44/fragment44_1F85B0]
-    - [0x1F9DB0, asm,     fragments/44/fragment44_1F9DB0]
-    - [0x1FD260, asm,     fragments/44/fragment44_1FD260]
-    - [0x201DA0, asm,     fragments/44/fragment44_201DA0]
-    - [0x2030B0, asm,     fragments/44/fragment44_2030B0]
-    - [0x204950, asm,     fragments/44/fragment44_204950]
-    - [0x205C30, asm,     fragments/44/fragment44_205C30]
-    - [0x207AF0, asm,     fragments/44/fragment44_207AF0]
-    - [0x209BD0, asm,     fragments/44/fragment44_209BD0]
-    - [0x20A610, asm,     fragments/44/fragment44_20A610]
-    - [0x20BDB0, asm,     fragments/44/fragment44_20BDB0]
-    - [0x20C560, asm,     fragments/44/fragment44_20C560]
-    - [0x20CBF0, asm,     fragments/44/fragment44_20CBF0]
-    - [0x20D3A0, asm,     fragments/44/fragment44_20D3A0]
-    - [0x20EBC0, asm,     fragments/44/fragment44_20EBC0]
-    - [0x20F140, asm,     fragments/44/fragment44_20F140]
-    - [0x212740, asm,     fragments/44/fragment44_212740]
+    - [0x1EE290, c,       fragments/44/fragment44_1EE290]
+    - [0x1F0680, c,       fragments/44/fragment44_1F0680]
+    - [0x1F1850, c,       fragments/44/fragment44_1F1850]
+    - [0x1F53D0, c,       fragments/44/fragment44_1F53D0]
+    - [0x1F5480, c,       fragments/44/fragment44_1F5480]
+    - [0x1F5BD0, c,       fragments/44/fragment44_1F5BD0]
+    - [0x1F5F20, c,       fragments/44/fragment44_1F5F20]
+    - [0x1F6BF0, c,       fragments/44/fragment44_1F6BF0]
+    - [0x1F7DD0, c,       fragments/44/fragment44_1F7DD0]
+    - [0x1F85B0, c,       fragments/44/fragment44_1F85B0]
+    - [0x1F9DB0, c,       fragments/44/fragment44_1F9DB0]
+    - [0x1FD260, c,       fragments/44/fragment44_1FD260]
+    - [0x201DA0, c,       fragments/44/fragment44_201DA0]
+    - [0x2030B0, c,       fragments/44/fragment44_2030B0]
+    - [0x204950, c,       fragments/44/fragment44_204950]
+    - [0x205C30, c,       fragments/44/fragment44_205C30]
+    - [0x207AF0, c,       fragments/44/fragment44_207AF0]
+    - [0x209BD0, c,       fragments/44/fragment44_209BD0]
+    - [0x20A610, c,       fragments/44/fragment44_20A610]
+    - [0x20BDB0, c,       fragments/44/fragment44_20BDB0]
+    - [0x20C560, c,       fragments/44/fragment44_20C560]
+    - [0x20CBF0, c,       fragments/44/fragment44_20CBF0]
+    - [0x20D3A0, c,       fragments/44/fragment44_20D3A0]
+    - [0x20EBC0, c,       fragments/44/fragment44_20EBC0]
+    - [0x20F140, c,       fragments/44/fragment44_20F140]
+    - [0x212740, c,       fragments/44/fragment44_212740]
     - [0x214630, data,    fragments/44/fragment44_data]
   
   - name: fragment45
@@ -967,11 +972,11 @@
     vram: 0x8AB00000
     subsegments:
     - [0x225180, textbin, fragments/45/fragment45_header]
-    - [0x2251A0, asm,     fragments/45/fragment45_2251A0]
-    - [0x22AB80, asm,     fragments/45/fragment45_22AB80]
-    - [0x22FAD0, asm,     fragments/45/fragment45_22FAD0]
-    - [0x2324B0, asm,     fragments/45/fragment45_2324B0]
-    - [0x2348E0, asm,     fragments/45/fragment45_2348E0]
+    - [0x2251A0, c,       fragments/45/fragment45_2251A0]
+    - [0x22AB80, c,       fragments/45/fragment45_22AB80]
+    - [0x22FAD0, c,       fragments/45/fragment45_22FAD0]
+    - [0x2324B0, c,       fragments/45/fragment45_2324B0]
+    - [0x2348E0, c,       fragments/45/fragment45_2348E0]
     - [0x2361E0, data,    fragments/45/fragment45_data]
 
   - name: fragment46
@@ -981,7 +986,7 @@
     vram: 0x8AE00000
     subsegments:
     - [0x23C2E0, textbin, fragments/46/fragment46_header]
-    - [0x23C300, asm,     fragments/46/fragment46_code]
+    - [0x23C300, c,       fragments/46/fragment46_code]
     - [0x242AA0, data,    fragments/46/fragment46_data]
 
   - name: fragment47
@@ -991,11 +996,11 @@
     vram: 0x86000000
     subsegments:
     - [0x246620, textbin, fragments/47/fragment47_header]
-    - [0x246640, asm,     fragments/47/fragment47_246640]
-    - [0x24AE60, asm,     fragments/47/fragment47_24AE60]
-    - [0x24E0A0, asm,     fragments/47/fragment47_24E0A0]
-    - [0x251C30, asm,     fragments/47/fragment47_251C30]
-    - [0x2533F0, asm,     fragments/47/fragment47_2533F0]
+    - [0x246640, c,       fragments/47/fragment47_246640]
+    - [0x24AE60, c,       fragments/47/fragment47_24AE60]
+    - [0x24E0A0, c,       fragments/47/fragment47_24E0A0]
+    - [0x251C30, c,       fragments/47/fragment47_251C30]
+    - [0x2533F0, c,       fragments/47/fragment47_2533F0]
     - [0x253770, data,    fragments/47/fragment47_data]
   
   - name: fragment48
@@ -1005,11 +1010,11 @@
     vram: 0x87C00000
     subsegments:
     - [0x256000, textbin, fragments/48/fragment48_header]
-    - [0x256020, asm,     fragments/48/fragment48_256020]
-    - [0x257730, asm,     fragments/48/fragment48_257730]
-    - [0x258080, asm,     fragments/48/fragment48_258080]
-    - [0x258D80, asm,     fragments/48/fragment48_258D80]
-    - [0x2597B0, asm,     fragments/48/fragment48_2597B0]
+    - [0x256020, c,       fragments/48/fragment48_256020]
+    - [0x257730, c,       fragments/48/fragment48_257730]
+    - [0x258080, c,       fragments/48/fragment48_258080]
+    - [0x258D80, c,       fragments/48/fragment48_258D80]
+    - [0x2597B0, c,       fragments/48/fragment48_2597B0]
     - [0x259CD0, data,    fragments/48/fragment48_data]
   
   - name: fragment49
@@ -1019,7 +1024,7 @@
     vram: 0x86100000
     subsegments:
     - [0x25A670, textbin, fragments/49/fragment49_header]
-    - [0x25A690, asm,     fragments/49/fragment49_code]
+    - [0x25A690, c,       fragments/49/fragment49_code]
     - [0x264710, data,    fragments/49/fragment49_data]
   
   - name: fragment50
@@ -1029,12 +1034,12 @@
     vram: 0x86200000
     subsegments:
     - [0x266A40, textbin, fragments/50/fragment50_header]
-    - [0x266A60, asm,     fragments/50/fragment50_266A60]
-    - [0x26BF40, asm,     fragments/50/fragment50_26BF40]
-    - [0x26D1D0, asm,     fragments/50/fragment50_26D1D0]
-    - [0x26DCC0, asm,     fragments/50/fragment50_26DCC0]
-    - [0x26E090, asm,     fragments/50/fragment50_26E090]
-    - [0x26E4C0, asm,     fragments/50/fragment50_26E4C0]
+    - [0x266A60, c,       fragments/50/fragment50_266A60]
+    - [0x26BF40, c,       fragments/50/fragment50_26BF40]
+    - [0x26D1D0, c,       fragments/50/fragment50_26D1D0]
+    - [0x26DCC0, c,       fragments/50/fragment50_26DCC0]
+    - [0x26E090, c,       fragments/50/fragment50_26E090]
+    - [0x26E4C0, c,       fragments/50/fragment50_26E4C0]
     - [0x26EA70, data,    fragments/50/fragment50_data]
 
   - name: fragment51
@@ -1044,13 +1049,13 @@
     vram: 0x86300000
     subsegments:
     - [0x275E20, textbin, fragments/51/fragment51_header]
-    - [0x275E40, asm,     fragments/51/fragment51_275E40]
-    - [0x279A20, asm,     fragments/51/fragment51_279A20]
-    - [0x279D70, asm,     fragments/51/fragment51_279D70]
-    - [0x27A440, asm,     fragments/51/fragment51_27A440]
-    - [0x27A740, asm,     fragments/51/fragment51_27A740]
-    - [0x27AC10, asm,     fragments/51/fragment51_27AC10]
-    - [0x27B9E0, asm,     fragments/51/fragment51_27B9E0]
+    - [0x275E40, c,       fragments/51/fragment51_275E40]
+    - [0x279A20, c,       fragments/51/fragment51_279A20]
+    - [0x279D70, c,       fragments/51/fragment51_279D70]
+    - [0x27A440, c,       fragments/51/fragment51_27A440]
+    - [0x27A740, c,       fragments/51/fragment51_27A740]
+    - [0x27AC10, c,       fragments/51/fragment51_27AC10]
+    - [0x27B9E0, c,       fragments/51/fragment51_27B9E0]
     - [0x27CCC0, data,    fragments/51/fragment51_data]
   
   - name: fragment52
@@ -1060,13 +1065,13 @@
     vram: 0x86400000
     subsegments:
     - [0x27E4C0, textbin, fragments/52/fragment52_header]
-    - [0x27E4E0, asm,     fragments/52/fragment52_27E4E0]
-    - [0x2853B0, asm,     fragments/52/fragment52_2853B0]
-    - [0x285750, asm,     fragments/52/fragment52_285750]
-    - [0x285F60, asm,     fragments/52/fragment52_285F60]
-    - [0x2862C0, asm,     fragments/52/fragment52_2862C0]
-    - [0x2870A0, asm,     fragments/52/fragment52_2870A0]
-    - [0x2871C0, asm,     fragments/52/fragment52_2871C0]
+    - [0x27E4E0, c,       fragments/52/fragment52_27E4E0]
+    - [0x2853B0, c,       fragments/52/fragment52_2853B0]
+    - [0x285750, c,       fragments/52/fragment52_285750]
+    - [0x285F60, c,       fragments/52/fragment52_285F60]
+    - [0x2862C0, c,       fragments/52/fragment52_2862C0]
+    - [0x2870A0, c,       fragments/52/fragment52_2870A0]
+    - [0x2871C0, c,       fragments/52/fragment52_2871C0]
     - [0x287A90, data,    fragments/52/fragment52_data]
 
   - name: fragment53
@@ -1076,7 +1081,7 @@
     vram: 0x86500000
     subsegments:
     - [0x2894B0, textbin, fragments/53/fragment53_header]
-    - [0x2894D0, asm,     fragments/53/fragment53_code]
+    - [0x2894D0, c,       fragments/53/fragment53_code]
     - [0x293A90, data,    fragments/53/fragment53_data]
 
   - name: fragment54
@@ -1086,7 +1091,7 @@
     vram: 0x86600000
     subsegments:
     - [0x299920, textbin, fragments/54/fragment54_header]
-    - [0x299940, asm,     fragments/54/fragment54_code]
+    - [0x299940, c,       fragments/54/fragment54_code]
     - [0x29FE40, data,    fragments/54/fragment54_data]
   
   - name: fragment55
@@ -1096,7 +1101,7 @@
     vram: 0x86700000
     subsegments:
     - [0x2A24E0, textbin, fragments/55/fragment55_header]
-    - [0x2A2500, asm,     fragments/55/fragment55_code]
+    - [0x2A2500, c,       fragments/55/fragment55_code]
     - [0x2AD040, data,    fragments/55/fragment55_data]
 
   - name: fragment56
@@ -1106,7 +1111,7 @@
     vram: 0x86800000
     subsegments:
     - [0x2B1540, textbin, fragments/56/fragment56_header]
-    - [0x2B1560, asm,     fragments/56/fragment56_code]
+    - [0x2B1560, c,       fragments/56/fragment56_code]
     - [0x2B8A00, data,    fragments/56/fragment56_data]
   
   - name: fragment57
@@ -1116,7 +1121,7 @@
     vram: 0x83300000
     subsegments:
     - [0x2BB830, textbin, fragments/57/fragment57_header]
-    - [0x2BB850, asm,     fragments/57/fragment57_code]
+    - [0x2BB850, c,       fragments/57/fragment57_code]
     - [0x2C3F90, data,    fragments/57/fragment57_data]
 
   - name: fragment58
@@ -1126,7 +1131,7 @@
     vram: 0x83400000
     subsegments:
     - [0x2C8410, textbin, fragments/58/fragment58_header]
-    - [0x2C8430, asm,     fragments/58/fragment58_code]
+    - [0x2C8430, c,       fragments/58/fragment58_code]
     - [0x2CBB90, data,    fragments/58/fragment58_data]
 
   - name: fragment59
@@ -1136,7 +1141,7 @@
     vram: 0x86900000
     subsegments:
     - [0x2CD3B0, textbin, fragments/59/fragment59_header]
-    - [0x2CD3D0, asm,     fragments/59/fragment59_code]
+    - [0x2CD3D0, c,       fragments/59/fragment59_code]
     - [0x2DB460, data,    fragments/59/fragment59_data]
   
   - name: fragment60
@@ -1146,7 +1151,7 @@
     vram: 0x86A00000
     subsegments:
     - [0x2E1080, textbin, fragments/60/fragment60_header]
-    - [0x2E10A0, asm,     fragments/60/fragment60_code]
+    - [0x2E10A0, c,       fragments/60/fragment60_code]
     - [0x2EE550, data,    fragments/60/fragment60_data]
 
   - name: fragment61
@@ -1156,7 +1161,7 @@
     vram: 0x86B00000
     subsegments:
     - [0x2F2F50, textbin, fragments/61/fragment61_header]
-    - [0x2F2F70, asm,     fragments/61/fragment61_code]
+    - [0x2F2F70, c,       fragments/61/fragment61_code]
     - [0x3000B0, data,    fragments/61/fragment61_data]
 
   - name: fragment62
@@ -1166,7 +1171,7 @@
     vram: 0x86C00000 # unk vram, guessed
     subsegments:
     - [0x303510, textbin, fragments/62/fragment62_header]
-    - [0x303530, asm,     fragments/62/fragment62_code]
+    - [0x303530, c,       fragments/62/fragment62_code]
     - [0x303830, data,    fragments/62/fragment62_data]
 
   - name: fragment63
@@ -1176,20 +1181,20 @@
     vram: 0x87E00000
     subsegments:
     - [0x303970, textbin, fragments/63/fragment63_header]
-    - [0x303990, asm,     fragments/63/fragment63_303990]
-    - [0x305090, asm,     fragments/63/fragment63_305090]
-    - [0x306150, asm,     fragments/63/fragment63_306150]
-    - [0x307D60, asm,     fragments/63/fragment63_307D60]
-    - [0x308D70, asm,     fragments/63/fragment63_308D70]
-    - [0x30B540, asm,     fragments/63/fragment63_30B540]
-    - [0x30E370, asm,     fragments/63/fragment63_30E370]
-    - [0x30F070, asm,     fragments/63/fragment63_30F070]
-    - [0x310270, asm,     fragments/63/fragment63_310270]
-    - [0x312AE0, asm,     fragments/63/fragment63_312AE0]
-    - [0x315A90, asm,     fragments/63/fragment63_315A90]
-    - [0x317060, asm,     fragments/63/fragment63_317060]
-    - [0x31BD80, asm,     fragments/63/fragment63_31BD80]
-    - [0x31CB20, asm,     fragments/63/fragment63_31CB20]
+    - [0x303990, c,       fragments/63/fragment63_303990]
+    - [0x305090, c,       fragments/63/fragment63_305090]
+    - [0x306150, c,       fragments/63/fragment63_306150]
+    - [0x307D60, c,       fragments/63/fragment63_307D60]
+    - [0x308D70, c,       fragments/63/fragment63_308D70]
+    - [0x30B540, c,       fragments/63/fragment63_30B540]
+    - [0x30E370, c,       fragments/63/fragment63_30E370]
+    - [0x30F070, c,       fragments/63/fragment63_30F070]
+    - [0x310270, c,       fragments/63/fragment63_310270]
+    - [0x312AE0, c,       fragments/63/fragment63_312AE0]
+    - [0x315A90, c,       fragments/63/fragment63_315A90]
+    - [0x317060, c,       fragments/63/fragment63_317060]
+    - [0x31BD80, c,       fragments/63/fragment63_31BD80]
+    - [0x31CB20, c,       fragments/63/fragment63_31CB20]
     - [0x31CFE0, data,    fragments/63/fragment63_data]
 
   - name: fragment64
@@ -1199,31 +1204,31 @@
     vram: 0x87F00000
     subsegments:
     - [0x322C70, textbin, fragments/64/fragment64_header]
-    - [0x322C90, asm,     fragments/64/fragment64_322C90]
-    - [0x3235A0, asm,     fragments/64/fragment64_3235A0]
-    - [0x324A10, asm,     fragments/64/fragment64_324A10]
-    - [0x324FB0, asm,     fragments/64/fragment64_324FB0]
-    - [0x325920, asm,     fragments/64/fragment64_325920]
-    - [0x326160, asm,     fragments/64/fragment64_326160]
-    - [0x326820, asm,     fragments/64/fragment64_326820]
-    - [0x326ED0, asm,     fragments/64/fragment64_326ED0]
-    - [0x328C20, asm,     fragments/64/fragment64_328C20]
-    - [0x328E40, asm,     fragments/64/fragment64_328E40]
-    - [0x3290A0, asm,     fragments/64/fragment64_3290A0]
-    - [0x32AEF0, asm,     fragments/64/fragment64_32AEF0]
-    - [0x32BC10, asm,     fragments/64/fragment64_32BC10]
-    - [0x32C420, asm,     fragments/64/fragment64_32C420]
-    - [0x32D260, asm,     fragments/64/fragment64_32D260]
-    - [0x32D7D0, asm,     fragments/64/fragment64_32D7D0]
-    - [0x32DC40, asm,     fragments/64/fragment64_32DC40]
-    - [0x32EC70, asm,     fragments/64/fragment64_32EC70]
-    - [0x32F2C0, asm,     fragments/64/fragment64_32F2C0]
-    - [0x32F5F0, asm,     fragments/64/fragment64_32F5F0]
-    - [0x32FE10, asm,     fragments/64/fragment64_32FE10]
-    - [0x330850, asm,     fragments/64/fragment64_330850]
-    - [0x331000, asm,     fragments/64/fragment64_331000]
-    - [0x3312D0, asm,     fragments/64/fragment64_3312D0]
-    - [0x3320F0, asm,     fragments/64/fragment64_3320F0]
+    - [0x322C90, c,       fragments/64/fragment64_322C90]
+    - [0x3235A0, c,       fragments/64/fragment64_3235A0]
+    - [0x324A10, c,       fragments/64/fragment64_324A10]
+    - [0x324FB0, c,       fragments/64/fragment64_324FB0]
+    - [0x325920, c,       fragments/64/fragment64_325920]
+    - [0x326160, c,       fragments/64/fragment64_326160]
+    - [0x326820, c,       fragments/64/fragment64_326820]
+    - [0x326ED0, c,       fragments/64/fragment64_326ED0]
+    - [0x328C20, c,       fragments/64/fragment64_328C20]
+    - [0x328E40, c,       fragments/64/fragment64_328E40]
+    - [0x3290A0, c,       fragments/64/fragment64_3290A0]
+    - [0x32AEF0, c,       fragments/64/fragment64_32AEF0]
+    - [0x32BC10, c,       fragments/64/fragment64_32BC10]
+    - [0x32C420, c,       fragments/64/fragment64_32C420]
+    - [0x32D260, c,       fragments/64/fragment64_32D260]
+    - [0x32D7D0, c,       fragments/64/fragment64_32D7D0]
+    - [0x32DC40, c,       fragments/64/fragment64_32DC40]
+    - [0x32EC70, c,       fragments/64/fragment64_32EC70]
+    - [0x32F2C0, c,       fragments/64/fragment64_32F2C0]
+    - [0x32F5F0, c,       fragments/64/fragment64_32F5F0]
+    - [0x32FE10, c,       fragments/64/fragment64_32FE10]
+    - [0x330850, c,       fragments/64/fragment64_330850]
+    - [0x331000, c,       fragments/64/fragment64_331000]
+    - [0x3312D0, c,       fragments/64/fragment64_3312D0]
+    - [0x3320F0, c,       fragments/64/fragment64_3320F0]
     - [0x3321A0, data,    fragments/64/fragment64_data]
 
   - name: fragment65
@@ -1233,7 +1238,7 @@
     vram: 0x87D00000
     subsegments:
     - [0x335DC0, textbin, fragments/65/fragment65_header]
-    - [0x335DE0, asm,     fragments/65/fragment65_code]
+    - [0x335DE0, c,       fragments/65/fragment65_code]
     - [0x336590, data,    fragments/65/fragment65_data]
 
   - name: fragment66
@@ -1243,7 +1248,7 @@
     vram: 0x82E00000
     subsegments:
     - [0x3365F0, textbin, fragments/66/fragment66_header]
-    - [0x336610, asm,     fragments/66/fragment66_code]
+    - [0x336610, c,       fragments/66/fragment66_code]
     - [0x33B4A0, data,    fragments/66/fragment66_data]
   
   - name: fragment67
@@ -1253,17 +1258,17 @@
     vram: 0x82900000
     subsegments:
     - [0x33CB00, textbin, fragments/67/fragment67_header]
-    - [0x33CB20, asm,     fragments/67/fragment67_33CB20]
-    - [0x33D6A0, asm,     fragments/67/fragment67_33D6A0]
-    - [0x33F420, asm,     fragments/67/fragment67_33F420]
-    - [0x33FAE0, asm,     fragments/67/fragment67_33FAE0]
-    - [0x3422F0, asm,     fragments/67/fragment67_3422F0]
-    - [0x342DB0, asm,     fragments/67/fragment67_342DB0]
-    - [0x343510, asm,     fragments/67/fragment67_343510]
-    - [0x344D70, asm,     fragments/67/fragment67_344D70]
-    - [0x34AB40, asm,     fragments/67/fragment67_34AB40]
-    - [0x34B0F0, asm,     fragments/67/fragment67_34B0F0]
-    - [0x34C8B0, asm,     fragments/67/fragment67_34C8B0]
+    - [0x33CB20, c,       fragments/67/fragment67_33CB20]
+    - [0x33D6A0, c,       fragments/67/fragment67_33D6A0]
+    - [0x33F420, c,       fragments/67/fragment67_33F420]
+    - [0x33FAE0, c,       fragments/67/fragment67_33FAE0]
+    - [0x3422F0, c,       fragments/67/fragment67_3422F0]
+    - [0x342DB0, c,       fragments/67/fragment67_342DB0]
+    - [0x343510, c,       fragments/67/fragment67_343510]
+    - [0x344D70, c,       fragments/67/fragment67_344D70]
+    - [0x34AB40, c,       fragments/67/fragment67_34AB40]
+    - [0x34B0F0, c,       fragments/67/fragment67_34B0F0]
+    - [0x34C8B0, c,       fragments/67/fragment67_34C8B0]
     - [0x34E600, data,    fragments/67/fragment67_data]
   
   - name: fragment68
@@ -1273,7 +1278,7 @@
     vram: 0x8F000000 # unk vram, guessed
     subsegments:
     - [0x357D20, textbin, fragments/68/fragment68_header]
-    - [0x357D40, asm,     fragments/68/fragment68_code]
+    - [0x357D40, c,       fragments/68/fragment68_code]
     - [0x358610, data,    fragments/68/fragment68_data]
 
   - name: fragment69
@@ -1283,7 +1288,7 @@
     vram: 0x8F100000 # unk vram, guessed
     subsegments:
     - [0x358830, textbin, fragments/69/fragment69_header]
-    - [0x358850, asm,     fragments/69/fragment69_code]
+    - [0x358850, c,       fragments/69/fragment69_code]
     - [0x35C130, data,    fragments/69/fragment69_data]
   
   - name: fragment70
@@ -1293,7 +1298,7 @@
     vram: 0x8F200000 # unk vram, guessed
     subsegments:
     - [0x35DD90, textbin, fragments/70/fragment70_header]
-    - [0x35DDB0, asm,     fragments/70/fragment70_code]
+    - [0x35DDB0, c,       fragments/70/fragment70_code]
     - [0x35E600, data,    fragments/70/fragment70_data]
 
   - name: fragment71
@@ -1303,7 +1308,7 @@
     vram: 0x8F300000 # unk vram, guessed
     subsegments:
     - [0x35E900, textbin, fragments/71/fragment71_header]
-    - [0x35E920, asm,     fragments/71/fragment71_code]
+    - [0x35E920, c,       fragments/71/fragment71_code]
     - [0x35F710, data,    fragments/71/fragment71_data]
 
   - name: fragment72
@@ -1313,7 +1318,7 @@
     vram: 0x8F400000 # unk vram, guessed
     subsegments:
     - [0x35FC90, textbin, fragments/72/fragment72_header]
-    - [0x35FCB0, asm,     fragments/72/fragment72_code]
+    - [0x35FCB0, c,       fragments/72/fragment72_code]
     - [0x361CC0, data,    fragments/72/fragment72_data]
 
   - name: fragment73
@@ -1323,7 +1328,7 @@
     vram: 0x8F500000 # unk vram, guessed
     subsegments:
     - [0x362890, textbin, fragments/73/fragment73_header]
-    - [0x3628B0, asm,     fragments/73/fragment73_code]
+    - [0x3628B0, c,       fragments/73/fragment73_code]
     - [0x363210, data,    fragments/73/fragment73_data]
   
   - name: fragment74
@@ -1333,7 +1338,7 @@
     vram: 0x8F600000 # unk vram, guessed
     subsegments:
     - [0x363590, textbin, fragments/74/fragment74_header]
-    - [0x3635B0, asm,     fragments/74/fragment74_code]
+    - [0x3635B0, c,       fragments/74/fragment74_code]
     - [0x364150, data,    fragments/74/fragment74_data]
   
   - name: fragment75
@@ -1343,7 +1348,7 @@
     vram: 0x8FA00000 # unk vram, guessed
     subsegments:
     - [0x364500, textbin, fragments/75/fragment75_header]
-    - [0x364520, asm,     fragments/75/fragment75_code]
+    - [0x364520, c,       fragments/75/fragment75_code]
     - [0x365E50, data,    fragments/75/fragment75_data]
   
   - name: fragment76
@@ -1353,7 +1358,7 @@
     vram: 0x8F700000 # unk vram, guessed
     subsegments:
     - [0x3667F0, textbin, fragments/76/fragment76_header]
-    - [0x366810, asm,     fragments/76/fragment76_code]
+    - [0x366810, c,       fragments/76/fragment76_code]
     - [0x367B40, data,    fragments/76/fragment76_data]
   
   - name: fragment77
@@ -1363,7 +1368,7 @@
     vram: 0x8F800000 # unk vram, guessed
     subsegments:
     - [0x3690C0, textbin, fragments/77/fragment77_header]
-    - [0x3690E0, asm,     fragments/77/fragment77_code]
+    - [0x3690E0, c,       fragments/77/fragment77_code]
     - [0x36C530, data,    fragments/77/fragment77_data]
   
   - name: fragment78
@@ -1373,7 +1378,7 @@
     vram: 0x8F900000 # unk vram, guessed
     subsegments:
     - [0x36DD90, textbin, fragments/78/fragment78_header]
-    - [0x36DDB0, asm,     fragments/78/fragment78_code]
+    - [0x36DDB0, c,       fragments/78/fragment78_code]
     - [0x36F2C0, data,    fragments/78/fragment78_data]
   
   - name: fragment79
@@ -1383,46 +1388,46 @@
     vram: 0x84100000
     subsegments:
     - [0x36F890, textbin, fragments/79/fragment79_header]
-    - [0x36F8B0, asm,     fragments/79/fragment79_36F8B0]
-    - [0x372DE0, asm,     fragments/79/fragment79_372DE0]
-    - [0x373F70, asm,     fragments/79/fragment79_373F70]
-    - [0x374840, asm,     fragments/79/fragment79_374840]
-    - [0x3749B0, asm,     fragments/79/fragment79_3749B0]
-    - [0x375110, asm,     fragments/79/fragment79_375110]
-    - [0x375530, asm,     fragments/79/fragment79_375530]
-    - [0x377570, asm,     fragments/79/fragment79_377570]
-    - [0x377F80, asm,     fragments/79/fragment79_377F80]
-    - [0x379450, asm,     fragments/79/fragment79_379450]
-    - [0x379E90, asm,     fragments/79/fragment79_379E90]
-    - [0x37A6E0, asm,     fragments/79/fragment79_37A6E0]
-    - [0x38D510, asm,     fragments/79/fragment79_38D510]
-    - [0x38EBD0, asm,     fragments/79/fragment79_38EBD0]
-    - [0x38EFA0, asm,     fragments/79/fragment79_38EFA0]
-    - [0x38EFE0, asm,     fragments/79/fragment79_38EFE0]
-    - [0x393B40, asm,     fragments/79/fragment79_393B40]
-    - [0x393BF0, asm,     fragments/79/fragment79_393BF0]
-    - [0x393CA0, asm,     fragments/79/fragment79_393CA0]
-    - [0x3ADCA0, asm,     fragments/79/fragment79_3ADCA0]
-    - [0x3B7DB0, asm,     fragments/79/fragment79_3B7DB0]
-    - [0x3B7EA0, asm,     fragments/79/fragment79_3B7EA0]
-    - [0x3B9B80, asm,     fragments/79/fragment79_3B9B80]
-    - [0x3BC290, asm,     fragments/79/fragment79_3BC290]
-    - [0x3BE6B0, asm,     fragments/79/fragment79_3BE6B0]
-    - [0x3BEAF0, asm,     fragments/79/fragment79_3BEAF0]
-    - [0x3BF4C0, asm,     fragments/79/fragment79_3BF4C0]
-    - [0x3C40B0, asm,     fragments/79/fragment79_3C40B0]
-    - [0x3C50B0, asm,     fragments/79/fragment79_3C50B0]
-    - [0x3C60B0, asm,     fragments/79/fragment79_3C60B0]
-    - [0x3CB430, asm,     fragments/79/fragment79_3CB430]
-    - [0x3CE960, asm,     fragments/79/fragment79_3CE960]
-    - [0x3CFAE0, asm,     fragments/79/fragment79_3CFAE0]
-    - [0x3D0D70, asm,     fragments/79/fragment79_3D0D70]
-    - [0x3D2C10, asm,     fragments/79/fragment79_3D2C10]
-    - [0x3D3260, asm,     fragments/79/fragment79_3D3260]
-    - [0x3D4060, asm,     fragments/79/fragment79_3D4060]
-    - [0x3D4DA0, asm,     fragments/79/fragment79_3D4DA0]
-    - [0x3D7DD0, asm,     fragments/79/fragment79_3D7DD0]
-    - [0x3D99F0, asm,     fragments/79/fragment79_3D99F0]
+    - [0x36F8B0, c,       fragments/79/fragment79_36F8B0]
+    - [0x372DE0, c,       fragments/79/fragment79_372DE0]
+    - [0x373F70, c,       fragments/79/fragment79_373F70]
+    - [0x374840, c,       fragments/79/fragment79_374840]
+    - [0x3749B0, c,       fragments/79/fragment79_3749B0]
+    - [0x375110, c,       fragments/79/fragment79_375110]
+    - [0x375530, c,       fragments/79/fragment79_375530]
+    - [0x377570, c,       fragments/79/fragment79_377570]
+    - [0x377F80, c,       fragments/79/fragment79_377F80]
+    - [0x379450, c,       fragments/79/fragment79_379450]
+    - [0x379E90, c,       fragments/79/fragment79_379E90]
+    - [0x37A6E0, c,       fragments/79/fragment79_37A6E0]
+    - [0x38D510, c,       fragments/79/fragment79_38D510]
+    - [0x38EBD0, c,       fragments/79/fragment79_38EBD0]
+    - [0x38EFA0, c,       fragments/79/fragment79_38EFA0]
+    - [0x38EFE0, c,       fragments/79/fragment79_38EFE0]
+    - [0x393B40, c,       fragments/79/fragment79_393B40]
+    - [0x393BF0, c,       fragments/79/fragment79_393BF0]
+    - [0x393CA0, c,       fragments/79/fragment79_393CA0]
+    - [0x3ADCA0, c,       fragments/79/fragment79_3ADCA0]
+    - [0x3B7DB0, c,       fragments/79/fragment79_3B7DB0]
+    - [0x3B7EA0, c,       fragments/79/fragment79_3B7EA0]
+    - [0x3B9B80, c,       fragments/79/fragment79_3B9B80]
+    - [0x3BC290, c,       fragments/79/fragment79_3BC290]
+    - [0x3BE6B0, c,       fragments/79/fragment79_3BE6B0]
+    - [0x3BEAF0, c,       fragments/79/fragment79_3BEAF0]
+    - [0x3BF4C0, c,       fragments/79/fragment79_3BF4C0]
+    - [0x3C40B0, c,       fragments/79/fragment79_3C40B0]
+    - [0x3C50B0, c,       fragments/79/fragment79_3C50B0]
+    - [0x3C60B0, c,       fragments/79/fragment79_3C60B0]
+    - [0x3CB430, c,       fragments/79/fragment79_3CB430]
+    - [0x3CE960, c,       fragments/79/fragment79_3CE960]
+    - [0x3CFAE0, c,       fragments/79/fragment79_3CFAE0]
+    - [0x3D0D70, c,       fragments/79/fragment79_3D0D70]
+    - [0x3D2C10, c,       fragments/79/fragment79_3D2C10]
+    - [0x3D3260, c,       fragments/79/fragment79_3D3260]
+    - [0x3D4060, c,       fragments/79/fragment79_3D4060]
+    - [0x3D4DA0, c,       fragments/79/fragment79_3D4DA0]
+    - [0x3D7DD0, c,       fragments/79/fragment79_3D7DD0]
+    - [0x3D99F0, c,       fragments/79/fragment79_3D99F0]
     - [0x3D9A00, data,    fragments/79/fragment79_data]
   
   - name: fragment80
@@ -1432,10 +1437,10 @@
     vram: 0x84200000
     subsegments:
     - [0x419480, textbin, fragments/80/fragment80_header]
-    - [0x4194A0, asm,     fragments/80/fragment80_4194A0]
-    - [0x41A5F0, asm,     fragments/80/fragment80_41A5F0]
-    - [0x41AC50, asm,     fragments/80/fragment80_41AC50]
-    - [0x41C930, asm,     fragments/80/fragment80_41C930]
+    - [0x4194A0, c,       fragments/80/fragment80_4194A0]
+    - [0x41A5F0, c,       fragments/80/fragment80_41A5F0]
+    - [0x41AC50, c,       fragments/80/fragment80_41AC50]
+    - [0x41C930, c,       fragments/80/fragment80_41C930]
     - [0x41C940, data,    fragments/80/fragment80_data]
 
   - name: fragment81
@@ -1445,7 +1450,7 @@
     vram: 0x84300000
     subsegments:
     - [0x41D750, textbin, fragments/81/fragment81_header]
-    - [0x41D770, asm,     fragments/81/fragment81_code]
+    - [0x41D770, c,       fragments/81/fragment81_code]
     - [0x41F9D0, data,    fragments/81/fragment81_data]
  
   - name: fragment82
@@ -1455,8 +1460,8 @@
     vram: 0x82D00000
     subsegments:
     - [0x420E80, textbin, fragments/82/fragment82_header]
-    - [0x420EA0, asm,     fragments/82/fragment82_420EA0]
-    - [0x4238F0, asm,     fragments/82/fragment82_4238F0]
+    - [0x420EA0, c,       fragments/82/fragment82_420EA0]
+    - [0x4238F0, c,       fragments/82/fragment82_4238F0]
     - [0x427E00, data,    fragments/82/fragment82_data]
 
   - name: fragment83
@@ -1466,7 +1471,7 @@
     vram: 0x82C00000
     subsegments:
     - [0x429850, textbin, fragments/83/fragment83_header]
-    - [0x429870, asm,     fragments/83/fragment83_code]
+    - [0x429870, c,       fragments/83/fragment83_code]
     - [0x42E150, data,    fragments/83/fragment83_data]
 
   - name: fragment84
@@ -1476,7 +1481,7 @@
     vram: 0x8FC00000 # unk vram, guessed
     subsegments:
     - [0x42F160, textbin, fragments/84/fragment84_header]
-    - [0x42F180, asm,     fragments/84/fragment84_code]
+    - [0x42F180, c,       fragments/84/fragment84_code]
     - [0x431590, data,    fragments/84/fragment84_data]
 
   - name: fragment85
@@ -1486,7 +1491,7 @@
     vram: 0x8FD00000 # unk vram, guessed
     subsegments:
     - [0x4320C0, textbin, fragments/85/fragment85_header]
-    - [0x4320E0, asm,     fragments/85/fragment85_code]
+    - [0x4320E0, c,       fragments/85/fragment85_code]
     - [0x434040, data,    fragments/85/fragment85_data]
 
   - name: fragment86
@@ -1496,7 +1501,7 @@
     vram: 0x84400000
     subsegments:
     - [0x434720, textbin, fragments/86/fragment86_header]
-    - [0x434740, asm,     fragments/86/fragment86_code]
+    - [0x434740, c,       fragments/86/fragment86_code]
     - [0x435140, data,    fragments/86/fragment86_data]
   
   - name: fragment87
@@ -1506,7 +1511,7 @@
     vram: 0x81B00000
     subsegments:
     - [0x435A70, textbin, fragments/87/fragment87_header]
-    - [0x435A90, asm,     fragments/87/fragment87_code]
+    - [0x435A90, c,       fragments/87/fragment87_code]
     - [0x436A20, data,    fragments/87/fragment87_data]
 
   - name: fragment88
@@ -1516,7 +1521,7 @@
     vram: 0x81C00000
     subsegments:
     - [0x436C20, textbin, fragments/88/fragment88_header]
-    - [0x436C40, asm,     fragments/88/fragment88_code]
+    - [0x436C40, c,       fragments/88/fragment88_code]
     - [0x437450, data,    fragments/88/fragment88_data]
 
   - [0x437610, bin] # rest of ROM

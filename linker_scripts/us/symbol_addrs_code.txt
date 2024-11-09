@@ -313,3 +313,5 @@ osFlashReadArray = 0x80084FC0; // defined:true type:func
 __osFlashGetAddr = 0x80085160; // defined:true type:func
 __osSetWatchLo = 0x80085190; // defined:true type:func
 send_mesg = 0x80075194; // type:func
+main_pool_push_state = 0x80002B44;
+main_pool_pop_state = 0x80002BF8;
