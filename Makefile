@@ -135,8 +135,8 @@ $(error Unable to find $(MIPS_BINUTILS_PREFIX)ld. Please install or build MIPS b
 endif
 
 
-CC              := tools/ido/$(DETECTED_OS)/7.1/cc
-CC_OLD          := tools/ido/$(DETECTED_OS)/5.3/cc
+CC              := $(shell pwd)/tools/ido/$(DETECTED_OS)/7.1/cc
+CC_OLD          := $(shell pwd)/tools/ido/$(DETECTED_OS)/5.3/cc
 
 AS              := $(MIPS_BINUTILS_PREFIX)as
 LD              := $(MIPS_BINUTILS_PREFIX)ld
@@ -383,7 +383,7 @@ $(LIBULTRA_LIB): $(ULTRALIB_LIB)
 
 $(ULTRALIB_LIB):
 	@$(PRINT) "$(GREEN)Making libultra:  $(BLUE)$@ $(NO_COL)\n"
-	$(V)$(MAKE) -C lib/ultralib VERSION=$(ULTRALIB_VERSION) TARGET=$(ULTRALIB_TARGET) FIXUPS=1 CROSS=$(MIPS_BINUTILS_PREFIX) CC=../../$(CC_OLD) VERBOSE=$(VERBOSE) COLOR=$(COLOR)
+	$(V)$(MAKE) -C lib/ultralib VERSION=$(ULTRALIB_VERSION) TARGET=$(ULTRALIB_TARGET) FIXUPS=1 CROSS=$(MIPS_BINUTILS_PREFIX) CC=$(CC_OLD) AS=$(CC_OLD) VERBOSE=$(VERBOSE) COLOR=$(COLOR)
 
 $(BUILD_DIR)/%.o: %.bin
 	$(call print,Binning object:,$<,$@)
