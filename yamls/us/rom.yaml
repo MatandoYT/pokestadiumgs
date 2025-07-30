@@ -705,7 +705,7 @@
     type: code
     bss_size: 0x0
     start: 0x165EC0
-    vram: 0x80000000 # unk vram. not loaded
+    vram: 0x8FE00000 # unk vram. Guessed.
     subsegments:
     - [0x165EC0, textbin, fragments/28/fragment28_header]
     - [0x165EE0, c,       fragments/28/fragment28_code]
