@@ -388,7 +388,7 @@
     - [0xAC540, data,    fragments/0x25/fragment_0x25_data]
 
   # unk fragment
-  - name: fragment_0x9_
+  - name: fragment_0x9
     type: code
     bss_size: 0x0
     start: 0xAD260
