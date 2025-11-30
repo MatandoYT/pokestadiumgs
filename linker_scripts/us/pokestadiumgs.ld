@@ -757,7 +757,7 @@ SECTIONS
     . = ALIGN(., 16);
 
     fragment_0x25_ROM_START = __romPos;
-    fragment_0x25_VRAM = ADDR(.fragment_0x25) ;
+    fragment_0x25_VRAM = ADDR(.fragment_0x25);
     .fragment_0x25 0x83500000 : AT(fragment_0x25_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -791,15 +791,15 @@ SECTIONS
         fragment_0x25_BSS_END = .;
         fragment_0x25_BSS_SIZE = ABSOLUTE(fragment_0x25_BSS_END - fragment_0x25_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x25) ;
+    __romPos += SIZEOF(.fragment_0x25);
     fragment_0x25_ROM_END = __romPos;
     fragment_0x25_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0x9_ROM_START = __romPos;
-    fragment_0x9_VRAM = ADDR(.fragment_0x9) ;
-    .fragment_0x9 0x81900000 : AT(fragment_0x9_ROM_START) SUBALIGN(16)
+    fragment_0x9_VRAM = ADDR(.fragment_0x9_);
+    .fragment_0x9_ 0x81900000 : AT(fragment_0x9_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
         fragment_0x9_TEXT_START = .;
@@ -832,14 +832,14 @@ SECTIONS
         fragment_0x9_BSS_END = .;
         fragment_0x9_BSS_SIZE = ABSOLUTE(fragment_0x9_BSS_END - fragment_0x9_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x9) ;
+    __romPos += SIZEOF(.fragment_0x9_);
     fragment_0x9_ROM_END = __romPos;
     fragment_0x9_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0xA_ROM_START = __romPos;
-    fragment_0xA_VRAM = ADDR(.fragment_0xA) ;
+    fragment_0xA_VRAM = ADDR(.fragment_0xA);
     .fragment_0xA 0x81A00000 : AT(fragment_0xA_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -873,14 +873,14 @@ SECTIONS
         fragment_0xA_BSS_END = .;
         fragment_0xA_BSS_SIZE = ABSOLUTE(fragment_0xA_BSS_END - fragment_0xA_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0xA) ;
+    __romPos += SIZEOF(.fragment_0xA);
     fragment_0xA_ROM_END = __romPos;
     fragment_0xA_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0x8_ROM_START = __romPos;
-    fragment_0x8_VRAM = ADDR(.fragment_0x8) ;
+    fragment_0x8_VRAM = ADDR(.fragment_0x8);
     .fragment_0x8 0x81800000 : AT(fragment_0x8_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -924,14 +924,14 @@ SECTIONS
         fragment_0x8_BSS_END = .;
         fragment_0x8_BSS_SIZE = ABSOLUTE(fragment_0x8_BSS_END - fragment_0x8_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x8) ;
+    __romPos += SIZEOF(.fragment_0x8);
     fragment_0x8_ROM_END = __romPos;
     fragment_0x8_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0x22_ROM_START = __romPos;
-    fragment_0x22_VRAM = ADDR(.fragment_0x22) ;
+    fragment_0x22_VRAM = ADDR(.fragment_0x22);
     .fragment_0x22 0x83200000 : AT(fragment_0x22_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -965,14 +965,14 @@ SECTIONS
         fragment_0x22_BSS_END = .;
         fragment_0x22_BSS_SIZE = ABSOLUTE(fragment_0x22_BSS_END - fragment_0x22_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x22) ;
+    __romPos += SIZEOF(.fragment_0x22);
     fragment_0x22_ROM_END = __romPos;
     fragment_0x22_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0x21_ROM_START = __romPos;
-    fragment_0x21_VRAM = ADDR(.fragment_0x21) ;
+    fragment_0x21_VRAM = ADDR(.fragment_0x21);
     .fragment_0x21 0x83100000 : AT(fragment_0x21_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -1006,14 +1006,14 @@ SECTIONS
         fragment_0x21_BSS_END = .;
         fragment_0x21_BSS_SIZE = ABSOLUTE(fragment_0x21_BSS_END - fragment_0x21_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x21) ;
+    __romPos += SIZEOF(.fragment_0x21);
     fragment_0x21_ROM_END = __romPos;
     fragment_0x21_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0x20_ROM_START = __romPos;
-    fragment_0x20_VRAM = ADDR(.fragment_0x20) ;
+    fragment_0x20_VRAM = ADDR(.fragment_0x20);
     .fragment_0x20 0x83000000 : AT(fragment_0x20_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -1052,14 +1052,14 @@ SECTIONS
         fragment_0x20_BSS_END = .;
         fragment_0x20_BSS_SIZE = ABSOLUTE(fragment_0x20_BSS_END - fragment_0x20_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x20) ;
+    __romPos += SIZEOF(.fragment_0x20);
     fragment_0x20_ROM_END = __romPos;
     fragment_0x20_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0x1F_ROM_START = __romPos;
-    fragment_0x1F_VRAM = ADDR(.fragment_0x1F) ;
+    fragment_0x1F_VRAM = ADDR(.fragment_0x1F);
     .fragment_0x1F 0x82F00000 : AT(fragment_0x1F_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -1093,14 +1093,14 @@ SECTIONS
         fragment_0x1F_BSS_END = .;
         fragment_0x1F_BSS_SIZE = ABSOLUTE(fragment_0x1F_BSS_END - fragment_0x1F_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x1F) ;
+    __romPos += SIZEOF(.fragment_0x1F);
     fragment_0x1F_ROM_END = __romPos;
     fragment_0x1F_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
     fragment_0xEB_ROM_START = __romPos;
-    fragment_0xEB_VRAM = ADDR(.fragment_0xEB) ;
+    fragment_0xEB_VRAM = ADDR(.fragment_0xEB);
     .fragment_0xEB 0x8FB00000 : AT(fragment_0xEB_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
@@ -1134,7 +1134,7 @@ SECTIONS
         fragment_0xEB_BSS_END = .;
         fragment_0xEB_BSS_SIZE = ABSOLUTE(fragment_0xEB_BSS_END - fragment_0xEB_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0xEB) ;
+    __romPos += SIZEOF(.fragment_0xEB);
     fragment_0xEB_ROM_END = __romPos;
     fragment_0xEB_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
@@ -2090,7 +2090,7 @@ SECTIONS
 
     fragment_0xEE_ROM_START = __romPos;
     fragment_0xEE_VRAM = ADDR(.fragment_0xEE);
-    .fragment_0xEE 0x80000000 : AT(fragment_0xEE_ROM_START) SUBALIGN(16)
+    .fragment_0xEE 0x8FE00000 : AT(fragment_0xEE_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
         fragment_0xEE_TEXT_START = .;
