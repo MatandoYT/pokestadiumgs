@@ -756,387 +756,387 @@ SECTIONS
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment1_ROM_START = __romPos;
-    fragment1_VRAM = ADDR(.fragment1);
-    .fragment1 0x83500000 : AT(fragment1_ROM_START) SUBALIGN(16)
+    fragment01_ROM_START = __romPos;
+    fragment01_VRAM = ADDR(.fragment01) ;
+    .fragment01 0x83500000 : AT(fragment01_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment1_TEXT_START = .;
-        build/asm/us/data/fragments/1/fragment1_header.o(.text);
-        build/src/fragments/1/fragment1_code.o(.text);
-        fragment1_TEXT_END = .;
-        fragment1_TEXT_SIZE = ABSOLUTE(fragment1_TEXT_END - fragment1_TEXT_START);
-        fragment1_DATA_START = .;
-        fragments_1_fragment1_header = .;
-        build/asm/us/data/fragments/1/fragment1_header.o(.data);
-        fragments_1_fragment1_code = .;
-        build/src/fragments/1/fragment1_code.o(.data);
-        fragments_1_fragment1_data_data = .;
-        build/asm/us/data/fragments/1/fragment1_data.data.o(.data);
-        fragment1_DATA_END = .;
-        fragment1_DATA_SIZE = ABSOLUTE(fragment1_DATA_END - fragment1_DATA_START);
-        fragment1_RODATA_START = .;
-        build/asm/us/data/fragments/1/fragment1_header.o(.rodata);
-        build/src/fragments/1/fragment1_code.o(.rodata);
-        fragment1_RODATA_END = .;
-        fragment1_RODATA_SIZE = ABSOLUTE(fragment1_RODATA_END - fragment1_RODATA_START);
+        fragment01_TEXT_START = .;
+        build/asm/us/data/fragments/1/fragment01_header.o(.text);
+        build/src/fragments/1/fragment01_code.o(.text);
+        fragment01_TEXT_END = .;
+        fragment01_TEXT_SIZE = ABSOLUTE(fragment01_TEXT_END - fragment01_TEXT_START);
+        fragment01_DATA_START = .;
+        fragments_1_fragment01_header = .;
+        build/asm/us/data/fragments/1/fragment01_header.o(.data);
+        fragments_1_fragment01_code = .;
+        build/src/fragments/1/fragment01_code.o(.data);
+        fragments_1_fragment01_data_data = .;
+        build/asm/us/data/fragments/1/fragment01_data.data.o(.data);
+        fragment01_DATA_END = .;
+        fragment01_DATA_SIZE = ABSOLUTE(fragment01_DATA_END - fragment01_DATA_START);
+        fragment01_RODATA_START = .;
+        build/asm/us/data/fragments/1/fragment01_header.o(.rodata);
+        build/src/fragments/1/fragment01_code.o(.rodata);
+        fragment01_RODATA_END = .;
+        fragment01_RODATA_SIZE = ABSOLUTE(fragment01_RODATA_END - fragment01_RODATA_START);
     }
-    fragment1_bss_VRAM = ADDR(.fragment1_bss);
-    .fragment1_bss (NOLOAD) : SUBALIGN(16)
+    fragment01_bss_VRAM = ADDR(.fragment01_bss);
+    .fragment01_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment1_BSS_START = .;
-        build/asm/us/data/fragments/1/fragment1_header.o(.bss);
-        build/src/fragments/1/fragment1_code.o(.bss);
-        fragment1_BSS_END = .;
-        fragment1_BSS_SIZE = ABSOLUTE(fragment1_BSS_END - fragment1_BSS_START);
+        fragment01_BSS_START = .;
+        build/asm/us/data/fragments/1/fragment01_header.o(.bss);
+        build/src/fragments/1/fragment01_code.o(.bss);
+        fragment01_BSS_END = .;
+        fragment01_BSS_SIZE = ABSOLUTE(fragment01_BSS_END - fragment01_BSS_START);
     }
-    __romPos += SIZEOF(.fragment1);
-    fragment1_ROM_END = __romPos;
-    fragment1_VRAM_END = .;
+    __romPos += SIZEOF(.fragment01) ;
+    fragment01_ROM_END = __romPos;
+    fragment01_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment2_ROM_START = __romPos;
-    fragment2_VRAM = ADDR(.fragment2);
-    .fragment2 0x81900000 : AT(fragment2_ROM_START) SUBALIGN(16)
+    fragment02_ROM_START = __romPos;
+    fragment02_VRAM = ADDR(.fragment02) ;
+    .fragment02 0x81900000 : AT(fragment02_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment2_TEXT_START = .;
-        build/asm/us/data/fragments/2/fragment2_header.o(.text);
-        build/src/fragments/2/fragment2_code.o(.text);
-        fragment2_TEXT_END = .;
-        fragment2_TEXT_SIZE = ABSOLUTE(fragment2_TEXT_END - fragment2_TEXT_START);
-        fragment2_DATA_START = .;
-        fragments_2_fragment2_header = .;
-        build/asm/us/data/fragments/2/fragment2_header.o(.data);
-        fragments_2_fragment2_code = .;
-        build/src/fragments/2/fragment2_code.o(.data);
-        fragments_2_fragment2_data_data = .;
-        build/asm/us/data/fragments/2/fragment2_data.data.o(.data);
-        fragment2_DATA_END = .;
-        fragment2_DATA_SIZE = ABSOLUTE(fragment2_DATA_END - fragment2_DATA_START);
-        fragment2_RODATA_START = .;
-        build/asm/us/data/fragments/2/fragment2_header.o(.rodata);
-        build/src/fragments/2/fragment2_code.o(.rodata);
-        fragment2_RODATA_END = .;
-        fragment2_RODATA_SIZE = ABSOLUTE(fragment2_RODATA_END - fragment2_RODATA_START);
+        fragment02_TEXT_START = .;
+        build/asm/us/data/fragments/2/fragment02_header.o(.text);
+        build/src/fragments/2/fragment02_code.o(.text);
+        fragment02_TEXT_END = .;
+        fragment02_TEXT_SIZE = ABSOLUTE(fragment02_TEXT_END - fragment02_TEXT_START);
+        fragment02_DATA_START = .;
+        fragments_2_fragment02_header = .;
+        build/asm/us/data/fragments/2/fragment02_header.o(.data);
+        fragments_2_fragment02_code = .;
+        build/src/fragments/2/fragment02_code.o(.data);
+        fragments_2_fragment02_data_data = .;
+        build/asm/us/data/fragments/2/fragment02_data.data.o(.data);
+        fragment02_DATA_END = .;
+        fragment02_DATA_SIZE = ABSOLUTE(fragment02_DATA_END - fragment02_DATA_START);
+        fragment02_RODATA_START = .;
+        build/asm/us/data/fragments/2/fragment02_header.o(.rodata);
+        build/src/fragments/2/fragment02_code.o(.rodata);
+        fragment02_RODATA_END = .;
+        fragment02_RODATA_SIZE = ABSOLUTE(fragment02_RODATA_END - fragment02_RODATA_START);
     }
-    fragment2_bss_VRAM = ADDR(.fragment2_bss);
-    .fragment2_bss (NOLOAD) : SUBALIGN(16)
+    fragment02_bss_VRAM = ADDR(.fragment02_bss);
+    .fragment02_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment2_BSS_START = .;
-        build/asm/us/data/fragments/2/fragment2_header.o(.bss);
-        build/src/fragments/2/fragment2_code.o(.bss);
-        fragment2_BSS_END = .;
-        fragment2_BSS_SIZE = ABSOLUTE(fragment2_BSS_END - fragment2_BSS_START);
+        fragment02_BSS_START = .;
+        build/asm/us/data/fragments/2/fragment02_header.o(.bss);
+        build/src/fragments/2/fragment02_code.o(.bss);
+        fragment02_BSS_END = .;
+        fragment02_BSS_SIZE = ABSOLUTE(fragment02_BSS_END - fragment02_BSS_START);
     }
-    __romPos += SIZEOF(.fragment2);
-    fragment2_ROM_END = __romPos;
-    fragment2_VRAM_END = .;
+    __romPos += SIZEOF(.fragment02) ;
+    fragment02_ROM_END = __romPos;
+    fragment02_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment3_ROM_START = __romPos;
-    fragment3_VRAM = ADDR(.fragment3);
-    .fragment3 0x81A00000 : AT(fragment3_ROM_START) SUBALIGN(16)
+    fragment03_ROM_START = __romPos;
+    fragment03_VRAM = ADDR(.fragment03) ;
+    .fragment03 0x81A00000 : AT(fragment03_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment3_TEXT_START = .;
-        build/asm/us/data/fragments/3/fragment3_header.o(.text);
-        build/src/fragments/3/fragment3_code.o(.text);
-        fragment3_TEXT_END = .;
-        fragment3_TEXT_SIZE = ABSOLUTE(fragment3_TEXT_END - fragment3_TEXT_START);
-        fragment3_DATA_START = .;
-        fragments_3_fragment3_header = .;
-        build/asm/us/data/fragments/3/fragment3_header.o(.data);
-        fragments_3_fragment3_code = .;
-        build/src/fragments/3/fragment3_code.o(.data);
-        fragments_3_fragment3_data_data = .;
-        build/asm/us/data/fragments/3/fragment3_data.data.o(.data);
-        fragment3_DATA_END = .;
-        fragment3_DATA_SIZE = ABSOLUTE(fragment3_DATA_END - fragment3_DATA_START);
-        fragment3_RODATA_START = .;
-        build/asm/us/data/fragments/3/fragment3_header.o(.rodata);
-        build/src/fragments/3/fragment3_code.o(.rodata);
-        fragment3_RODATA_END = .;
-        fragment3_RODATA_SIZE = ABSOLUTE(fragment3_RODATA_END - fragment3_RODATA_START);
+        fragment03_TEXT_START = .;
+        build/asm/us/data/fragments/3/fragment03_header.o(.text);
+        build/src/fragments/3/fragment03_code.o(.text);
+        fragment03_TEXT_END = .;
+        fragment03_TEXT_SIZE = ABSOLUTE(fragment03_TEXT_END - fragment03_TEXT_START);
+        fragment03_DATA_START = .;
+        fragments_3_fragment03_header = .;
+        build/asm/us/data/fragments/3/fragment03_header.o(.data);
+        fragments_3_fragment03_code = .;
+        build/src/fragments/3/fragment03_code.o(.data);
+        fragments_3_fragment03_data_data = .;
+        build/asm/us/data/fragments/3/fragment03_data.data.o(.data);
+        fragment03_DATA_END = .;
+        fragment03_DATA_SIZE = ABSOLUTE(fragment03_DATA_END - fragment03_DATA_START);
+        fragment03_RODATA_START = .;
+        build/asm/us/data/fragments/3/fragment03_header.o(.rodata);
+        build/src/fragments/3/fragment03_code.o(.rodata);
+        fragment03_RODATA_END = .;
+        fragment03_RODATA_SIZE = ABSOLUTE(fragment03_RODATA_END - fragment03_RODATA_START);
     }
-    fragment3_bss_VRAM = ADDR(.fragment3_bss);
-    .fragment3_bss (NOLOAD) : SUBALIGN(16)
+    fragment03_bss_VRAM = ADDR(.fragment03_bss);
+    .fragment03_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment3_BSS_START = .;
-        build/asm/us/data/fragments/3/fragment3_header.o(.bss);
-        build/src/fragments/3/fragment3_code.o(.bss);
-        fragment3_BSS_END = .;
-        fragment3_BSS_SIZE = ABSOLUTE(fragment3_BSS_END - fragment3_BSS_START);
+        fragment03_BSS_START = .;
+        build/asm/us/data/fragments/3/fragment03_header.o(.bss);
+        build/src/fragments/3/fragment03_code.o(.bss);
+        fragment03_BSS_END = .;
+        fragment03_BSS_SIZE = ABSOLUTE(fragment03_BSS_END - fragment03_BSS_START);
     }
-    __romPos += SIZEOF(.fragment3);
-    fragment3_ROM_END = __romPos;
-    fragment3_VRAM_END = .;
+    __romPos += SIZEOF(.fragment03) ;
+    fragment03_ROM_END = __romPos;
+    fragment03_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment4_ROM_START = __romPos;
-    fragment4_VRAM = ADDR(.fragment4);
-    .fragment4 0x81800000 : AT(fragment4_ROM_START) SUBALIGN(16)
+    fragment04_ROM_START = __romPos;
+    fragment04_VRAM = ADDR(.fragment04) ;
+    .fragment04 0x81800000 : AT(fragment04_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment4_TEXT_START = .;
-        build/asm/us/data/fragments/4/fragment4_header.o(.text);
-        build/src/fragments/4/fragment4_AE600.o(.text);
-        build/src/fragments/4/fragment4_AFAA0.o(.text);
-        build/src/fragments/4/fragment4_B2D00.o(.text);
-        fragment4_TEXT_END = .;
-        fragment4_TEXT_SIZE = ABSOLUTE(fragment4_TEXT_END - fragment4_TEXT_START);
-        fragment4_DATA_START = .;
-        fragments_4_fragment4_header = .;
-        build/asm/us/data/fragments/4/fragment4_header.o(.data);
-        fragments_4_fragment4_AE600 = .;
-        build/src/fragments/4/fragment4_AE600.o(.data);
-        fragments_4_fragment4_AFAA0 = .;
-        build/src/fragments/4/fragment4_AFAA0.o(.data);
-        fragments_4_fragment4_B2D00 = .;
-        build/src/fragments/4/fragment4_B2D00.o(.data);
-        fragments_4_fragment4_data_data = .;
-        build/asm/us/data/fragments/4/fragment4_data.data.o(.data);
-        fragment4_DATA_END = .;
-        fragment4_DATA_SIZE = ABSOLUTE(fragment4_DATA_END - fragment4_DATA_START);
-        fragment4_RODATA_START = .;
-        build/asm/us/data/fragments/4/fragment4_header.o(.rodata);
-        build/src/fragments/4/fragment4_AE600.o(.rodata);
-        build/src/fragments/4/fragment4_AFAA0.o(.rodata);
-        build/src/fragments/4/fragment4_B2D00.o(.rodata);
-        fragment4_RODATA_END = .;
-        fragment4_RODATA_SIZE = ABSOLUTE(fragment4_RODATA_END - fragment4_RODATA_START);
+        fragment04_TEXT_START = .;
+        build/asm/us/data/fragments/4/fragment04_header.o(.text);
+        build/src/fragments/4/fragment04_AE600.o(.text);
+        build/src/fragments/4/fragment04_AFAA0.o(.text);
+        build/src/fragments/4/fragment04_B2D00.o(.text);
+        fragment04_TEXT_END = .;
+        fragment04_TEXT_SIZE = ABSOLUTE(fragment04_TEXT_END - fragment04_TEXT_START);
+        fragment04_DATA_START = .;
+        fragments_4_fragment04_header = .;
+        build/asm/us/data/fragments/4/fragment04_header.o(.data);
+        fragments_4_fragment04_AE600 = .;
+        build/src/fragments/4/fragment04_AE600.o(.data);
+        fragments_4_fragment04_AFAA0 = .;
+        build/src/fragments/4/fragment04_AFAA0.o(.data);
+        fragments_4_fragment04_B2D00 = .;
+        build/src/fragments/4/fragment04_B2D00.o(.data);
+        fragments_4_fragment04_data_data = .;
+        build/asm/us/data/fragments/4/fragment04_data.data.o(.data);
+        fragment04_DATA_END = .;
+        fragment04_DATA_SIZE = ABSOLUTE(fragment04_DATA_END - fragment04_DATA_START);
+        fragment04_RODATA_START = .;
+        build/asm/us/data/fragments/4/fragment04_header.o(.rodata);
+        build/src/fragments/4/fragment04_AE600.o(.rodata);
+        build/src/fragments/4/fragment04_AFAA0.o(.rodata);
+        build/src/fragments/4/fragment04_B2D00.o(.rodata);
+        fragment04_RODATA_END = .;
+        fragment04_RODATA_SIZE = ABSOLUTE(fragment04_RODATA_END - fragment04_RODATA_START);
     }
-    fragment4_bss_VRAM = ADDR(.fragment4_bss);
-    .fragment4_bss (NOLOAD) : SUBALIGN(16)
+    fragment04_bss_VRAM = ADDR(.fragment04_bss);
+    .fragment04_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment4_BSS_START = .;
-        build/asm/us/data/fragments/4/fragment4_header.o(.bss);
-        build/src/fragments/4/fragment4_AE600.o(.bss);
-        build/src/fragments/4/fragment4_AFAA0.o(.bss);
-        build/src/fragments/4/fragment4_B2D00.o(.bss);
-        fragment4_BSS_END = .;
-        fragment4_BSS_SIZE = ABSOLUTE(fragment4_BSS_END - fragment4_BSS_START);
+        fragment04_BSS_START = .;
+        build/asm/us/data/fragments/4/fragment04_header.o(.bss);
+        build/src/fragments/4/fragment04_AE600.o(.bss);
+        build/src/fragments/4/fragment04_AFAA0.o(.bss);
+        build/src/fragments/4/fragment04_B2D00.o(.bss);
+        fragment04_BSS_END = .;
+        fragment04_BSS_SIZE = ABSOLUTE(fragment04_BSS_END - fragment04_BSS_START);
     }
-    __romPos += SIZEOF(.fragment4);
-    fragment4_ROM_END = __romPos;
-    fragment4_VRAM_END = .;
+    __romPos += SIZEOF(.fragment04) ;
+    fragment04_ROM_END = __romPos;
+    fragment04_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment5_ROM_START = __romPos;
-    fragment5_VRAM = ADDR(.fragment5);
-    .fragment5 0x83200000 : AT(fragment5_ROM_START) SUBALIGN(16)
+    fragment05_ROM_START = __romPos;
+    fragment05_VRAM = ADDR(.fragment05) ;
+    .fragment05 0x83200000 : AT(fragment05_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment5_TEXT_START = .;
-        build/asm/us/data/fragments/5/fragment5_header.o(.text);
-        build/src/fragments/5/fragment5_code.o(.text);
-        fragment5_TEXT_END = .;
-        fragment5_TEXT_SIZE = ABSOLUTE(fragment5_TEXT_END - fragment5_TEXT_START);
-        fragment5_DATA_START = .;
-        fragments_5_fragment5_header = .;
-        build/asm/us/data/fragments/5/fragment5_header.o(.data);
-        fragments_5_fragment5_code = .;
-        build/src/fragments/5/fragment5_code.o(.data);
-        fragments_5_fragment5_data_data = .;
-        build/asm/us/data/fragments/5/fragment5_data.data.o(.data);
-        fragment5_DATA_END = .;
-        fragment5_DATA_SIZE = ABSOLUTE(fragment5_DATA_END - fragment5_DATA_START);
-        fragment5_RODATA_START = .;
-        build/asm/us/data/fragments/5/fragment5_header.o(.rodata);
-        build/src/fragments/5/fragment5_code.o(.rodata);
-        fragment5_RODATA_END = .;
-        fragment5_RODATA_SIZE = ABSOLUTE(fragment5_RODATA_END - fragment5_RODATA_START);
+        fragment05_TEXT_START = .;
+        build/asm/us/data/fragments/5/fragment05_header.o(.text);
+        build/src/fragments/5/fragment05_code.o(.text);
+        fragment05_TEXT_END = .;
+        fragment05_TEXT_SIZE = ABSOLUTE(fragment05_TEXT_END - fragment05_TEXT_START);
+        fragment05_DATA_START = .;
+        fragments_5_fragment05_header = .;
+        build/asm/us/data/fragments/5/fragment05_header.o(.data);
+        fragments_5_fragment05_code = .;
+        build/src/fragments/5/fragment05_code.o(.data);
+        fragments_5_fragment05_data_data = .;
+        build/asm/us/data/fragments/5/fragment05_data.data.o(.data);
+        fragment05_DATA_END = .;
+        fragment05_DATA_SIZE = ABSOLUTE(fragment05_DATA_END - fragment05_DATA_START);
+        fragment05_RODATA_START = .;
+        build/asm/us/data/fragments/5/fragment05_header.o(.rodata);
+        build/src/fragments/5/fragment05_code.o(.rodata);
+        fragment05_RODATA_END = .;
+        fragment05_RODATA_SIZE = ABSOLUTE(fragment05_RODATA_END - fragment05_RODATA_START);
     }
-    fragment5_bss_VRAM = ADDR(.fragment5_bss);
-    .fragment5_bss (NOLOAD) : SUBALIGN(16)
+    fragment05_bss_VRAM = ADDR(.fragment05_bss);
+    .fragment05_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment5_BSS_START = .;
-        build/asm/us/data/fragments/5/fragment5_header.o(.bss);
-        build/src/fragments/5/fragment5_code.o(.bss);
-        fragment5_BSS_END = .;
-        fragment5_BSS_SIZE = ABSOLUTE(fragment5_BSS_END - fragment5_BSS_START);
+        fragment05_BSS_START = .;
+        build/asm/us/data/fragments/5/fragment05_header.o(.bss);
+        build/src/fragments/5/fragment05_code.o(.bss);
+        fragment05_BSS_END = .;
+        fragment05_BSS_SIZE = ABSOLUTE(fragment05_BSS_END - fragment05_BSS_START);
     }
-    __romPos += SIZEOF(.fragment5);
-    fragment5_ROM_END = __romPos;
-    fragment5_VRAM_END = .;
+    __romPos += SIZEOF(.fragment05) ;
+    fragment05_ROM_END = __romPos;
+    fragment05_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment6_ROM_START = __romPos;
-    fragment6_VRAM = ADDR(.fragment6);
-    .fragment6 0x83100000 : AT(fragment6_ROM_START) SUBALIGN(16)
+    fragment06_ROM_START = __romPos;
+    fragment06_VRAM = ADDR(.fragment06) ;
+    .fragment06 0x83100000 : AT(fragment06_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment6_TEXT_START = .;
-        build/asm/us/data/fragments/6/fragment6_header.o(.text);
-        build/src/fragments/6/fragment6_code.o(.text);
-        fragment6_TEXT_END = .;
-        fragment6_TEXT_SIZE = ABSOLUTE(fragment6_TEXT_END - fragment6_TEXT_START);
-        fragment6_DATA_START = .;
-        fragments_6_fragment6_header = .;
-        build/asm/us/data/fragments/6/fragment6_header.o(.data);
-        fragments_6_fragment6_code = .;
-        build/src/fragments/6/fragment6_code.o(.data);
-        fragments_6_fragment6_data_data = .;
-        build/asm/us/data/fragments/6/fragment6_data.data.o(.data);
-        fragment6_DATA_END = .;
-        fragment6_DATA_SIZE = ABSOLUTE(fragment6_DATA_END - fragment6_DATA_START);
-        fragment6_RODATA_START = .;
-        build/asm/us/data/fragments/6/fragment6_header.o(.rodata);
-        build/src/fragments/6/fragment6_code.o(.rodata);
-        fragment6_RODATA_END = .;
-        fragment6_RODATA_SIZE = ABSOLUTE(fragment6_RODATA_END - fragment6_RODATA_START);
+        fragment06_TEXT_START = .;
+        build/asm/us/data/fragments/6/fragment06_header.o(.text);
+        build/src/fragments/6/fragment06_code.o(.text);
+        fragment06_TEXT_END = .;
+        fragment06_TEXT_SIZE = ABSOLUTE(fragment06_TEXT_END - fragment06_TEXT_START);
+        fragment06_DATA_START = .;
+        fragments_6_fragment06_header = .;
+        build/asm/us/data/fragments/6/fragment06_header.o(.data);
+        fragments_6_fragment06_code = .;
+        build/src/fragments/6/fragment06_code.o(.data);
+        fragments_6_fragment06_data_data = .;
+        build/asm/us/data/fragments/6/fragment06_data.data.o(.data);
+        fragment06_DATA_END = .;
+        fragment06_DATA_SIZE = ABSOLUTE(fragment06_DATA_END - fragment06_DATA_START);
+        fragment06_RODATA_START = .;
+        build/asm/us/data/fragments/6/fragment06_header.o(.rodata);
+        build/src/fragments/6/fragment06_code.o(.rodata);
+        fragment06_RODATA_END = .;
+        fragment06_RODATA_SIZE = ABSOLUTE(fragment06_RODATA_END - fragment06_RODATA_START);
     }
-    fragment6_bss_VRAM = ADDR(.fragment6_bss);
-    .fragment6_bss (NOLOAD) : SUBALIGN(16)
+    fragment06_bss_VRAM = ADDR(.fragment06_bss);
+    .fragment06_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment6_BSS_START = .;
-        build/asm/us/data/fragments/6/fragment6_header.o(.bss);
-        build/src/fragments/6/fragment6_code.o(.bss);
-        fragment6_BSS_END = .;
-        fragment6_BSS_SIZE = ABSOLUTE(fragment6_BSS_END - fragment6_BSS_START);
+        fragment06_BSS_START = .;
+        build/asm/us/data/fragments/6/fragment06_header.o(.bss);
+        build/src/fragments/6/fragment06_code.o(.bss);
+        fragment06_BSS_END = .;
+        fragment06_BSS_SIZE = ABSOLUTE(fragment06_BSS_END - fragment06_BSS_START);
     }
-    __romPos += SIZEOF(.fragment6);
-    fragment6_ROM_END = __romPos;
-    fragment6_VRAM_END = .;
+    __romPos += SIZEOF(.fragment06) ;
+    fragment06_ROM_END = __romPos;
+    fragment06_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment7_ROM_START = __romPos;
-    fragment7_VRAM = ADDR(.fragment7);
-    .fragment7 0x83000000 : AT(fragment7_ROM_START) SUBALIGN(16)
+    fragment07_ROM_START = __romPos;
+    fragment07_VRAM = ADDR(.fragment07) ;
+    .fragment07 0x83000000 : AT(fragment07_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment7_TEXT_START = .;
-        build/asm/us/data/fragments/7/fragment7_header.o(.text);
-        build/src/fragments/7/fragment7_BA250.o(.text);
-        build/src/fragments/7/fragment7_C4C10.o(.text);
-        fragment7_TEXT_END = .;
-        fragment7_TEXT_SIZE = ABSOLUTE(fragment7_TEXT_END - fragment7_TEXT_START);
-        fragment7_DATA_START = .;
-        fragments_7_fragment7_header = .;
-        build/asm/us/data/fragments/7/fragment7_header.o(.data);
-        fragments_7_fragment7_BA250 = .;
-        build/src/fragments/7/fragment7_BA250.o(.data);
-        fragments_7_fragment7_C4C10 = .;
-        build/src/fragments/7/fragment7_C4C10.o(.data);
-        fragments_7_fragment7_data_data = .;
-        build/asm/us/data/fragments/7/fragment7_data.data.o(.data);
-        fragment7_DATA_END = .;
-        fragment7_DATA_SIZE = ABSOLUTE(fragment7_DATA_END - fragment7_DATA_START);
-        fragment7_RODATA_START = .;
-        build/asm/us/data/fragments/7/fragment7_header.o(.rodata);
-        build/src/fragments/7/fragment7_BA250.o(.rodata);
-        build/src/fragments/7/fragment7_C4C10.o(.rodata);
-        fragment7_RODATA_END = .;
-        fragment7_RODATA_SIZE = ABSOLUTE(fragment7_RODATA_END - fragment7_RODATA_START);
+        fragment07_TEXT_START = .;
+        build/asm/us/data/fragments/7/fragment07_header.o(.text);
+        build/src/fragments/7/fragment07_BA250.o(.text);
+        build/src/fragments/7/fragment07_C4C10.o(.text);
+        fragment07_TEXT_END = .;
+        fragment07_TEXT_SIZE = ABSOLUTE(fragment07_TEXT_END - fragment07_TEXT_START);
+        fragment07_DATA_START = .;
+        fragments_7_fragment07_header = .;
+        build/asm/us/data/fragments/7/fragment07_header.o(.data);
+        fragments_7_fragment07_BA250 = .;
+        build/src/fragments/7/fragment07_BA250.o(.data);
+        fragments_7_fragment07_C4C10 = .;
+        build/src/fragments/7/fragment07_C4C10.o(.data);
+        fragments_7_fragment07_data_data = .;
+        build/asm/us/data/fragments/7/fragment07_data.data.o(.data);
+        fragment07_DATA_END = .;
+        fragment07_DATA_SIZE = ABSOLUTE(fragment07_DATA_END - fragment07_DATA_START);
+        fragment07_RODATA_START = .;
+        build/asm/us/data/fragments/7/fragment07_header.o(.rodata);
+        build/src/fragments/7/fragment07_BA250.o(.rodata);
+        build/src/fragments/7/fragment07_C4C10.o(.rodata);
+        fragment07_RODATA_END = .;
+        fragment07_RODATA_SIZE = ABSOLUTE(fragment07_RODATA_END - fragment07_RODATA_START);
     }
-    fragment7_bss_VRAM = ADDR(.fragment7_bss);
-    .fragment7_bss (NOLOAD) : SUBALIGN(16)
+    fragment07_bss_VRAM = ADDR(.fragment07_bss);
+    .fragment07_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment7_BSS_START = .;
-        build/asm/us/data/fragments/7/fragment7_header.o(.bss);
-        build/src/fragments/7/fragment7_BA250.o(.bss);
-        build/src/fragments/7/fragment7_C4C10.o(.bss);
-        fragment7_BSS_END = .;
-        fragment7_BSS_SIZE = ABSOLUTE(fragment7_BSS_END - fragment7_BSS_START);
+        fragment07_BSS_START = .;
+        build/asm/us/data/fragments/7/fragment07_header.o(.bss);
+        build/src/fragments/7/fragment07_BA250.o(.bss);
+        build/src/fragments/7/fragment07_C4C10.o(.bss);
+        fragment07_BSS_END = .;
+        fragment07_BSS_SIZE = ABSOLUTE(fragment07_BSS_END - fragment07_BSS_START);
     }
-    __romPos += SIZEOF(.fragment7);
-    fragment7_ROM_END = __romPos;
-    fragment7_VRAM_END = .;
+    __romPos += SIZEOF(.fragment07) ;
+    fragment07_ROM_END = __romPos;
+    fragment07_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment8_ROM_START = __romPos;
-    fragment8_VRAM = ADDR(.fragment8);
-    .fragment8 0x82F00000 : AT(fragment8_ROM_START) SUBALIGN(16)
+    fragment08_ROM_START = __romPos;
+    fragment08_VRAM = ADDR(.fragment08) ;
+    .fragment08 0x82F00000 : AT(fragment08_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment8_TEXT_START = .;
-        build/asm/us/data/fragments/8/fragment8_header.o(.text);
-        build/src/fragments/8/fragment8_code.o(.text);
-        fragment8_TEXT_END = .;
-        fragment8_TEXT_SIZE = ABSOLUTE(fragment8_TEXT_END - fragment8_TEXT_START);
-        fragment8_DATA_START = .;
-        fragments_8_fragment8_header = .;
-        build/asm/us/data/fragments/8/fragment8_header.o(.data);
-        fragments_8_fragment8_code = .;
-        build/src/fragments/8/fragment8_code.o(.data);
-        fragments_8_fragment8_data_data = .;
-        build/asm/us/data/fragments/8/fragment8_data.data.o(.data);
-        fragment8_DATA_END = .;
-        fragment8_DATA_SIZE = ABSOLUTE(fragment8_DATA_END - fragment8_DATA_START);
-        fragment8_RODATA_START = .;
-        build/asm/us/data/fragments/8/fragment8_header.o(.rodata);
-        build/src/fragments/8/fragment8_code.o(.rodata);
-        fragment8_RODATA_END = .;
-        fragment8_RODATA_SIZE = ABSOLUTE(fragment8_RODATA_END - fragment8_RODATA_START);
+        fragment08_TEXT_START = .;
+        build/asm/us/data/fragments/8/fragment08_header.o(.text);
+        build/src/fragments/8/fragment08_code.o(.text);
+        fragment08_TEXT_END = .;
+        fragment08_TEXT_SIZE = ABSOLUTE(fragment08_TEXT_END - fragment08_TEXT_START);
+        fragment08_DATA_START = .;
+        fragments_8_fragment08_header = .;
+        build/asm/us/data/fragments/8/fragment08_header.o(.data);
+        fragments_8_fragment08_code = .;
+        build/src/fragments/8/fragment08_code.o(.data);
+        fragments_8_fragment08_data_data = .;
+        build/asm/us/data/fragments/8/fragment08_data.data.o(.data);
+        fragment08_DATA_END = .;
+        fragment08_DATA_SIZE = ABSOLUTE(fragment08_DATA_END - fragment08_DATA_START);
+        fragment08_RODATA_START = .;
+        build/asm/us/data/fragments/8/fragment08_header.o(.rodata);
+        build/src/fragments/8/fragment08_code.o(.rodata);
+        fragment08_RODATA_END = .;
+        fragment08_RODATA_SIZE = ABSOLUTE(fragment08_RODATA_END - fragment08_RODATA_START);
     }
-    fragment8_bss_VRAM = ADDR(.fragment8_bss);
-    .fragment8_bss (NOLOAD) : SUBALIGN(16)
+    fragment08_bss_VRAM = ADDR(.fragment08_bss);
+    .fragment08_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment8_BSS_START = .;
-        build/asm/us/data/fragments/8/fragment8_header.o(.bss);
-        build/src/fragments/8/fragment8_code.o(.bss);
-        fragment8_BSS_END = .;
-        fragment8_BSS_SIZE = ABSOLUTE(fragment8_BSS_END - fragment8_BSS_START);
+        fragment08_BSS_START = .;
+        build/asm/us/data/fragments/8/fragment08_header.o(.bss);
+        build/src/fragments/8/fragment08_code.o(.bss);
+        fragment08_BSS_END = .;
+        fragment08_BSS_SIZE = ABSOLUTE(fragment08_BSS_END - fragment08_BSS_START);
     }
-    __romPos += SIZEOF(.fragment8);
-    fragment8_ROM_END = __romPos;
-    fragment8_VRAM_END = .;
+    __romPos += SIZEOF(.fragment08) ;
+    fragment08_ROM_END = __romPos;
+    fragment08_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
-    fragment9_ROM_START = __romPos;
-    fragment9_VRAM = ADDR(.fragment9);
-    .fragment9 0x8FB00000 : AT(fragment9_ROM_START) SUBALIGN(16)
+    fragment09_ROM_START = __romPos;
+    fragment09_VRAM = ADDR(.fragment09) ;
+    .fragment09 0x8FB00000 : AT(fragment09_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment9_TEXT_START = .;
-        build/asm/us/data/fragments/9/fragment9_header.o(.text);
-        build/src/fragments/9/fragment9_code.o(.text);
-        fragment9_TEXT_END = .;
-        fragment9_TEXT_SIZE = ABSOLUTE(fragment9_TEXT_END - fragment9_TEXT_START);
-        fragment9_DATA_START = .;
-        fragments_9_fragment9_header = .;
-        build/asm/us/data/fragments/9/fragment9_header.o(.data);
-        fragments_9_fragment9_code = .;
-        build/src/fragments/9/fragment9_code.o(.data);
-        fragments_9_fragment9_data_data = .;
-        build/asm/us/data/fragments/9/fragment9_data.data.o(.data);
-        fragment9_DATA_END = .;
-        fragment9_DATA_SIZE = ABSOLUTE(fragment9_DATA_END - fragment9_DATA_START);
-        fragment9_RODATA_START = .;
-        build/asm/us/data/fragments/9/fragment9_header.o(.rodata);
-        build/src/fragments/9/fragment9_code.o(.rodata);
-        fragment9_RODATA_END = .;
-        fragment9_RODATA_SIZE = ABSOLUTE(fragment9_RODATA_END - fragment9_RODATA_START);
+        fragment09_TEXT_START = .;
+        build/asm/us/data/fragments/9/fragment09_header.o(.text);
+        build/src/fragments/9/fragment09_code.o(.text);
+        fragment09_TEXT_END = .;
+        fragment09_TEXT_SIZE = ABSOLUTE(fragment09_TEXT_END - fragment09_TEXT_START);
+        fragment09_DATA_START = .;
+        fragments_9_fragment09_header = .;
+        build/asm/us/data/fragments/9/fragment09_header.o(.data);
+        fragments_9_fragment09_code = .;
+        build/src/fragments/9/fragment09_code.o(.data);
+        fragments_9_fragment09_data_data = .;
+        build/asm/us/data/fragments/9/fragment09_data.data.o(.data);
+        fragment09_DATA_END = .;
+        fragment09_DATA_SIZE = ABSOLUTE(fragment09_DATA_END - fragment09_DATA_START);
+        fragment09_RODATA_START = .;
+        build/asm/us/data/fragments/9/fragment09_header.o(.rodata);
+        build/src/fragments/9/fragment09_code.o(.rodata);
+        fragment09_RODATA_END = .;
+        fragment09_RODATA_SIZE = ABSOLUTE(fragment09_RODATA_END - fragment09_RODATA_START);
     }
-    fragment9_bss_VRAM = ADDR(.fragment9_bss);
-    .fragment9_bss (NOLOAD) : SUBALIGN(16)
+    fragment09_bss_VRAM = ADDR(.fragment09_bss);
+    .fragment09_bss (NOLOAD) : SUBALIGN(16)
     {
         FILL(0x00000000);
-        fragment9_BSS_START = .;
-        build/asm/us/data/fragments/9/fragment9_header.o(.bss);
-        build/src/fragments/9/fragment9_code.o(.bss);
-        fragment9_BSS_END = .;
-        fragment9_BSS_SIZE = ABSOLUTE(fragment9_BSS_END - fragment9_BSS_START);
+        fragment09_BSS_START = .;
+        build/asm/us/data/fragments/9/fragment09_header.o(.bss);
+        build/src/fragments/9/fragment09_code.o(.bss);
+        fragment09_BSS_END = .;
+        fragment09_BSS_SIZE = ABSOLUTE(fragment09_BSS_END - fragment09_BSS_START);
     }
-    __romPos += SIZEOF(.fragment9);
-    fragment9_ROM_END = __romPos;
-    fragment9_VRAM_END = .;
+    __romPos += SIZEOF(.fragment09) ;
+    fragment09_ROM_END = __romPos;
+    fragment09_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
     . = ALIGN(., 16);
 
