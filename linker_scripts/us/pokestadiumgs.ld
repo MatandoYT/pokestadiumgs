@@ -798,8 +798,8 @@ SECTIONS
     . = ALIGN(., 16);
 
     fragment_0x9_ROM_START = __romPos;
-    fragment_0x9_VRAM = ADDR(.fragment_0x9_);
-    .fragment_0x9_ 0x81900000 : AT(fragment_0x9_ROM_START) SUBALIGN(16)
+    fragment_0x9_VRAM = ADDR(.fragment_0x9);
+    .fragment_0x9 0x81900000 : AT(fragment_0x9_ROM_START) SUBALIGN(16)
     {
         FILL(0x00000000);
         fragment_0x9_TEXT_START = .;
@@ -832,7 +832,7 @@ SECTIONS
         fragment_0x9_BSS_END = .;
         fragment_0x9_BSS_SIZE = ABSOLUTE(fragment_0x9_BSS_END - fragment_0x9_BSS_START);
     }
-    __romPos += SIZEOF(.fragment_0x9_);
+    __romPos += SIZEOF(.fragment_0x9);
     fragment_0x9_ROM_END = __romPos;
     fragment_0x9_VRAM_END = .;
     __romPos = ALIGN(__romPos, 16);
